@@ -30,7 +30,7 @@ Fake news is false information that is broacasted to the people. It has immense 
 
 ## Potential methods you will consider apply (these can change as you play with the data).
 
-The datasets will be analysed and cleaned using a python script. Once the dataset is ready, we will split the data into training, validation and testing sets. For the model any classification algorithms can be used. However, we are considering Decison trees.
+The datasets will be analysed and cleaned using a python script. For the model any classification algorithms can be used. However, we are considering Decison trees. 
 
 ## How will you measure success?
 
