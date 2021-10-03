@@ -16,6 +16,8 @@ Fake news detection
 The data is present in form of various links under this repository.
 https://data.4tu.nl/articles/dataset/Repository_of_fake_news_detection_datasets/14151755
 We will take multiple sets of data from various sources mentioned in the repository specially LIAR and FEVER for the project.
+However the link to LIAR is not working accoridng to this repository. The url to LIAR dataset is:
+https://www.cs.ucsb.edu/~william/data/liar_dataset.zip
 
 All the datasets will be analysed and combined , if possible.
 
