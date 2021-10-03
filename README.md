@@ -31,6 +31,16 @@ All the datasets will be analysed and combined, if possible.
 Fake news is false information that is broacasted to the people. It has immense impact on the society.Through this dataset we will be creating a model to detect the news is fake or real. We will use classification alogorithm for this model. The model will be able to predict if the news is real or fake by labelling it.
 
 
+## Potential methods you will consider apply (these can change as you play with the data).
+
+The datasets will be analysed and will be combined using a python script. Once the dataset is ready, we will split the data into training, validation and testing sets. For the model any classification algorithms can be used. However, we are condidering Decison tree classification.
+
+## How will you measure success?
+
+The success will be measured from accuracy score of the model. However we will also consider confusion matrix which lets us know about the False Positives and False negatives.
+
+
+
 
 
 
