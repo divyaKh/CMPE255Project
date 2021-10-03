@@ -3,13 +3,13 @@ This repository is the group project for Team-8 in CMPE 255 class at SJSU.
 ## Team members:
 ## Name - Github username
 
-1)Nancy Saxena- NancyS1
+1)Nancy Saxena - NancyS1
 
-2)Divya Khandelwal
+2)Divya Khandelwal - divyaKh
 
-3)Wen Hao Tseng
+3)Wen Hao Tseng - Wenhao-Tseng
 
-4)Chintan Shah
+4)Chintan Shah - chaks64
 
 # Project title: 
 
