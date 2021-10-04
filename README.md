@@ -7,34 +7,36 @@ This repository is the group project for Team-8 in CMPE 255 class at SJSU.
 
 2)Divya Khandelwal - divyaKh
 
-3)Wen Hao Tseng - Wenhao-Tseng
+3)Wen-Hao Tseng - Wenhao-Tseng
 
 4)Chintan Shah - chaks64
 
 # Project title: 
 
-Fake news detection
+Predicting network attack using UNSW-NB15 dataset
 
 ## What data you’ll use and where you’ll get it?
 
-We will be using LIAR dataset for project.
+We will be using the UNSW-NB15 dataset.
 
-The url to LIAR dataset is:
-https://www.cs.ucsb.edu/~william/data/liar_dataset.zip
-
+The url to UNSW-NB15  dataset is:
+https://research.unsw.edu.au/projects/unsw-nb15-dataset 
 
 ## Description of the problem you’ll solve or the question you’ll investigate.
 
-Fake news is false information that is broacasted to the people. It has immense impact on the society.Through this dataset we will be creating a model to detect the news is fake or real. We will use classification alogorithm for this model. The model will be able to predict if the news is real or fake by labelling it.
-
+A network attack attempts to gain unauthorized access to the network. Using this dataset , we will predict the network attack that is happening over the network. This dataset has nine types of attacks, namely, Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode and Worms unlike other dataset like KDD-99 dataset which has only four attack types DOS, R2L, U2R, and PROBE.
 
 ## Potential methods you will consider apply (these can change as you play with the data).
 
-The datasets will be analysed and cleaned using a python script. For the model any classification algorithms can be used. However, we are considering Decison trees. 
+The datasets will be analysed and cleaned using a python script. For the model any classification algorithms can be used. However, we are considering decision trees. We will also consider other algorithm apart from Decision trees.
 
 ## How will you measure success?
 
-The success will be measured from accuracy score of the model. However we will also consider confusion matrix which lets us know about the False Positives and False negatives.
+The success will be measured from the accuracy score of the model. However we will also consider the confusion matrix which lets us know about the False Positives and False negatives.
+
+
+
+
 
 
 
