@@ -21,6 +21,11 @@ We will be using the UNSW-NB15 dataset.
 
 The url to UNSW-NB15  dataset is:
 https://research.unsw.edu.au/projects/unsw-nb15-dataset 
+We will be using UNSW_NB15_training-set.csv and UNSW_NB15_testing-set.csv respectively. The number of records in the training set is 175,341 records and the testing set is 82,332 records.
+
+There are 49 features which are mentioned :https://cloudstor.aarnet.edu.au/plus/apps/onlyoffice/s/2DhnLGDdEECo4ys?fileId=206777051
+
+
 
 ## Description of the problem you’ll solve or the question you’ll investigate.
 
@@ -28,7 +33,11 @@ A network attack attempts to gain unauthorized access to the network. Using this
 
 ## Potential methods you will consider apply (these can change as you play with the data).
 
-The datasets will be analysed and cleaned using a python script. For the model any classification algorithms can be used. However, we are considering decision trees. We will also consider other algorithm apart from Decision trees.
+The datasets will be analysed and cleaned using a python script. For the model any classification algorithms can be used. However, we are considering decision trees. We will also consider other algorithm apart from Decision trees, like NN,KNN, Naive bayes etc. We are also considering :the different types of machine learning model  to build a hybrid learning mode.
+![image](https://user-images.githubusercontent.com/79034901/138795426-a0a061d0-6a6f-442c-899f-490578660de8.png)
+
+Source : https://www.researchgate.net/profile/Di-Wu-137/publication/330702257/figure/fig3/AS:720319446781952@1548748947667/Schematic-structure-of-hybrid-machine-learning-method.ppm
+
 
 ## How will you measure success?
 
