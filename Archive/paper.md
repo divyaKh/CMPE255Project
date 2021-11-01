@@ -15,9 +15,8 @@ header-includes: |
 
 # Abstract
 
-A network attack attempts to gain unauthorized access to the network. Using the UNSW_NB15 Dataset [@7348942], we will predict the network attack that is happening over the network. This dataset has nine types of attacks, namely, Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode and Worms unlike other dataset like KDD-99 dataset which has only four attack types DOS, R2L, U2R, and PROBE.
-
 # Introduction
+A network attack attempts to gain unauthorized access to the network. Using the UNSW_NB15 Dataset [@7348942], we will predict the network attack that is happening over the network. This dataset has nine types of attacks, namely, Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode and Worms unlike other dataset like KDD-99 dataset which has only four attack types DOS, R2L, U2R, and PROBE.
 
 # Methods
 
