@@ -4,4 +4,4 @@ Following are the task done in the "Dataset and its cleaning.ipynb" :
   2.1 Dropping extra columns
   2.2 Dealing with null values
   2.3 Using encoding for categorical data
-3. Generate 2 o/p csv files - processed_training.csv , processed_test.csv
+3. Generate 2 o/p csv files - train_cleaned.csv , test_cleaned.csv
