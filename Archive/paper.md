@@ -20,7 +20,7 @@ Cyber attacks are one of the biggest threads in this era of digital world. It is
 # Introduction
 The occurrence of cyber security incidents have proliferated in recent years. Almost every year, one or two major information security incidents attract the attention of the world. Numerous studies have already been conducted in the field of cyber security utilizing data mining technologies. Using the UNSW-NB15 Dataset [@7348942], we will predict the network attack that is happening over the network. This dataset has nine types of attacks, namely, Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode and Worms unlike other dataset like KDD-99 dataset which has only four attack types DOS, R2L, U2R, and PROBE. The attack distribution data of UNSW-NB15 is shown in Figure 1.  
 
-![Figure 1](../distribution_pie_chart.png)
+![Figure 1](images/EDA/distribution_pie_chart.png)
 
 
 
