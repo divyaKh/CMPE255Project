@@ -43,7 +43,7 @@ In the **protocol** category, most of the values are consists of udp and tcp. Fo
 In **attack** data "dns" is present higher than any other values. There are few no of others and http also. 
 In the **state** category we found the imbalce there are lots of int state for attacks.  
 For numerical features, we plot PDF. For better visualization, we also used log scale. 
-There are some results worth pointing out. **dload**: Destination bits per second, in Figure 3-1 and 302, for attack data all the values are very close to 0. 
+There are some results worth pointing out. **dload**: Destination bits per second, in Figure 3-1 and 3-2, for attack data all the values are very close to 0. 
 For normal data they are distributed all over, has values close to 0 and also very large values. **sbytes**: Source to destination bytes, Most of normal category values are close to 0. Attack categories has most of its values around 5 in log1p graph. 
 The spread of values is wider in attack compared to normal.  
 
