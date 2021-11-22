@@ -63,7 +63,35 @@ Dataset generally contains columns that hold categorical values. This is because
 
 In this project, both type of encoders were tested for. It is then infered from the results, that one-hot encoding is leading to increase in the feature numbers from 45 to above 200. So, label encoder is the best choice. It is used on the categorical columns like "dtype","proto", "stype".
 
-2. Data Scaling
+2. Data Scaling:
+4.2 Data Normalization::
+
+Data normalization is done to make the data set cohesive and similar across all the fields and columns.In the UNSW-NB15 dataset, if the data normalization is not done it will lead to the suppression of  the effectiveness of an important equally important attribute(on a lower scale because of other attributes having values on a larger scale.
+4.2.1: MinMax normalization :
+The min max normalization is used to transform features to be on a similar scale.
+It reduced the values to the range of [0,1]
+ The new point is calculated as :
+X_new = (X - X_min)/(X_max - X_min)
+Geometrically speaking, transformation squishes the n-dimensional data into an n-dimensional unit hypercube.
+
+The Feature set after Applying MinMax scaler.
+
+Figure : here
+4.2.2: Z-Score Normalization:
+
+
+Standardization or Z-Score Normalization is the transformation of features by subtracting from mean and dividing by standard deviation. This is often called as Z-score.
+The new data points are added as :
+X_new = (X - mean)/Std
+
+Geometrically speaking, it translates the data to the mean vector of original data to the origin and squishes or expands the points if std is 1 respectively.
+
+Standardization does not get affected by outliers because there is no predefined range of transformed features.
+Figure here:
+
+
+In UNSW-NB15 dataset, the outliers play an important role. The outliers are the datapoints, where the algorithm can predict anomaly. In later sections, we will compare the effects of both kinds of Normalization on the tree based algorithms, with respect to accuracy and F1 score.
+
 
 3. Dimension Reduction 
 
@@ -75,6 +103,23 @@ Machine models needs to be trained on the network packets from the dataset to al
 4. Random Forest
 
 ## XGBoost
+6.1:XGBoost:
+XGBoost, which stands for Extreme Gradient Boosting, is a scalable, distributed gradient-boosted decision tree (GBDT) machine learning library. It provides parallel tree boosting and is the leading machine learning library for regression, classification.
+Extreme Gradient Boosting (xgboost) is similar to the gradient boosting framework but more efficient. It has both linear model solver and tree learning algorithms. So, what makes it fast is its capacity to do parallel computation on a single machine.
+When using boosting techniques all instances in the dataset are assigned a score that tells how difficult to classify they are.
+The XGboost model was applied to the different preprocessed dataset. The accuracy of the XGBoost is high when compared to other algorithms. Figure shows that the test accuracy is above 90% for the cases.
+
+Figure :
+!
+
+
+Figure shows a good F1 -score, that the model classifies the classes in  test data above 90% accurately.
+
+Here are the different ROC scores on the different preprocessed data :
+
+Figure:
+
+Area under the curve for ROC is high, if we consider the threshold as 50%. Figure indicates that the models is performing well fo both the classes ie, 0 and 1
 
 ![Figure ](./images/XGBoost/ROC_XGB_NoPreprocessing.png)
 
