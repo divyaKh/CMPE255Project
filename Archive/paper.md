@@ -43,15 +43,15 @@ In the **protocol** category, most of the values are consists of udp and tcp. Fo
 In **attack** data "dns" is present higher than any other values. There are few no of others and http also. 
 In the **state** category we found the imbalce there are lots of int state for attacks.  
 For numerical features, we plot PDF. For better visualization, we also used log scale. 
-There are some results worth pointing out. **dload**: Destination bits per second, in Figure 3-1 and 3-2, for attack data all the values are very close to 0. 
-For normal data they are distributed all over, has values close to 0 and also very large values. **sbytes**: Source to destination bytes, Most of normal category values are close to 0. Attack categories has most of its values around 5 in log1p graph. 
+There are some results worth pointing out. **dload**: destination bits per second, in Figure 3-1 and 3-2, for attack data all the values are very close to 0. 
+For normal data they are distributed all over, has values close to 0 and also very large values. **sbytes**: source to destination bytes, most of normal category values are close to 0. Attack categories has most of its values around 5 in log1p graph. 
 The spread of values is wider in attack compared to normal.  
 
 ![Figure 3-1](images/EDA/dload1.png)
 
 ![Figure 3-2](images/EDA/dload2.png)
 
-To Get correlation values for all the features, we plot heatmap of correaltion shown in Figure 4 for better visualization. Most correlated features are: sbytes and sloss, sbytes and sloss, swin and dwin. 
+To get correlation values for all the features, we plot heatmap of correaltion shown in Figure 4 for better visualization. Most correlated features are: sbytes and sloss, sbytes and sloss, swin and dwin. 
 These features are having very high correlation between them more 95%.
 Although some features have high correlation between them, some of them is because they share same values, for instance, swin and dwin have correlation values is 99% between them. 
 Even though these 2 columns are numerical but most of their values are only 0 and 255.
