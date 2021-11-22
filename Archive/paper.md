@@ -15,45 +15,129 @@ header-includes: |
 
 # Abstract
 
+Cyber attacks are one of the biggest threads in this era of digital world. It is very important to combat the network attacks to establish a secure environment for all the users of a network. This project focuses on creating and testing Machine Learning Models over a large dataset of raw network packets to detect network attacks. The dataset used, is created by Cyber Range Lab of UNSW Canberra. The project analyses the performance of different ML models like XGBoost, Random Forest, etc. over the dataset that has been preprocessed using techniques like Dimension Reduction, MinMax Scaling etc. The performance, in terms if Acuracy and F1 score, is studied for each model and the inferences like best working model are derived.
+
 # Introduction
 The occurrence of cyber security incidents have proliferated in recent years. Almost every year, one or two major information security incidents attract the attention of the world. Numerous studies have already been conducted in the field of cyber security utilizing data mining technologies. Using the UNSW-NB15 Dataset [@7348942], we will predict the network attack that is happening over the network. This dataset has nine types of attacks, namely, Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode and Worms unlike other dataset like KDD-99 dataset which has only four attack types DOS, R2L, U2R, and PROBE. The attack distribution data of UNSW-NB15 is shown in Figure 1.  
 
 ![Figure 1](../distribution_pie_chart.png)
 
-# Methods
+
+
+# Exploratory Data Analysis
+
+
+
+# Data Pre-Processing
+Large data that is to be studied and worked upon is often raw and needs pre-processing. There are two steps in this:
+1. Data cleaning and preparation 
+2. Data pre-processing
+
+## Data Preparation
+Data needs to be cleaned for errors like missing values, incorrect values, unnecessary and duplicate data etc. Therefore, data cleaning is the first step that is performed before working ahead with any dataset. In this project, following are the basic data preparation steps that have been performed:
+1. Dropping unnecessary columns: The columns that add no information to the dataset are dropped so that number of features to work with are reduced.
+
+2. Dealing with Missing Values: Generally, the dataset contains some missing values which need to be dealt with attentively. There are different ways to deal with a missing value:
+	2.1 Drop the missing value record(row) or feature(column)
+	2.2 Replace missing value with appropriate mean/mode/median value of the feature(column)
+In this project, since input dataset did not contain any missing values, this step is not performed. 
+
+3. Incorrect values: There could some invalid entries into a feature that are not of the expected datatype of that feature. These values need to be corrected. In this project, few columns like "is_ftp_login" and "is_sm_ips_ports" that expected binary input contained non binary value. This is corrected to get non-erroneous results. 
+
+## Data Pre-Processing
+Data pre-preocessing is performaned in order to generate a dataset that aids Machine Learning to predict more accurate results. Following data preprocessing steps have been performed in this project:
+
+1. Encoding: 
+Dataset generally contains columns that hold categorical values. This is because categorical values are more decriptive that numerical values. But ML models cannot work with any non-numerical values. So, prior to feed data to Machine Learning model, encoding is performed. There are two types of encodings that are ususally performed:
+1. Label Encoding
+	Pros: 
+		- Simple technique
+		- Assigns numbers to different categorical values
+	Cons:
+		- Misinterpreted by algorithms as having some sort of hierarchy/order
+2. One-Hot Encoding
+	Pros:
+		- Eliminates the hierarchy/order issues 
+	Cons:
+		- Adds more columns(features) to the data set which may contribute to overfitting
+
+In this project, both type of encoders were tested for. It is then infered from the results, that one-hot encoding is leading to increase in the feature numbers from 45 to above 200. So, label encoder is the best choice. It is used on the categorical columns like "dtype","proto", "stype".
+
+2. Data Scaling
+
+3. Dimension Reduction 
+
+# Data Modeling
+Machine models needs to be trained on the network packets from the dataset to allow them to detect network attacks. There are different machine learning models available, but for this project, the following four are considered:
+1. XGBoost
+2. GB Gradient
+3. Decision Tree
+4. Random Forest
+
+## XGBoost
+
+![Figure ](./images/XGBoost/ROC_XGB_NoPreprocessing.png)
+
+![Figure ](./images/XGBoost/ROC_XGB_PCA.png)
+
+![Figure ](./images/XGBoost/ROC_XGB_mm_corr.png)
+
+![Figure ](./images/XGBoost/ROC_XGB_mm.png)
+
+![Figure ](./images/XGBoost/ROC_XGB_ss.png)
+
+![Figure ](./images/XGBoost/ROC_XGB_ss_corr.png)
+
+## GBGradient
+RandomForest/
+![Figure ](./images/GBGradient/ROC_GB_NoPreprocessing.png)
+
+![Figure ](./images/GBGradient/ROC_GB_PCA.png)
+
+![Figure ](./images/GBGradient/ROC_GB_mm_corr.png)
+
+![Figure ](./images/GBGradient/ROC_GB_mm.png)
+
+![Figure ](./images/GBGradient/ROC_GB_ss.png)
+
+![Figure ](./images/GBGradient/ROC_GB_ss_corr.png)
+
+## Decision Tree
+
+![Figure ](./images/DecisionTree/ROC_DecisionTree_NoPreprocessing.png)
+
+![Figure ](./images/DecisionTree/ROC_DecisionTree_PCA.png)
+
+![Figure ](./images/DecisionTree/ROC_DecisionTree_mm_corr.png)
+
+![Figure ](./images/DecisionTree/ROC_DecisionTree_mm.png)
+
+![Figure ](./images/DecisionTree/ROC_DecisionTree_ss.png)
+
+![Figure ](./images/DecisionTree/ROC_DecisionTree_ss_corr.png)
+
+## Random Forest
+Random Forest is a classification algorithm is combination of many decision trees. It is a better classifier than decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of Random forest model include simplicity and good accuracy.
+
+One of the best ways to analysis the performance of a Machine Learning model is studying its ROC curve. In this project, ROC curves for Random Forest was studied with different preprocessing techniques and following were the observations:
+
+![Figure ](./images/RandomForest/ROC_RandomForest_NoPreprocessing.png)
+
+![Figure ](./images/RandomForest/ROC_RandomForest_PCA.png)
+
+![Figure ](./images/RandomForest/ROC_RandomForest_mm_corr.png)
+
+![Figure ](./images/RandomForest/ROC_RandomForest_mm.png)
+
+![Figure ](./images/RandomForest/ROC_RandomForest_ss.png)
+
+![Figure ](./images/RandomForest/ROC_RandomForest_ss_corr.png)
+
 
 # Comparisons
 
-# 5 Data Analysis
-### 5.1 Correlation Analysis – 
-Correlation is a statistical analysis which is used for measuring and also describing the relation between different entities. In our data set we are using correlation feature selection for eliminating or dropping columns which have correlation factor more that 99%. Since the columns which are correlated with each other gives the same result, so pruning the correlated columns might reduce the complexity of the algorithm which will help in better analysis. After applying the correlation algorithm in our data set, there are 3 columns namely sloss, dloss and ct_ftp_cmd which are correlated to sbytes, dbytes, is_ftp_login respectively. Modeling of dataset was done using 4 different ML models i.e. XG Boost, Gradient Boost, Decision tree and Random Forest. We can see the comparison of modeling without correlation and with correlation. The accuracy of all the models hardly changed, for XG Boost accuracy increased from 94.9% to 95.1% while for decision tree it increased from 93.5% to 93.6% for others it remains unchanged. Hence, the correlation algorithm proved to be very efficient for us.
-
-![image](https://user-images.githubusercontent.com/24936584/142936166-788579a3-0952-4b77-8a53-b97b87a74c6c.png)
-
-![image](https://user-images.githubusercontent.com/24936584/142936128-14ee5b96-b926-4216-9554-610a855abe2f.png)
-
-### 5.2 Principal Component Analysis – 
-Principal Component Analysis, or PCA, is a dimensionality-reduction method that is often used to reduce the dimensionality of large data sets, by transforming a large set of variables into a smaller one that still contains most of the information in the large set. But this dimensionality reduction technique may reduce the accuracy of any model at quite high rate, so this point needs to be considered while applying algorithm. We applied PCA algorithm with the variance of 99% on our data set. After applying number of rows were reduced from 42 to 29. But it cost the accuracy of every model.
-Comparison can be inferred through following figures: 
-
--XG Boost: Without PCA accuracy was 93.4% but after applying PCA it reduced to 90.5%
-
-![image](https://user-images.githubusercontent.com/24936584/142938935-70dfac8d-d46e-4579-b1fe-8f366ba9d9af.png)
-
--Gradient Boost: Accuracy without PCA was 94.8% which further reduced to 93%
-
-![image](https://user-images.githubusercontent.com/24936584/142938889-34a60642-f0a3-4f4c-8f32-185c6e32be7b.png)
-
--Decision Tree: Accuracy without PCA was 94.9% which further reduced to 93.1%
-
-![image](https://user-images.githubusercontent.com/24936584/142938843-38bb4166-b3a7-476d-988d-c600a18346e6.png)
-
--Random Forest: Accuracy without PCA was 96% which further reduced to 94.5%
-
-![image](https://user-images.githubusercontent.com/24936584/142938794-cca3d728-969b-4c3b-bfa4-2fb1185e7d64.png)
-
+# Example Analysis
 
 # Conclusions
-
 
 # References
