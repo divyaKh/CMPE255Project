@@ -51,8 +51,8 @@ The spread of values is wider in attack compared to normal.
 
 ![Figure 3-2](images/EDA/dload2.png)
 
-To get correlation values for all the features, we plot heatmap of correaltion shown in Figure 4 for better visualization. Most correlated features are: sbytes and sloss, sbytes and sloss, swin and dwin. 
-These features are having very high correlation between them more 95%.
+To get correlation values for all the features, we plot heatmap of correaltion shown in Figure 4 for better visualization. The most correlated features are: sbytes and sloss, sbytes and sloss, swin and dwin. 
+These features are having very high correlation between them more than 95%.
 Although some features have high correlation between them, some of them is because they share same values, for instance, swin and dwin have correlation values is 99% between them. 
 Even though these 2 columns are numerical but most of their values are only 0 and 255.
 
