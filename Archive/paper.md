@@ -37,15 +37,19 @@ Principal Component Analysis, or PCA, is a dimensionality-reduction method that 
 Comparison can be inferred through following figures: 
 
 -XG Boost: Without PCA accuracy was 93.4% but after applying PCA it reduced to 90.5%
+
 ![image](https://user-images.githubusercontent.com/24936584/142938935-70dfac8d-d46e-4579-b1fe-8f366ba9d9af.png)
 
 -Gradient Boost: Accuracy without PCA was 94.8% which further reduced to 93%
+
 ![image](https://user-images.githubusercontent.com/24936584/142938889-34a60642-f0a3-4f4c-8f32-185c6e32be7b.png)
 
 -Decision Tree: Accuracy without PCA was 94.9% which further reduced to 93.1%
+
 ![image](https://user-images.githubusercontent.com/24936584/142938843-38bb4166-b3a7-476d-988d-c600a18346e6.png)
 
 -Random Forest: Accuracy without PCA was 96% which further reduced to 94.5%
+
 ![image](https://user-images.githubusercontent.com/24936584/142938794-cca3d728-969b-4c3b-bfa4-2fb1185e7d64.png)
 
 
