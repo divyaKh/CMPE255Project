@@ -32,7 +32,7 @@ Correlation is a statistical analysis which is used for measuring and also descr
 
 ![image](https://user-images.githubusercontent.com/24936584/142936128-14ee5b96-b926-4216-9554-610a855abe2f.png)
 
-### Principal Component Analysis – 
+### 5.2 Principal Component Analysis – 
 Principal Component Analysis, or PCA, is a dimensionality-reduction method that is often used to reduce the dimensionality of large data sets, by transforming a large set of variables into a smaller one that still contains most of the information in the large set. But this dimensionality reduction technique may reduce the accuracy of any model at quite high rate, so this point needs to be considered while applying algorithm. We applied PCA algorithm with the variance of 99% on our data set. After applying number of rows were reduced from 42 to 29. But it cost the accuracy of every model.
 Comparison can be inferred through following figures: 
 
