@@ -25,7 +25,7 @@ The occurrence of cyber security incidents have proliferated in recent years. Al
 # Comparisons
 
 # 5 Data Analysis
-5.1 Correlation Analysis – 
+### 5.1 Correlation Analysis – 
 Correlation is a statistical analysis which is used for measuring and also describing the relation between different entities. In our data set we are using correlation feature selection for eliminating or dropping columns which have correlation factor more that 99%. Since the columns which are correlated with each other gives the same result, so pruning the correlated columns might reduce the complexity of the algorithm which will help in better analysis. After applying the correlation algorithm in our data set, there are 3 columns namely sloss, dloss and ct_ftp_cmd which are correlated to sbytes, dbytes, is_ftp_login respectively. Modeling of dataset was done using 4 different ML models i.e. XG Boost, Gradient Boost, Decision tree and Random Forest. We can see the comparison of modeling without correlation and with correlation. The accuracy of all the models hardly changed, for XG Boost accuracy increased from 94.9% to 95.1% while for decision tree it increased from 93.5% to 93.6% for others it remains unchanged. Hence, the correlation algorithm proved to be very efficient for us.
 
 ![image](https://user-images.githubusercontent.com/24936584/142936166-788579a3-0952-4b77-8a53-b97b87a74c6c.png)
