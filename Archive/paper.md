@@ -221,9 +221,9 @@ One of the best ways to analysis the performance of a Machine Learning model is 
 
 The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 1) and F1 score (Fig.2) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
 
-![Figure ](/images/Random_Forest_plots/AccuracyRandom_Forest.png)
+![Figure 6.4.1](/images/Random_Forest_plots/AccuracyRandom_Forest.png)
 
-![Figure ](/images/Random_Forest_plots/F1_scoresRandom\Forest.png)
+![Figure 6.4.2](/images/Random_Forest_plots/F1_scoresRandom_Forest.png)
 
 
 
