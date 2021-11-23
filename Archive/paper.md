@@ -104,7 +104,7 @@ It reduced the values to the range of [0,1]
                                 X_new = (X - X_min)/(X_max - X_min)
 Geometrically speaking, transformation squishes the n-dimensional data into an n-dimensional unit hypercube.
 The Description of the features after applying MinMax scaling:
-[Figure ](images/Figure_minmax.png)
+[Figure ](images/Figure_minmax.JPG)
 
 Figure shows the description of top 10 features after applying MinMax scaler.
 
@@ -119,7 +119,7 @@ Geometrically speaking, it translates the data to the mean vector of original da
 
 Standardization does not get affected by outliers because there is no predefined range of transformed features.
 
-[Figure ](images/Figure_standard.png)
+[Figure ](images/Figure_standard.JPG)
 
 
 Figure shows the description of top 10 features after applying standard scaler.
@@ -184,16 +184,12 @@ The XGboost model was applied to the different preprocessed dataset. Figure show
 Figure 6.1.1 shows the accuracy plots for different preprocessed datasets.
 
 ![Figure 6.1.2](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
-
 Figure shows the F1 scores of the models build from different dataset.
+
+Dataset with MinMax scaler has thte highest accuracy and F1 score. Dataset with PCA applied has lower accuracy, because PCA might cause some dataset information to lose.
 
 ## 6.2 Gradient Boost
 Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function. All the trees are connected in series and each tree tries to minimise the error of the previous tree. Due to this sequential connection, the gradient boost algorithm is usually slow to learn, but also highly accurate.
-
-![Figure 6.2.1](https://user-images.githubusercontent.com/24936584/142963987-3707f5be-692e-4d15-a20d-9dd175ff7392.png)
-
-![Figure 6.2.2](https://user-images.githubusercontent.com/24936584/142963995-b758dcec-e66e-423c-bf1d-2646f2c1fa53.png)
-
 
 ![image](images/Accuracy_plots/AccuracyGB_Gradient.png)
 
@@ -215,6 +211,8 @@ It can be observed that with standard scaling preprocessing technique, accuracy 
 
 ![Figure 6.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png)
 Figure 6.3.2 shows the F1-score of the decison trees on the different preprocessed dataset 
+
+The accuracy and F1 scores are high for the dataset with standard scaler on the model. Model fitted with dataset with Minmax scaling has similar performance to the model fitted with dataset that has MinMax scaling applied and feature pruning on basis of correlation.
 
 ## 6.4 Random Forest
 Random Forest is a classification algorithm is combination of many decision trees. It is a better classifier than decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of Random forest model include simplicity and good accuracy.
