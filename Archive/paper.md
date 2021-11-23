@@ -155,24 +155,24 @@ After analysing the correlation matrix, sbytes is correlated with sloss by 0.995
 Principal Component Analysis, or PCA, is a dimensionality-reduction method that is often used to reduce the dimensionality of large data sets, by transforming a large set of variables into a smaller one that still contains most of the information in the large set. But this dimensionality reduction technique may reduce the accuracy of any model at quite a high rate. The principal component analysis algorithm was applied on the dataset considering the to capture the minimum variance of 99% else considering the less percent will lead to loss of most of the data. After applying PCA, the number of features that are responsible for the detection of 99% of variance has been reduced to 29 from 42 columns
 Figure shows the clustering of the PCA
 
-![image](https://user-images.githubusercontent.com/24936584/142955187-a689b66e-c679-428d-baf9-51226cf88a60.png)
+![Figure ](https://user-images.githubusercontent.com/24936584/142955187-a689b66e-c679-428d-baf9-51226cf88a60.png)
 
 
 ## XGBoost
-6.1:XGBoost:
+
 XGBoost, which stands for Extreme Gradient Boosting, is a scalable, distributed gradient-boosted decision tree (GBDT) machine learning library. It provides parallel tree boosting and is the leading machine learning library for regression, classification.
 Extreme Gradient Boosting (xgboost) is similar to the gradient boosting framework but more efficient. It has both linear model solver and tree learning algorithms. So, what makes it fast is its capacity to do parallel computation on a single machine.
 When using boosting techniques all instances in the dataset are assigned a score that tells how difficult to classify they are.
-The XGboost model was applied to the different preprocessed dataset. The accuracy of the XGBoost is high when compared to other algorithms. Figure shows that the test accuracy is above 90% for the cases.
+The XGboost model was applied to the different preprocessed dataset. Figure shows that the test accuracy is above 90% for the cases.
 
-Figure :
+
 ![Figure ](./images/Accuracy_plots/AccuracyXGBoost.png)
+Figure 1 shows the accuracy plots for different preprocessed datasets.
 
 ![Figure ](./images/F1scores_plots_all_models/F1_scoresXGBoost.png)
 
+Figure shows the F1 scores of the models build from different dataset.
 
-
-Figure shows a good F1 -score, that the model classifies the classes in  test data above 90% accurately.
 
 Here are the different ROC scores on the different preprocessed data :
 
@@ -213,11 +213,13 @@ Gradient Boost/
 A tree can be “learned” by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node all has the same value of the target variable, or when splitting no longer adds value to the predictions. The construction of decision tree classifier does not require any domain knowledge or parameter setting, and therefore is appropriate for exploratory knowledge discovery. 
 The Decsision model was applied to the different preprocessed dataset. The accuracy of the XGBoost is high when compared to other algorithms. Figure shows that the test accuracy is above 90% for the cases.
 
-Figure :
+
 ![Figure ](./images/Accuracy_plots/AccuracyDecisionTrees.png)
 
-![Figure ](./images/F1scores_plots_all_models/F1_scoresDecisonTree.png)
+Figure shows the accuracy of the decison trees on the differnt preprocessed dataset
 
+![Figure ](./images/F1scores_plots_all_models/F1_scores_DecisonTree.png)
+Figure shows the F1-score of the decison trees on the different preprocessed dataset 
 
 The ROC curve shows a high accuracy:
 
