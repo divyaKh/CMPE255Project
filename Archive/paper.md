@@ -84,7 +84,7 @@ In this project, since input dataset did not contain any missing values, this st
 # 5. Data Pre-Processing
 Data pre-preocessing is performed in order to generate a dataset that aids Machine Learning to predict more accurate results. Following data preprocessing steps have been performed in this project:
 
-## 5.1 Encoding: 
+## 5.1 Encoding 
 Dataset generally contains columns that hold categorical values. This is because categorical values are more decriptive that numerical values. But ML models cannot work with any non-numerical values. So, prior to feed data to Machine Learning model, encoding is performed. There are two types of encodings that are ususally performed:
 
 1. Label Encoding: It is a simple technique to assign numbers to different categorical values. But it is generally misinterpreted by algorithms as having some sort of hierarchy/order.
