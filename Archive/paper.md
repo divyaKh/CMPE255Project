@@ -17,21 +17,21 @@ header-includes: |
 
 Cyber attacks are one of the biggest threads in this era of digital world. It is very important to combat the network attacks to establish a secure environment for all the users of a network. This project focuses on creating and testing Machine Learning Models over a large dataset of raw network packets to detect network attacks. The dataset used, is created by Cyber Range Lab of UNSW Canberra. The project analyses the performance of different ML models like XGBoost, Random Forest, etc. over the dataset that has been preprocessed using techniques like Dimension Reduction, MinMax Scaling etc. The performance, in terms if Acuracy and F1 score, is studied for each model and the inferences like best working model are derived.
 
-# Introduction
+# 1. Introduction
 The occurrence of cyber security incidents have proliferated in recent years. Almost every year, one or two major information security incidents attract the attention of the world. Numerous studies have already been conducted in the field of cyber security utilizing data mining technologies. Using the UNSW-NB15 Dataset [@7348942], we will predict the network attack that is happening over the network. This dataset has nine types of attacks, namely, Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode and Worms unlike other dataset like KDD-99 dataset which has only four attack types DOS, R2L, U2R, and PROBE. The attack distribution data of UNSW-NB15 is shown in Figure 1.  
 
 ![Figure 1](images/EDA/distribution_pie_chart.png)
 
-# Literature Review:
+# 2. Literature Review
 
 Many datasets have been used for Intrusion detection system like KDD’99. According to 
-A. Divekar et al, “As with KDD-99, certain parameters were found unnecessary. A reduced set of 20 features found by Mean Decrease Impurity was used in this paper.”[2]. Tavallaee et al. [3], while proposing an improved NSL-KDD, provided a comprehensive description of the KDD CUP 99's idiosyncrasies”.Tavallaee et al. [3] developed NSL-KDD to rectify KDD-99 and overcome its drawbacks. However, it had some drawbacks like non representation of low footprint attacks[1]. A. Divekar et al, have compared and the datasets by applying preprocessing and feature Selection and found that uNSW-NB15 was found to be a modern substitute to  NSL-KDD and KDD CUP 99 dataset.[2]
+A. Divekar et al, “As with KDD-99, certain parameters were found unnecessary. A reduced set of 20 features found by Mean Decrease Impurity was used in this paper.”[@Divekar2018BenchmarkingDF]. Tavallaee et al. [@Tavallaee2009ADA], while proposing an improved NSL-KDD, provided a comprehensive description of the KDD CUP 99's idiosyncrasies”.Tavallaee et al. [@Tavallaee2009ADA] developed NSL-KDD to rectify KDD-99 and overcome its drawbacks. However, it had some drawbacks like non representation of low footprint attacks[@7348942]. A. Divekar et al, have compared and the datasets by applying preprocessing and feature Selection and found that uNSW-NB15 was found to be a modern substitute to  NSL-KDD and KDD CUP 99 dataset.[@Divekar2018BenchmarkingDF]
 
-A svm based model was implemented by D. Jing and H. Chen.According to the authors”the performance of our method is evaluated through accuracy, detection rate and false positive rate. Compared with other methods, the superiority of the proposed SVM method is shown by the experimental results.”[5].
-A multi-layer perceptron feed-forward artificial neural network with a single hidden layer was proposed by M. Al-Zewairi et al[4]. According to the authors, “The evaluation results demonstrate that the proposed classifier outperforms other models in the literature with 98.99% accuracy and 0.56% false alarm rate on unseen data.”[4]The decision trees was one of the models that was compared with this Artificial neural network.
+A svm based model was implemented by D. Jing and H. Chen.According to the authors”the performance of our method is evaluated through accuracy, detection rate and false positive rate. Compared with other methods, the superiority of the proposed SVM method is shown by the experimental results.”[@Jing2019SVMBN].
+A multi-layer perceptron feed-forward artificial neural network with a single hidden layer was proposed by M. Al-Zewairi et al[@AlZewairi2017ExperimentalEO]. According to the authors, “The evaluation results demonstrate that the proposed classifier outperforms other models in the literature with 98.99% accuracy and 0.56% false alarm rate on unseen data.”[@AlZewairi2017ExperimentalEO]The decision trees was one of the models that was compared with this Artificial neural network.
 
 
-# Exploratory Data Analysis
+# 3. Exploratory Data Analysis
 
 For our work, the UNSW-NB15 dataset contains 257,673 data instances with 49 features. 
 The total classes of this dataset are 10 classes: one is for a *normal* network data (93 000 instances) and nine classes of anomalous network data (attacks classes). 
@@ -45,7 +45,7 @@ In this data set, there are total 9 attack categories of attack and normal is no
 The most occured attack data categories are "*Reconnaissance*", "*Backdoor*", "*DoS*", "*Exploits*" and "*Analysis*". 
 In the **protocol** category, most of the values are consists of udp and tcp. For attacks count of udp is lot higher. The bar plot is shown in Figure 2.
 
-![Figure 2](images/EDA/protocol.png)
+![Figure 3.1](images/EDA/protocol.png)
 
 In **attack** data "dns" is present higher than any other values. There are few no of others and http also. 
 In the **state** category we found the imbalce there are lots of int state for attacks.  
@@ -54,16 +54,16 @@ There are some results worth pointing out. **dload**: destination bits per secon
 For normal data they are distributed all over, has values close to 0 and also very large values. **sbytes**: source to destination bytes, most of normal category values are close to 0. Attack categories has most of its values around 5 in log1p graph. 
 The spread of values is wider in attack compared to normal.  
 
-![Figure 3-1](images/EDA/dload1.png)
+![Figure 3.2.1](images/EDA/dload1.png)
 
-![Figure 3-2](images/EDA/dload2.png)
+![Figure 3.2.2](images/EDA/dload2.png)
 
 To get correlation values for all the features, we plot heatmap of correaltion shown in Figure 4 for better visualization. The most correlated features are: sbytes and sloss, sbytes and sloss, swin and dwin. 
 These features are having very high correlation between them more than 95%.
 Although some features have high correlation between them, some of them is because they share same values, for instance, swin and dwin have correlation values is 99% between them. 
 Even though these 2 columns are numerical but most of their values are only 0 and 255.
 
-![Figure 4](images/EDA/heatmap.png)
+![Figure 3.3](images/EDA/heatmap.png)
 
 
 # Data Preparation
@@ -152,9 +152,9 @@ After analysing the correlation matrix, sbytes is correlated with sloss by 0.995
 Principal Component Analysis, or PCA, is a dimensionality-reduction method that is often used to reduce the dimensionality of large data sets, by transforming a large set of variables into a smaller one that still contains most of the information in the large set. But this dimensionality reduction technique may reduce the accuracy of any model at quite a high rate. The principal component analysis algorithm was applied on the dataset considering the to capture the minimum variance of 99% else considering the less percent will lead to loss of most of the data. After applying PCA, the number of features that are responsible for the detection of 99% of variance has been reduced to 29 from 42 columns
 Figure shows the clustering of the PCA
 
-![Figure ](https://user-images.githubusercontent.com/24936584/142955187-a689b66e-c679-428d-baf9-51226cf88a60.png)
+![Figure 5.2.1](https://user-images.githubusercontent.com/24936584/142955187-a689b66e-c679-428d-baf9-51226cf88a60.png)
 
-=======
+
 # 6. Data Modeling:
 
 Datasets used for modelling:
@@ -174,10 +174,10 @@ When using boosting techniques all instances in the dataset are assigned a score
 The XGboost model was applied to the different preprocessed dataset. Figure shows that the test accuracy is above 90% for the cases.
 
 
-![Figure ](./images/Accuracy_plots/AccuracyXGBoost.png)
-Figure 1 shows the accuracy plots for different preprocessed datasets.
+![Figure 6.1.1](images/Accuracy_plots/AccuracyXGBoost.png)
+Figure 6.1.1 shows the accuracy plots for different preprocessed datasets.
 
-![Figure ](./images/F1scores_plots_all_models/F1_scoresXGBoost.png)
+![Figure 6.1.2](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
 
 Figure shows the F1 scores of the models build from different dataset.
 
@@ -201,6 +201,7 @@ ROC curve for XGBoost with standard scaling
 
 ROC curve for XGBoost after applying standard scaling and correlation analysis
 
+
 ![Figure ](./images/XGBoost_plots/XGBoostX_ss_pca.png)
 
 ROC curve for XGBoost after applying standard scaling and PCA.
@@ -210,38 +211,42 @@ Area under the curve for ROC is high, if we consider the threshold as 50%. Figur
 ## 6.2 Gradient Boost
 Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function. All the trees are connected in series and each tree tries to minimise the error of the previous tree. Due to this sequential connection, the gradient boost algorithm is usually slow to learn, but also highly accurate.
 
-![image](https://user-images.githubusercontent.com/24936584/142963987-3707f5be-692e-4d15-a20d-9dd175ff7392.png)
+![Figure 6.2.1](https://user-images.githubusercontent.com/24936584/142963987-3707f5be-692e-4d15-a20d-9dd175ff7392.png)
 
-![image](https://user-images.githubusercontent.com/24936584/142963995-b758dcec-e66e-423c-bf1d-2646f2c1fa53.png)
+![Figure 6.2.2](https://user-images.githubusercontent.com/24936584/142963995-b758dcec-e66e-423c-bf1d-2646f2c1fa53.png)
+
+
+![image](/Archive/images/Accuracy_plots/AccuracyGB_Gradient.png)
+
+
+![image](/Archive/images/F1scores_plots_all_models/F1_scoresGB_Gradient.png)
+
 
 Figure shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
 
-Gradient Boost/
+![Figure 6.2.3](images/GB_Gradient_plots/GB_GradientX.png)
 
-![Figure ](./images/GB_Gradient_plots/GB GradientX.png)
+![Figure 6.2.4](images/GB_Gradient_plots/GB_GradientX_mm.png)
 
+![Figure 6.2.5](images/GB_Gradient_plots/GB_GradientX_mm_corr.png)
 
-![Figure ](./images/GB_Gradient_plots/GB GradientX_mm.png)
+![Figure 6.2.6](images/GB_Gradient_plots/GB_GradientX_pca.png)
 
-![Figure ](./images/GB_Gradient_plots/GB GradientX_mm_corr.png)
+![Figure 6.2.7](images/GB_Gradient_plots/GB_GradientX_ss.png)
 
-![Figure ](./images/GB_Gradient_plots/GB GradientX_pca.png)
+![Figure 6.2.8](images/GB_Gradient_plots/GB_GradientX_ss_corr.png)
 
-![Figure ](./images/GB_Gradient_plots/GB GradientX_ss.png)
-
-![Figure ](./images/GB_Gradient_plots/GB GradientX_ss_cor.png)
-
-## Decision Tree
+## 6.3 Decision Tree
 
 A tree can be “learned” by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node all has the same value of the target variable, or when splitting no longer adds value to the predictions. The construction of decision tree classifier does not require any domain knowledge or parameter setting, and therefore is appropriate for exploratory knowledge discovery. 
 The Decsision model was applied to the different preprocessed dataset. The accuracy of the XGBoost is high when compared to other algorithms. Figure shows that the test accuracy is above 90% for the cases.
 
 
-![Figure ](./images/Accuracy_plots/AccuracyDecisionTrees.png)
+![Figure 6.3.1](images/Accuracy_plots/AccuracyDecison_Tree.png)
 
 Figure shows the accuracy of the decison trees on the differnt preprocessed dataset
 
-![Figure ](./images/F1scores_plots_all_models/F1_scores_DecisonTree.png)
+![Figure 6.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png)
 Figure shows the F1-score of the decison trees on the different preprocessed dataset 
 
 ROC curves on the different preprocessed datasets.
@@ -271,13 +276,11 @@ ROC curve for Decision trees after applying standard scaling and PCA.
 ## 6.4 Random Forest
 Random Forest is a classification algorithm is combination of many decision trees. It is a better classifier than decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of Random forest model include simplicity and good accuracy.
 
-One of the best ways to analysis the performance of a Machine Learning model is studying its ROC curve. In this project, ROC curves for Random Forest was studied with different preprocessing techniques and following were the observations:
+One of the best ways to analysis the performance of a Machine Learning model is studying it accuracy and F1 score. The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 6.4.1) and F1 score (Figure 6.4-.) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
 
-The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 1) and F1 score (Fig.2) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
+![Figure 6.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png)
 
-![Figure ](./images/Random_Forest_plots/AccuracyRandom_Forest.png)
-
-![Figure ](./images/Random_Forest_plots/F1_scoresRandom\Forest.png)
+![Figure 6.4.2](images/F1scores_plots_all_models/F1_scoresRandom_Forest.png)
 
 
 
