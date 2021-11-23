@@ -175,19 +175,11 @@ Figure 7.1.2 shows the F1 scores of the models build from different dataset.
 ## 7.2 Gradient Boost
 Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function. All the trees are connected in series and each tree tries to minimise the error of the previous tree. Due to this sequential connection, the gradient boost algorithm is usually slow to learn, but also highly accurate.
 
-![Figure 7.2.1](https://user-images.githubusercontent.com/24936584/142963987-3707f5be-692e-4d15-a20d-9dd175ff7392.png)
-
-![Figure 7.2.2](https://user-images.githubusercontent.com/24936584/142963995-b758dcec-e66e-423c-bf1d-2646f2c1fa53.png)
-
-
 ![Figure 7.2.3](images/Accuracy_plots/AccuracyGB_Gradient.png)
-
 
 ![Figure 7.2.3](images/F1scores_plots_all_models/F1_scoresGB_Gradient.png)
 
-
 Figure shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
-
 
 ## 7.3 Decision Tree
 
