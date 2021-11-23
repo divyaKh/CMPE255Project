@@ -17,12 +17,12 @@ header-includes: |
 
 Cyber attacks are one of the biggest threads in this era of digital world. It is very important to combat the network attacks to establish a secure environment for all the users of a network. This project focuses on creating and testing Machine Learning Models over a large dataset of raw network packets to detect network attacks. The dataset used, is created by Cyber Range Lab of UNSW Canberra. The project analyses the performance of different ML models like XGBoost, Random Forest, etc. over the dataset that has been preprocessed using techniques like Dimension Reduction, MinMax Scaling etc. The performance, in terms if Acuracy and F1 score, is studied for each model and the inferences like best working model are derived.
 
-# Introduction
+# 1. Introduction
 The occurrence of cyber security incidents have proliferated in recent years. Almost every year, one or two major information security incidents attract the attention of the world. Numerous studies have already been conducted in the field of cyber security utilizing data mining technologies. Using the UNSW-NB15 Dataset [@7348942], we will predict the network attack that is happening over the network. This dataset has nine types of attacks, namely, Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode and Worms unlike other dataset like KDD-99 dataset which has only four attack types DOS, R2L, U2R, and PROBE. The attack distribution data of UNSW-NB15 is shown in Figure 1.  
 
 ![Figure 1](images/EDA/distribution_pie_chart.png)
 
-# Literature Review:
+# 2. Literature Review
 
 Many datasets have been used for Intrusion detection system like KDD’99. According to 
 A. Divekar et al, “As with KDD-99, certain parameters were found unnecessary. A reduced set of 20 features found by Mean Decrease Impurity was used in this paper.”[@Divekar2018BenchmarkingDF]. Tavallaee et al. [@Tavallaee2009ADA], while proposing an improved NSL-KDD, provided a comprehensive description of the KDD CUP 99's idiosyncrasies”.Tavallaee et al. [@Tavallaee2009ADA] developed NSL-KDD to rectify KDD-99 and overcome its drawbacks. However, it had some drawbacks like non representation of low footprint attacks[@7348942]. A. Divekar et al, have compared and the datasets by applying preprocessing and feature Selection and found that uNSW-NB15 was found to be a modern substitute to  NSL-KDD and KDD CUP 99 dataset.[@Divekar2018BenchmarkingDF]
@@ -31,7 +31,7 @@ A svm based model was implemented by D. Jing and H. Chen.According to the author
 A multi-layer perceptron feed-forward artificial neural network with a single hidden layer was proposed by M. Al-Zewairi et al[@AlZewairi2017ExperimentalEO]. According to the authors, “The evaluation results demonstrate that the proposed classifier outperforms other models in the literature with 98.99% accuracy and 0.56% false alarm rate on unseen data.”[@AlZewairi2017ExperimentalEO]The decision trees was one of the models that was compared with this Artificial neural network.
 
 
-# Exploratory Data Analysis
+# 3. Exploratory Data Analysis
 
 For our work, the UNSW-NB15 dataset contains 257,673 data instances with 49 features. 
 The total classes of this dataset are 10 classes: one is for a *normal* network data (93 000 instances) and nine classes of anomalous network data (attacks classes). 
@@ -45,7 +45,7 @@ In this data set, there are total 9 attack categories of attack and normal is no
 The most occured attack data categories are "*Reconnaissance*", "*Backdoor*", "*DoS*", "*Exploits*" and "*Analysis*". 
 In the **protocol** category, most of the values are consists of udp and tcp. For attacks count of udp is lot higher. The bar plot is shown in Figure 2.
 
-![Figure 2](images/EDA/protocol.png)
+![Figure 3.1](images/EDA/protocol.png)
 
 In **attack** data "dns" is present higher than any other values. There are few no of others and http also. 
 In the **state** category we found the imbalce there are lots of int state for attacks.  
@@ -54,16 +54,16 @@ There are some results worth pointing out. **dload**: destination bits per secon
 For normal data they are distributed all over, has values close to 0 and also very large values. **sbytes**: source to destination bytes, most of normal category values are close to 0. Attack categories has most of its values around 5 in log1p graph. 
 The spread of values is wider in attack compared to normal.  
 
-![Figure 3-1](images/EDA/dload1.png)
+![Figure 3.2.1](images/EDA/dload1.png)
 
-![Figure 3-2](images/EDA/dload2.png)
+![Figure 3.2.2](images/EDA/dload2.png)
 
 To get correlation values for all the features, we plot heatmap of correaltion shown in Figure 4 for better visualization. The most correlated features are: sbytes and sloss, sbytes and sloss, swin and dwin. 
 These features are having very high correlation between them more than 95%.
 Although some features have high correlation between them, some of them is because they share same values, for instance, swin and dwin have correlation values is 99% between them. 
 Even though these 2 columns are numerical but most of their values are only 0 and 255.
 
-![Figure 4](images/EDA/heatmap.png)
+![Figure 3.3](images/EDA/heatmap.png)
 
 
 # Data Preparation
@@ -219,7 +219,7 @@ Random Forest is a classification algorithm is combination of many decision tree
 
 One of the best ways to analysis the performance of a Machine Learning model is studying its ROC curve. In this project, ROC curves for Random Forest was studied with different preprocessing techniques and following were the observations:
 
-The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 1) and F1 score (Fig.2) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
+The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 6.4.1) and F1 score (Figure 6.4.2) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
 
 ![Figure 6.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png)
 
