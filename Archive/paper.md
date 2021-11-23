@@ -101,7 +101,7 @@ Data normalization is done to make the data set cohesive and similar across all 
 The min max normalization is used to transform features to be on a similar scale.
 It reduced the values to the range of [0,1]
  The new point is calculated as :
-<center>  X_new = (X - X_min)/(X_max - X_min) </center> 
+<center>  *X_new = (X - X_min)/(X_max - X_min)* </center> 
 Geometrically speaking, transformation squishes the n-dimensional data into an n-dimensional unit hypercube.
 The Description of the features after applying MinMax scaling:
 
@@ -113,7 +113,7 @@ Figure 5.2.1 shows the description of top 10 features after applying MinMax scal
 
 Standardization or Z-Score Normalization is the transformation of features by subtracting from mean and dividing by standard deviation. This is often called as Z-score.
 The new data points are added as :
-<center> X_new = (X - mean)/Std </center>
+<center> *X_new = (X - mean)/Std* </center>
 Geometrically speaking, it translates the data to the mean vector of original data to the origin and squishes or expands the points if std is 1 respectively.
 
 Standardization does not get affected by outliers because there is no predefined range of transformed features.
