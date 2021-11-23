@@ -94,7 +94,7 @@ Dataset generally contains columns that hold categorical values. This is because
 In this project, both type of encoders were tested for. It is then infered from the results, that one-hot encoding is leading to increase in the feature numbers from 45 to above 200. So, label encoder is the best choice. It is used on the categorical columns like "dtype","proto", "stype".
 
 
-## 4.2 Data Normalization::
+## 4.2 Data Normalization
 
 Data normalization is done to make the data set cohesive and similar across all the fields and columns.In the UNSW-NB15 dataset, if the data normalization is not done it will lead to the suppression of  the effectiveness of an important equally important attribute(on a lower scale because of other attributes having values on a larger scale.
 #4.2.1: MinMax normalization :
@@ -128,9 +128,9 @@ Figure shows the description of top 10 features after applying standard scaler.
 In UNSW-NB15 dataset, the outliers play an important role. The outliers are the datapoints, where the algorithm can predict anomaly. In later sections, we will compare the effects of both kinds of Normalization on the tree based algorithms, with respect to accuracy and F1 score.
 
 
-# 4.3 Dimension Reduction 
+## 4.3 Dimension Reduction 
 
-# Data Modeling
+### Data Modeling
 Machine models needs to be trained on the network packets from the dataset to allow them to detect network attacks. There are different machine learning models available, but for this project, the following four are considered:
 1. XGBoost
 2. GB Gradient
@@ -138,8 +138,8 @@ Machine models needs to be trained on the network packets from the dataset to al
 4. Random Forest
 
 
-# 5. Data Analysis:
-## 5.1 Correlation Analysis -
+# 5. Data Analysis
+## 5.1 Correlation Analysis 
 Correlation feature selection is used for eliminating or dropping columns which have high correlation variance.
 Figure 4 shows the complete visualization of correlation values.
 
@@ -148,25 +148,25 @@ dbytes dloss 0.99710885
 
 After analysing the correlation matrix, sbytes is correlated with sloss by 0.995 and dbytes is correlated with dloss by 0.9971. Since selecting correlation variance as 0.95 will result in loss of most of the data. So to optimize that 0.99 factor is considered. Therefore keeping only one the correlated columns, 'sloss' and 'dloss' columns are dropped.
 
-## 5.2 Principal Component Analysis - 
+## 5.2 Principal Component Analysis 
 Principal Component Analysis, or PCA, is a dimensionality-reduction method that is often used to reduce the dimensionality of large data sets, by transforming a large set of variables into a smaller one that still contains most of the information in the large set. But this dimensionality reduction technique may reduce the accuracy of any model at quite a high rate. The principal component analysis algorithm was applied on the dataset considering the to capture the minimum variance of 99% else considering the less percent will lead to loss of most of the data. After applying PCA, the number of features that are responsible for the detection of 99% of variance has been reduced to 29 from 42 columns
 Figure shows the clustering of the PCA
 
 ![Figure 5.2.1](https://user-images.githubusercontent.com/24936584/142955187-a689b66e-c679-428d-baf9-51226cf88a60.png)
 
 
-# 6. Data Modeling:
+# 6. Data Modeling
 
 Datasets used for modelling:
 
-1)Dataset without any preprocessing(X)
-2)Dataset after applying Standard scaler and PCA(X_ss_pca)
-3)Dataset after applying MinMax scaler(X_mm)
-4)Dataset after applying Standard sclaer(X_ss)
-5)Dataset after applying MinMax scaler and correlation analysis(X_mm_corr)
-6)Dataset after applying Standard scaler and correaltion analysis(X_ss_corr)
+1. Dataset without any preprocessing(X)
+2. Dataset after applying Standard scaler and PCA(X_ss_pca)
+3. Dataset after applying MinMax scaler(X_mm)
+4. Dataset after applying Standard sclaer(X_ss)
+5. Dataset after applying MinMax scaler and correlation analysis(X_mm_corr)
+6. Dataset after applying Standard scaler and correaltion analysis(X_ss_corr)
 
-## 6.1 XGBoost:
+## 6.1 XGBoost
 
 XGBoost, which stands for Extreme Gradient Boosting, is a scalable, distributed gradient-boosted decision tree (GBDT) machine learning library. It provides parallel tree boosting and is the leading machine learning library for regression, classification.
 Extreme Gradient Boosting (xgboost) is similar to the gradient boosting framework but more efficient. It has both linear model solver and tree learning algorithms. So, what makes it fast is its capacity to do parallel computation on a single machine.
@@ -262,57 +262,56 @@ It can be observed accuracy of RF is maximum for three preprocessing techniques 
 It can be observed that with MinMax preprocessing technique, F1 of RF is maximum and with PCA, it is lowest.
 
 
-# Comparisons
-## Without Processing the dataset: 
+# 7. Comparisons
+## Without Processing the dataset:
 The data modeling was done for the data without any processing which gave the following results
  
- ![image](https://user-images.githubusercontent.com/24936584/142974327-42ed9f93-9835-4e99-b881-7ba6ba04dc85.png)
+ ![Figure 7.1](https://user-images.githubusercontent.com/24936584/142974327-42ed9f93-9835-4e99-b881-7ba6ba04dc85.png)
 
  
 For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.6% and lastly for Random forest the accuracy was 93.4%.
 
-## After applying Min-Max Scaler algorithm:
+## After applying Min-Max Scaler algorithm
 The data modeling was done for the dataset which gave the following results
  
- ![image](https://user-images.githubusercontent.com/24936584/142974343-136afe8f-06db-48c9-9dbf-46ef0eb12977.png)
+ ![Figure 7.2](https://user-images.githubusercontent.com/24936584/142974343-136afe8f-06db-48c9-9dbf-46ef0eb12977.png)
 
  
 For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.7% and lastly for Random forest the accuracy was 93.6%.
 
 
-## After applying Min-Max Scaler with Correlation:
+## After applying Min-Max Scaler with Correlation
 The data modeling was done for the dataset which gave the following results
  
- ![image](https://user-images.githubusercontent.com/24936584/142974362-e8fe529e-bb23-401f-b0b6-30c031df3acc.png)
+ ![Figure 7.3](https://user-images.githubusercontent.com/24936584/142974362-e8fe529e-bb23-401f-b0b6-30c031df3acc.png)
 
  
 For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.7% and lastly for Random forest the accuracy was 93.3%.
 
-## After applying Standard Scaler with PCA:
+## After applying Standard Scaler with PCA
 The data modeling was done for the dataset which gave the following results. The accuracy dropped for this processing.
 
-![image](https://user-images.githubusercontent.com/24936584/142974377-659bb010-a752-460a-aa7a-972bd87d79d9.png)
+![Figure 7.4](https://user-images.githubusercontent.com/24936584/142974377-659bb010-a752-460a-aa7a-972bd87d79d9.png)
 
 
 For XG Boost accuracy was 92.9%, for Gradient boost it dropped to 90.6% further for Decision tree it was around 91.3% and lastly for Random forest the accuracy was 90.4%.
 
-## After applying Standard Scaler:
+## After applying Standard Scaler
 The data modeling was done for the dataset which gave the following results.  
 
-![image](https://user-images.githubusercontent.com/24936584/142974398-d704f565-2cb6-47fa-a948-7993adf7ebfc.png)
+![Figure 7.5](https://user-images.githubusercontent.com/24936584/142974398-d704f565-2cb6-47fa-a948-7993adf7ebfc.png)
 
 
 For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.8% and lastly for Random forest the accuracy was 93.4%.
 
-## After applying Standard Scaler with Correlation:
+## After applying Standard Scaler with Correlation
 The data modeling was done for the dataset which gave the following results. 
  
- ![image](https://user-images.githubusercontent.com/24936584/142974439-3efb80ec-180e-47d9-8cc1-a1551d25b24f.png)
+ ![Figure 7.6](https://user-images.githubusercontent.com/24936584/142974439-3efb80ec-180e-47d9-8cc1-a1551d25b24f.png)
  
  
-For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.6% and lastly for Random forest the accuracy was 93.2%.
-
-### The standard scaler processing proved to be the most accurate for all the models with accuracy of 95.1%, 93.3%, 93.8% and 93.4% for XG Boost, Gradient Boost, Decision tree and Random Forest respectively. The main reason is Standard Scaler removes the mean and scales the data to unit variance. It also shrinks the range of feature.
+For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.6% and lastly for Random forest the accuracy was 93.2%.  
+The standard scaler processing proved to be the most accurate for all the models with accuracy of 95.1%, 93.3%, 93.8% and 93.4% for XG Boost, Gradient Boost, Decision tree and Random Forest respectively. The main reason is Standard Scaler removes the mean and scales the data to unit variance. It also shrinks the range of feature.
 
 
 
