@@ -184,14 +184,15 @@ Figure shows a good F1 score for the gradient descent algorithm. Also the model 
 ## 7.3 Decision Tree
 
 A tree can be “learned” by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node all has the same value of the target variable, or when splitting no longer adds value to the predictions. The construction of decision tree classifier does not require any domain knowledge or parameter setting, and therefore is appropriate for exploratory knowledge discovery. 
-The Decision Tree model was applied to the different preprocessed datasets and following results were observed.
+The Decision Tree model was applied to the different preprocessed datasets and the following results were observed.
 
 ![Figure 7.3.1](images/Accuracy_plots/AccuracyDecison_Tree.png). 
-Figure 7.3.1 shows the accuracy of the decison trees on the differnt preprocessed dataset
-It can be observed that with standard scaling preprocessing technique, accuracy of DT is maximum and with PCA, it is lowest.
+Figure 7.3.1 shows the accuracy of the decision trees on the different preprocessed dataset. 
+It can be observed that with Standard Scaling preprocessing technique, the accuracy of DT is maximum, and with PCA, it is lowest.
 
 ![Figure 7.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png). 
-Figure 7.3.2 shows the F1-score of the decison trees on the different preprocessed dataset 
+Figure 7.3.2 shows the F1-score of the decision trees on the different preprocessed dataset. 
+It can be observed that with Standard Scaling preprocessing technique, F1 of DT is maximum, and with PCA, it is lowest.
 
 ## 7.4 Random Forest
 Random Forest is a classification algorithm that is a combination of many decision trees. It is a better classifier than a decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of the Random forest model includes simplicity and good accuracy.
