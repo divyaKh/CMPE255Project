@@ -22,6 +22,13 @@ The occurrence of cyber security incidents have proliferated in recent years. Al
 
 ![Figure 1](images/EDA/distribution_pie_chart.png)
 
+#Literature Review:
+
+Many datasets have been used for Intrusion detection system like KDD’99. According to 
+A. Divekar et al, “As with KDD-99, certain parameters were found unnecessary. A reduced set of 20 features found by Mean Decrease Impurity was used in this paper.”[2]. Tavallaee et al. [3], while proposing an improved NSL-KDD, provided a comprehensive description of the KDD CUP 99's idiosyncrasies”.Tavallaee et al. [3] developed NSL-KDD to rectify KDD-99 and overcome its drawbacks. However, it had some drawbacks like non representation of low footprint attacks[1]. A. Divekar et al, have compared and the datasets by applying preprocessing and feature Selection and found that uNSW-NB15 was found to be a modern substitute to  NSL-KDD and KDD CUP 99 dataset.[2]
+
+A svm based model was implemented by D. Jing and H. Chen.According to the authors”the performance of our method is evaluated through accuracy, detection rate and false positive rate. Compared with other methods, the superiority of the proposed SVM method is shown by the experimental results.”[5].
+A multi-layer perceptron feed-forward artificial neural network with a single hidden layer was proposed by M. Al-Zewairi et al[4]. According to the authors, “The evaluation results demonstrate that the proposed classifier outperforms other models in the literature with 98.99% accuracy and 0.56% false alarm rate on unseen data.”[4]The decision trees was one of the models that was compared with this Artificial neural network.
 
 
 # Exploratory Data Analysis
