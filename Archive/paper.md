@@ -166,7 +166,10 @@ When using boosting techniques all instances in the dataset are assigned a score
 The XGboost model was applied to the different preprocessed dataset. The accuracy of the XGBoost is high when compared to other algorithms. Figure shows that the test accuracy is above 90% for the cases.
 
 Figure :
-!
+![Figure ](./images/Accuracy_plots/AccuracyXGBoost.png)
+
+![Figure ](./images/F1scores_plots_all_models/F1_scoresXGBoost.png)
+
 
 
 Figure shows a good F1 -score, that the model classifies the classes in  test data above 90% accurately.
@@ -177,19 +180,11 @@ Figure:
 
 Area under the curve for ROC is high, if we consider the threshold as 50%. Figure indicates that the models is performing well fo both the classes ie, 0 and 1
 
-XGBoost_plots/
 
-![Figure ](./images/XGBoost/ROC_XGB_NoPreprocessing.png)
+![Figure ](./images/)
 
-![Figure ](./images/XGBoost/ROC_XGB_PCA.png)
 
-![Figure ](./images/XGBoost/ROC_XGB_mm_corr.png)
 
-![Figure ](./images/XGBoost/ROC_XGB_mm.png)
-
-![Figure ](./images/XGBoost/ROC_XGB_ss.png)
-
-![Figure ](./images/XGBoost/ROC_XGB_ss_corr.png)
 
 ## GBGradient
 RandomForest/
