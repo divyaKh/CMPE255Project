@@ -184,13 +184,13 @@ Figure shows a good F1 score for the gradient descent algorithm. Also the model 
 ## 7.3 Decision Tree
 
 A tree can be “learned” by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node all has the same value of the target variable, or when splitting no longer adds value to the predictions. The construction of decision tree classifier does not require any domain knowledge or parameter setting, and therefore is appropriate for exploratory knowledge discovery. 
-The Decsision model was applied to the different preprocessed dataset. The accuracy of the XGBoost is high when compared to other algorithms. Figure shows that the test accuracy is above 90% for the cases.
+The Decision Tree model was applied to the different preprocessed datasets and following results were observed.
 
-![Figure 7.3.1](images/Accuracy_plots/AccuracyDecison_Tree.png)
+![Figure 7.3.1](images/Accuracy_plots/AccuracyDecison_Tree.png). 
 Figure 7.3.1 shows the accuracy of the decison trees on the differnt preprocessed dataset
 It can be observed that with standard scaling preprocessing technique, accuracy of DT is maximum and with PCA, it is lowest.
 
-![Figure 7.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png)
+![Figure 7.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png). 
 Figure 7.3.2 shows the F1-score of the decison trees on the different preprocessed dataset 
 
 ## 7.4 Random Forest
@@ -198,12 +198,12 @@ Random Forest is a classification algorithm is combination of many decision tree
 
 One of the best ways to analysis the performance of a Machine Learning model is studying it accuracy and F1 score. The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 6.4.1) and F1 score (Figure 6.4-.) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
 
-![Figure 7.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png)
+![Figure 7.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png). 
 Figure 6.4.1 shows the F1-score of the decison trees on the different preprocessed dataset 
 
 It can be observed accuracy of RF is maximum for three preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling and Standard Scaling. It is lowest with PCA.
 
-![Figure 7.4.2](images/F1scores_plots_all_models/F1_scoresRandom_Forest.png)
+![Figure 7.4.2](images/F1scores_plots_all_models/F1_scoresRandom_Forest.png). 
 Figure 6.4.2 shows the F1-score of the decison trees on the different preprocessed dataset 
 
 It can be observed that with MinMax preprocessing technique, F1 of RF is maximum and with PCA, it is lowest.
