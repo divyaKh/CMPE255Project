@@ -13,11 +13,11 @@ This repository is the group project for Team-8 in CMPE 255 class at SJSU CMPE d
 
 # Project title: 
 
-Predicting Network Attacks using UNSW-NB15 dataset
+Predicting Network Attacks using UNSW-NB15 dataset. 
 
 ## What data you’ll use and where you’ll get it?
 
-We will be using the UNSW-NB15 dataset.
+We will be using the UNSW-NB15 dataset. The raw network packets of the UNSW-NB 15 dataset was created by the IXIA PerfectStorm tool in the Cyber Range Lab of UNSW Canberra for generating a hybrid of real modern normal activities and synthetic contemporary attack behaviours.
 
 The url to UNSW-NB15  dataset is:
 https://research.unsw.edu.au/projects/unsw-nb15-dataset 
@@ -40,7 +40,11 @@ Source : https://www.researchgate.net/profile/Di-Wu-137/publication/330702257/fi
 
 ## Measuring success?
 
-The success will be measured from the accuracy score of the model. However we will also consider the confusion matrix which lets us know about the False Positives and False negatives.
+The success will be measured from the 
+1. accuracy score of the model. 
+2. confusion matrix which lets us know about the False Positives and False negatives.
+3. F1 score
+4. ROC curve 
 
 
 
