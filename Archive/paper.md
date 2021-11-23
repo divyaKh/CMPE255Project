@@ -160,10 +160,10 @@ When using boosting techniques all instances in the dataset are assigned a score
 The XGboost model was applied to the different preprocessed dataset. Figure shows that the test accuracy is above 90% for the cases.
 
 
-![Figure ](/images/Accuracy_plots/AccuracyXGBoost.png)
+![Figure ](images/Accuracy_plots/AccuracyXGBoost.png)
 Figure 1 shows the accuracy plots for different preprocessed datasets.
 
-![Figure ](/images/F1scores_plots_all_models/F1_scoresXGBoost.png)
+![Figure ](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
 
 Figure shows the F1 scores of the models build from different dataset.
 
@@ -175,7 +175,7 @@ Figure:
 Area under the curve for ROC is high, if we consider the threshold as 50%. Figure indicates that the models is performing well fo both the classes ie, 0 and 1
 
 
-![Figure ](/images/)
+![Figure ](images/)
 
 
 ## 6.2 Gradient Boost
@@ -187,17 +187,17 @@ Gradient boosting is a machine learning technique used in regression and classif
 
 Figure shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
 
-![Figure ](/images/GB_Gradient_plots/GB_GradientX.png)
+![Figure ](images/GB_Gradient_plots/GB_GradientX.png)
 
-![Figure ](/images/GB_Gradient_plots/GB_GradientX_mm.png)
+![Figure ](images/GB_Gradient_plots/GB_GradientX_mm.png)
 
-![Figure ](/images/GB_Gradient_plots/GB_GradientX_mm_corr.png)
+![Figure ](images/GB_Gradient_plots/GB_GradientX_mm_corr.png)
 
-![Figure ](/images/GB_Gradient_plots/GB_GradientX_pca.png)
+![Figure ](images/GB_Gradient_plots/GB_GradientX_pca.png)
 
-![Figure ](/images/GB_Gradient_plots/GB_GradientX_ss.png)
+![Figure ](images/GB_Gradient_plots/GB_GradientX_ss.png)
 
-![Figure ](/images/GB_Gradient_plots/GB_GradientX_ss_cor.png)
+![Figure ](images/GB_Gradient_plots/GB_GradientX_ss_corr.png)
 
 ## Decision Tree
 
@@ -205,11 +205,11 @@ A tree can be “learned” by splitting the source set into subsets based on an
 The Decsision model was applied to the different preprocessed dataset. The accuracy of the XGBoost is high when compared to other algorithms. Figure shows that the test accuracy is above 90% for the cases.
 
 
-![Figure ](/images/Accuracy_plots/AccuracyDecisionTrees.png)
+![Figure ](images/Accuracy_plots/AccuracyDecison_Tree.png)
 
 Figure shows the accuracy of the decison trees on the differnt preprocessed dataset
 
-![Figure ](/images/F1scores_plots_all_models/F1_scores_DecisonTree.png)
+![Figure ](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png)
 Figure shows the F1-score of the decison trees on the different preprocessed dataset 
 
 The ROC curve shows a high accuracy:
@@ -221,9 +221,9 @@ One of the best ways to analysis the performance of a Machine Learning model is 
 
 The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 1) and F1 score (Fig.2) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
 
-![Figure 6.4.1](/images/Random_Forest_plots/AccuracyRandom_Forest.png)
+![Figure 6.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png)
 
-![Figure 6.4.2](/images/Random_Forest_plots/F1_scoresRandom_Forest.png)
+![Figure 6.4.2](images/F1scores_plots_all_models/F1_scoresRandom_Forest.png)
 
 
 
