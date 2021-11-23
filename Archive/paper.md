@@ -133,6 +133,24 @@ Machine models needs to be trained on the network packets from the dataset to al
 3. Decision Tree
 4. Random Forest
 
+
+# 5. Data Analysis:
+## 5.1 Correlation Analysis -
+Correlation feature selection is used for eliminating or dropping columns which have high correlation variance.
+Figure 4 shows the complete visualization of correlation values.
+
+sbytes sloss 0.995027191
+dbytes dloss 0.99710885
+
+After analysing the correlation matrix, sbytes is correlated with sloss by 0.995 and dbytes is correlated with dloss by 0.9971. Since selecting correlation variance as 0.95 will result in loss of most of the data. So to optimize that 0.99 factor is considered. Therefore keeping only one the correlated columns, 'sloss' and 'dloss' columns are dropped.
+
+## 5.2 Principal Component Analysis - 
+Principal Component Analysis, or PCA, is a dimensionality-reduction method that is often used to reduce the dimensionality of large data sets, by transforming a large set of variables into a smaller one that still contains most of the information in the large set. But this dimensionality reduction technique may reduce the accuracy of any model at quite a high rate. The principal component analysis algorithm was applied on the dataset considering the to capture the minimum variance of 99% else considering the less percent will lead to loss of most of the data. After applying PCA, the number of features that are responsible for the detection of 99% of variance has been reduced to 29 from 42 columns
+Figure shows the clustering of the PCA
+
+![image](https://user-images.githubusercontent.com/24936584/142955187-a689b66e-c679-428d-baf9-51226cf88a60.png)
+
+
 ## XGBoost
 6.1:XGBoost:
 XGBoost, which stands for Extreme Gradient Boosting, is a scalable, distributed gradient-boosted decision tree (GBDT) machine learning library. It provides parallel tree boosting and is the leading machine learning library for regression, classification.
