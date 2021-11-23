@@ -43,14 +43,14 @@ We perfomed 3 kinds of exploratory data analysis on the UNSW-NB15 dataset,
 namely countplot or barplot for all categorial or columns with small number of unique values, plot PDF for numerical features, and Correlation of the features and its heatmap.  
 In this data set, there are total 9 attack categories of attack and normal is non-attack. The data is highly imbalanced and have lots of non-attack than attacks.
 The most occured attack data categories are "*Reconnaissance*", "*Backdoor*", "*DoS*", "*Exploits*" and "*Analysis*". 
-In the **protocol** category, most of the values are consists of udp and tcp. For attacks count of udp is lot higher. The bar plot is shown in Figure 2.
+In the **protocol** category, most of the values are consists of udp and tcp. For attacks count of udp is lot higher. The bar plot is shown in Figure 3.1.
 
 ![Figure 3.1](images/EDA/protocol.png)
 
 In **attack** data "dns" is present higher than any other values. There are few no of others and http also. 
 In the **state** category we found the imbalce there are lots of int state for attacks.  
 For numerical features, we plot PDF. For better visualization, we also used log scale. 
-There are some results worth pointing out. **dload**: destination bits per second, in Figure 3-1 and 3-2, for attack data all the values are very close to 0. 
+There are some results worth pointing out. **dload**: destination bits per second, in Figure 3.2.1 and 3.2.2, for attack data all the values are very close to 0. 
 For normal data they are distributed all over, has values close to 0 and also very large values. **sbytes**: source to destination bytes, most of normal category values are close to 0. Attack categories has most of its values around 5 in log1p graph. 
 The spread of values is wider in attack compared to normal.  
 
@@ -58,7 +58,7 @@ The spread of values is wider in attack compared to normal.
 
 ![Figure 3.2.2](images/EDA/dload2.png)
 
-To get correlation values for all the features, we plot heatmap of correaltion shown in Figure 4 for better visualization. The most correlated features are: sbytes and sloss, sbytes and sloss, swin and dwin. 
+To get correlation values for all the features, we plot heatmap of correaltion shown in Figure 3.3 for better visualization. The most correlated features are: sbytes and sloss, sbytes and sloss, swin and dwin. 
 These features are having very high correlation between them more than 95%.
 Although some features have high correlation between them, some of them is because they share same values, for instance, swin and dwin have correlation values is 99% between them. 
 Even though these 2 columns are numerical but most of their values are only 0 and 255.
