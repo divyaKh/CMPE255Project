@@ -108,7 +108,7 @@ The Description of the features after applying MinMax scaling:
 
 Figure shows the description of top 10 features after applying MinMax scaler.
 
-#4.2.2: Z-Score Normalization:
+### 4.2.2: Z-Score Normalization:
 
 
 Standardization or Z-Score Normalization is the transformation of features by subtracting from mean and dividing by standard deviation. This is often called as Z-score.
