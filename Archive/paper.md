@@ -133,10 +133,10 @@ Figure 3.3 shows the complete visualization of correlation values.
 sbytes sloss 0.995027191
 dbytes dloss 0.99710885
 
-After analysing the correlation matrix, sbytes is correlated with sloss by 0.995 and dbytes is correlated with dloss by 0.9971. Since selecting correlation variance as 0.95 will result in loss of most of the data. So to optimize that 0.99 factor is considered. Therefore keeping only one the correlated columns, 'sloss' and 'dloss' columns are dropped.
+After analysing the correlation matrix, sbytes is correlated with sloss by 0.995 and dbytes is correlated with dloss by 0.9971. Since selecting correlation variance as 0.95 will result in loss of most of the data. So to optimize that 0.99 factor is considered. Therefore keeping only one of the correlated columns, 'sloss' and 'dloss' columns are dropped.
 
 ## 6.2 Principal Component Analysis 
-Principal Component Analysis, or PCA, is a dimensionality-reduction method that is often used to reduce the dimensionality of large data sets, by transforming a large set of variables into a smaller one that still contains most of the information in the large set. But this dimensionality reduction technique may reduce the accuracy of any model at quite a high rate. The principal component analysis algorithm was applied on the dataset considering the to capture the minimum variance of 99% else considering the less percent will lead to loss of most of the data. After applying PCA, the number of features that are responsible for the detection of 99% of variance has been reduced to 29 from 42 columns
+Principal Component Analysis, or PCA, is a dimensionality-reduction method that is often used to reduce the dimensionality of large data sets, by transforming a large set of variables into a smaller one that still contains most of the information in the large set. But this dimensionality reduction technique may reduce the accuracy of any model at quite a high rate. The principal component analysis algorithm was applied on the dataset considering the to capture the minimum variance of 99%. After applying PCA, the number of features that are responsible for the detection of 99% of variance has been reduced to 29 from 42 columns.
 Figure shows the clustering of the PCA
 
 ![Figure 6.2.1](https://user-images.githubusercontent.com/24936584/142955187-a689b66e-c679-428d-baf9-51226cf88a60.png)
@@ -170,7 +170,8 @@ The XGboost model was applied to the different preprocessed dataset. Figure show
 Figure 7.1.1 shows the accuracy plots for different preprocessed datasets.
 
 ![Figure 7.1.2](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
-Figure 7.1.2 shows the F1 scores of the models build from different dataset.
+Figure 7.1.2 shows the F1 scores of the models build from different preprocessed datasets.
+Dataset with MinMax scaler has the highest accuracy and F1 score. Dataset with PCA applied has lower accuracy, because PCA might cause some dataset information to lose.
 
 ## 7.2 Gradient Boost
 Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function. All the trees are connected in series and each tree tries to minimise the error of the previous tree. Due to this sequential connection, the gradient boost algorithm is usually slow to learn, but also highly accurate.
@@ -194,6 +195,8 @@ It can be observed that with Standard Scaling preprocessing technique, the accur
 Figure 7.3.2 shows the F1-score of the decision trees on the different preprocessed dataset. 
 It can be observed that with Standard Scaling preprocessing technique, F1 of DT is maximum, and with PCA, it is lowest.
 
+The accuracy and F1 scores are high for the dataset with standard scaler on the model. Model fitted with dataset with Minmax scaling has similar performance to the model fitted with dataset that has MinMax scaling applied and feature pruning on basis of correlation.
+
 ## 7.4 Random Forest
 Random Forest is a classification algorithm that is a combination of many decision trees. It is a better classifier than a decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of the Random forest model includes simplicity and good accuracy.
 One of the best ways to analyze the performance of a Machine Learning model is by studying its accuracy and F1 score. The accuracy and F1 score of the Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 6.4.1) and F1 score (Figure 6.4-.) given by Random Forest are better than most of the other models that the testing is performed. This can be inferred from this that Random Forest predicts more accurate results here. 
@@ -207,7 +210,6 @@ It can be observed accuracy of RF is maximum for three preprocessing techniques 
 Figure 7.4.2 shows the F1-score of the decision trees on the different preprocessed dataset 
 
 It can be observed that with MinMax preprocessing technique, F1 of RF is maximum, and with PCA, it is lowest.
-
 
 # 8. Comparisons
 ## 8.1 Without Processing the dataset
@@ -259,10 +261,6 @@ The data modeling was done for the dataset which gave the following results show
  
 For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.6% and lastly for Random forest the accuracy was 93.2%.  
 The standard scaler processing proved to be the most accurate for all the models with accuracy of 95.1%, 93.3%, 93.8% and 93.4% for XG Boost, Gradient Boost, Decision tree and Random Forest respectively. The main reason is Standard Scaler removes the mean and scales the data to unit variance. It also shrinks the range of feature.
-
-
-
-# Example Analysis
 
 # Conclusions
 
