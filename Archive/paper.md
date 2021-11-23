@@ -181,23 +181,23 @@ Area under the curve for ROC is high, if we consider the threshold as 50%. Figur
 ## 6.2 Gradient Boost
 Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function. All the trees are connected in series and each tree tries to minimise the error of the previous tree. Due to this sequential connection, the gradient boost algorithm is usually slow to learn, but also highly accurate.
 
+![Figure 6.2.1](https://user-images.githubusercontent.com/24936584/142963987-3707f5be-692e-4d15-a20d-9dd175ff7392.png)
 
-![image](/Archive/images/GB_Gradient_plots/GB_GradientX.png)
-
+![Figure 6.2.2](https://user-images.githubusercontent.com/24936584/142963995-b758dcec-e66e-423c-bf1d-2646f2c1fa53.png)
 
 Figure shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
 
-![image](/Archive/images/GB_Gradient_plots/GB_GradientX.png)
+![Figure 6.2.3](images/GB_Gradient_plots/GB_GradientX.png)
 
-![image](/Archive/images/GB_Gradient_plots/GB_GradientX_mm.png)
+![Figure 6.2.4](images/GB_Gradient_plots/GB_GradientX_mm.png)
 
-![image](/Archive/images/GB_Gradient_plots/GB_GradientX_mm_corr.png)
+![Figure 6.2.5](images/GB_Gradient_plots/GB_GradientX_mm_corr.png)
 
-![image](/Archive/images/GB_Gradient_plots/GB_GradientX_pca.png)
+![Figure 6.2.6](images/GB_Gradient_plots/GB_GradientX_pca.png)
 
-![image](/Archive/images/GB_Gradient_plots/GB_GradientX_ss.png)
+![Figure 6.2.7](images/GB_Gradient_plots/GB_GradientX_ss.png)
 
-![image](/Archive/images/GB_Gradient_plots/GB_GradientX_ss_corr.png)
+![Figure 6.2.8](images/GB_Gradient_plots/GB_GradientX_ss_corr.png)
 
 ## 6.3 Decision Tree
 
@@ -217,7 +217,7 @@ The ROC curve shows a high accuracy:
 ## 6.4 Random Forest
 Random Forest is a classification algorithm is combination of many decision trees. It is a better classifier than decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of Random forest model include simplicity and good accuracy.
 
-One of the best ways to analysis the performance of a Machine Learning model is studying it accuracy and F1 score. The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 6-4-1) and F1 score (Figure 6-4-2) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
+One of the best ways to analysis the performance of a Machine Learning model is studying it accuracy and F1 score. The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 6.4.1) and F1 score (Figure 6.4-.) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
 
 ![Figure 6.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png)
 
