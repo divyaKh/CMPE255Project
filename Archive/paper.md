@@ -204,11 +204,11 @@ A tree can be “learned” by splitting the source set into subsets based on an
 The Decsision model was applied to the different preprocessed dataset. The accuracy of the XGBoost is high when compared to other algorithms. Figure shows that the test accuracy is above 90% for the cases.
 
 ![Figure 6.3.1](images/Accuracy_plots/AccuracyDecison_Tree.png)
-Figure shows the accuracy of the decison trees on the differnt preprocessed dataset
+Figure 6.3.1 shows the accuracy of the decison trees on the differnt preprocessed dataset
 It can be observed that with standard scaling preprocessing technique, accuracy of DT is maximum and with PCA, it is lowest.
 
 ![Figure 6.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png)
-Figure shows the F1-score of the decison trees on the different preprocessed dataset 
+Figure 6.3.2 shows the F1-score of the decison trees on the different preprocessed dataset 
 
 ## 6.4 Random Forest
 Random Forest is a classification algorithm is combination of many decision trees. It is a better classifier than decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of Random forest model include simplicity and good accuracy.
@@ -216,15 +216,15 @@ Random Forest is a classification algorithm is combination of many decision tree
 One of the best ways to analysis the performance of a Machine Learning model is studying it accuracy and F1 score. The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 6.4.1) and F1 score (Figure 6.4-.) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
 
 ![Figure 6.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png)
-It can be observed accuracy of RF is maximum for three preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling and Standard Scaling. It is lowest with PCA.
+Figure 6.4.1 It can be observed accuracy of RF is maximum for three preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling and Standard Scaling. It is lowest with PCA.
 
 ![Figure 6.4.2](images/F1scores_plots_all_models/F1_scoresRandom_Forest.png)
-It can be observed that with MinMax preprocessing technique, F1 of RF is maximum and with PCA, it is lowest.
+Figure 6.4.2 It can be observed that with MinMax preprocessing technique, F1 of RF is maximum and with PCA, it is lowest.
 
 
 # 7. Comparisons
 ## Without Processing the dataset
-The data modeling was done for the data without any processing which gave the following results
+The data modeling was done for the data without any processing which gave the following results shown in Figure 7.1.
  
  ![Figure 7.1](https://user-images.githubusercontent.com/24936584/142974327-42ed9f93-9835-4e99-b881-7ba6ba04dc85.png)
 
@@ -232,7 +232,7 @@ The data modeling was done for the data without any processing which gave the fo
 For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.6% and lastly for Random forest the accuracy was 93.4%.
 
 ## After applying Min-Max Scaler algorithm
-The data modeling was done for the dataset which gave the following results
+The data modeling was done for the dataset which gave the following results shown in Figure 7.2.
  
  ![Figure 7.2](https://user-images.githubusercontent.com/24936584/142974343-136afe8f-06db-48c9-9dbf-46ef0eb12977.png)
 
@@ -241,7 +241,7 @@ For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further 
 
 
 ## After applying Min-Max Scaler with Correlation
-The data modeling was done for the dataset which gave the following results
+The data modeling was done for the dataset which gave the following results shown in Figure 7.3.
  
  ![Figure 7.3](https://user-images.githubusercontent.com/24936584/142974362-e8fe529e-bb23-401f-b0b6-30c031df3acc.png)
 
@@ -249,7 +249,7 @@ The data modeling was done for the dataset which gave the following results
 For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.7% and lastly for Random forest the accuracy was 93.3%.
 
 ## After applying Standard Scaler with PCA
-The data modeling was done for the dataset which gave the following results. The accuracy dropped for this processing.
+The data modeling was done for the dataset which gave the following results shown in Figure 7.4. The accuracy dropped for this processing.
 
 ![Figure 7.4](https://user-images.githubusercontent.com/24936584/142974377-659bb010-a752-460a-aa7a-972bd87d79d9.png)
 
@@ -257,7 +257,7 @@ The data modeling was done for the dataset which gave the following results. The
 For XG Boost accuracy was 92.9%, for Gradient boost it dropped to 90.6% further for Decision tree it was around 91.3% and lastly for Random forest the accuracy was 90.4%.
 
 ## After applying Standard Scaler
-The data modeling was done for the dataset which gave the following results.  
+The data modeling was done for the dataset which gave the following results shown in Figure 7.5.  
 
 ![Figure 7.5](https://user-images.githubusercontent.com/24936584/142974398-d704f565-2cb6-47fa-a948-7993adf7ebfc.png)
 
@@ -265,7 +265,7 @@ The data modeling was done for the dataset which gave the following results.
 For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.8% and lastly for Random forest the accuracy was 93.4%.
 
 ## After applying Standard Scaler with Correlation
-The data modeling was done for the dataset which gave the following results. 
+The data modeling was done for the dataset which gave the following results shown in Figure 7.6. 
  
  ![Figure 7.6](https://user-images.githubusercontent.com/24936584/142974439-3efb80ec-180e-47d9-8cc1-a1551d25b24f.png)
  
