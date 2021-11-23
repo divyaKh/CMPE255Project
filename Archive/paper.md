@@ -66,7 +66,7 @@ Even though these 2 columns are numerical but most of their values are only 0 an
 ![Figure 3.3](images/EDA/heatmap.png)
 
 
-# Data Preparation
+# 3. Data Preparation
 Large data that is to be studied and worked upon is often raw and needs cleaning. Data is cleaned for errors like missing values, incorrect values, unnecessary and duplicate data etc. Therefore, data cleaning is the first step that is performed before working ahead with any dataset. In this project, following are the basic data preparation steps that have been performed:
 
 1. Dropping unnecessary columns: The columns that add no information to the dataset are dropped so that number of features to work with are reduced.
