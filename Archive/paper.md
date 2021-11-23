@@ -185,24 +185,24 @@ Figure shows the F1 scores of the models build from different dataset.
 Here are the different ROC scores on the different preprocessed data :
 
 
-![Figure ](./images/XGBoost_plots/XGBoostX_mm.png)
+![Figure 6.1.3](images/XGBoost_plots/XGBoostX_mm.png)
 ROC curve for XGBoost with Minmax scaling
 
-![Figure ](./images/XGBoost_plots/XGBoostX.png)
+![Figure 6.1.4](images/XGBoost_plots/XGBoostX.png)
 ROC curve for XGBoost without any preprocessed data.
 
-![Figure ](./images/XGBoost_plots/XGBoostX_mm_corr.png)
+![Figure 6.1.5](images/XGBoost_plots/XGBoostX_mm_corr.png)
 ROC curve for XGBoost with Minmax scaling and correlation analysis.
 
-![Figure ](./images/XGBoost_plots/XGBoostX_ss.png)
+![Figure 6.1.6](images/XGBoost_plots/XGBoostX_ss.png)
 ROC curve for XGBoost with standard scaling
 
-![Figure ](./images/XGBoost_plots/XGBoostX_ss_corr.png)
+![Figure 6.1.7](images/XGBoost_plots/XGBoostX_ss_corr.png)
 
 ROC curve for XGBoost after applying standard scaling and correlation analysis
 
 
-![Figure ](./images/XGBoost_plots/XGBoostX_ss_pca.png)
+![Figure 6.1.8](images/XGBoost_plots/XGBoostX_pca.png)
 
 ROC curve for XGBoost after applying standard scaling and PCA.
 
@@ -248,29 +248,6 @@ Figure shows the accuracy of the decison trees on the differnt preprocessed data
 
 ![Figure 6.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png)
 Figure shows the F1-score of the decison trees on the different preprocessed dataset 
-
-ROC curves on the different preprocessed datasets.
-
-![Figure ](./images/DecisionTree_plots/Decision_TreeX_mm.png)
-
-ROC curve for Decision Trees with any minmax scaling.
-
-![Figure ](./images/DecisionTree_plots/Decision_TreeX_mm.png)
-ROC curve for Decision trees without any preprocessed data.
-
-![Figure ](./images/DecisionTree_plots/Decision_TreeX_mm_corr.png)
-ROC curve for Decision trees with Minmax scaling and correlation analysis.
-
-![Figure ](./images/DecisionTree_plots/Decision_TreeX_ss.png)
-ROC curve for Decision trees with standard scaling
-
-![Figure ](./images/DecisionTree_plots/Decision_TreeX_ss_corr.png)
-
-ROC curve for Decision trees after applying standard scaling and correlation analysis
-
-![Figure ](./images/DecisionTree_plots/Decision_TreeX_ss_pca.png)
-
-ROC curve for Decision trees after applying standard scaling and PCA.
 
 
 ## 6.4 Random Forest
