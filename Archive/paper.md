@@ -127,7 +127,7 @@ In UNSW-NB15 dataset, the outliers play an important role. The outliers are the 
 # 6. Data Analysis
 ## 6.1 Correlation Analysis 
 Correlation feature selection is used for eliminating or dropping columns which have high correlation variance.
-Figure 4 shows the complete visualization of correlation values.
+Figure 3.3 shows the complete visualization of correlation values.
 
 sbytes sloss 0.995027191
 dbytes dloss 0.99710885
@@ -199,12 +199,12 @@ Random Forest is a classification algorithm is combination of many decision tree
 One of the best ways to analysis the performance of a Machine Learning model is studying it accuracy and F1 score. The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 6.4.1) and F1 score (Figure 6.4-.) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
 
 ![Figure 7.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png). 
-Figure 6.4.1 shows the F1-score of the decison trees on the different preprocessed dataset 
+Figure 7.4.1 shows the F1-score of the decison trees on the different preprocessed dataset 
 
 It can be observed accuracy of RF is maximum for three preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling and Standard Scaling. It is lowest with PCA.
 
 ![Figure 7.4.2](images/F1scores_plots_all_models/F1_scoresRandom_Forest.png). 
-Figure 6.4.2 shows the F1-score of the decison trees on the different preprocessed dataset 
+Figure 7.4.2 shows the F1-score of the decison trees on the different preprocessed dataset 
 
 It can be observed that with MinMax preprocessing technique, F1 of RF is maximum and with PCA, it is lowest.
 
