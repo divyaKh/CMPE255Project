@@ -106,9 +106,8 @@ It reduced the values to the range of [0,1]
 Geometrically speaking, transformation squishes the n-dimensional data into an n-dimensional unit hypercube.
 The Description of the features after applying MinMax scaling:
 
-[Figure 5.2.1](images/Figure_minmax.png)
-
-Figure shows the description of top 10 features after applying MinMax scaler.
+![Figure 5.2.1](images/Figure_minmax.png)
+Figure 5.2.1 shows the description of top 10 features after applying MinMax scaler.
 
 ### 5.2.2: Z-Score Normalization
 
@@ -121,10 +120,8 @@ Geometrically speaking, it translates the data to the mean vector of original da
 
 Standardization does not get affected by outliers because there is no predefined range of transformed features.
 
-[Figure 5.2.2](images/Figure_standard.png)
-
-
-Figure shows the description of top 10 features after applying standard scaler.
+![Figure 5.2.2](images/Figure_standard.png)
+Figure 5.2.2 shows the description of top 10 features after applying standard scaler.
 
 
 In UNSW-NB15 dataset, the outliers play an important role. The outliers are the datapoints, where the algorithm can predict anomaly. In later sections, we will compare the effects of both kinds of Normalization on the tree based algorithms, with respect to accuracy and F1 score.
