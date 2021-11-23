@@ -223,7 +223,7 @@ It can be observed that with MinMax preprocessing technique, F1 of RF is maximum
 
 
 # 7. Comparisons
-## Without Processing the dataset:
+## Without Processing the dataset
 The data modeling was done for the data without any processing which gave the following results
  
  ![Figure 7.1](https://user-images.githubusercontent.com/24936584/142974327-42ed9f93-9835-4e99-b881-7ba6ba04dc85.png)
