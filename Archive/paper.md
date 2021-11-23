@@ -66,7 +66,7 @@ Even though these 2 columns are numerical but most of their values are only 0 an
 ![Figure 3.3](images/EDA/heatmap.png)
 
 
-# 3. Data Preparation
+# 4. Data Preparation
 Large data that is to be studied and worked upon is often raw and needs cleaning. Data is cleaned for errors like missing values, incorrect values, unnecessary and duplicate data etc. Therefore, data cleaning is the first step that is performed before working ahead with any dataset. In this project, following are the basic data preparation steps that have been performed:
 
 1. Dropping unnecessary columns: The columns that add no information to the dataset are dropped so that number of features to work with are reduced.
@@ -81,10 +81,10 @@ In this project, since input dataset did not contain any missing values, this st
 
 3. Incorrect values: There could some invalid entries into a feature that are not of the expected datatype of that feature. These values need to be corrected. In this project, few columns like "is_ftp_login" and "is_sm_ips_ports" that expected binary input contained non binary value. This is corrected to get non-erroneous results. 
 
-# 4. Data Pre-Processing
+# 5. Data Pre-Processing
 Data pre-preocessing is performed in order to generate a dataset that aids Machine Learning to predict more accurate results. Following data preprocessing steps have been performed in this project:
 
-## 4.1 Encoding: 
+## 5.1 Encoding: 
 Dataset generally contains columns that hold categorical values. This is because categorical values are more decriptive that numerical values. But ML models cannot work with any non-numerical values. So, prior to feed data to Machine Learning model, encoding is performed. There are two types of encodings that are ususally performed:
 
 1. Label Encoding: It is a simple technique to assign numbers to different categorical values. But it is generally misinterpreted by algorithms as having some sort of hierarchy/order.
@@ -94,21 +94,23 @@ Dataset generally contains columns that hold categorical values. This is because
 In this project, both type of encoders were tested for. It is then infered from the results, that one-hot encoding is leading to increase in the feature numbers from 45 to above 200. So, label encoder is the best choice. It is used on the categorical columns like "dtype","proto", "stype".
 
 
-## 4.2 Data Normalization
+## 5.2 Data Normalization
 
 Data normalization is done to make the data set cohesive and similar across all the fields and columns.In the UNSW-NB15 dataset, if the data normalization is not done it will lead to the suppression of  the effectiveness of an important equally important attribute(on a lower scale because of other attributes having values on a larger scale.
-#4.2.1: MinMax normalization :
+
+### 5.2.1: MinMax normalization
 The min max normalization is used to transform features to be on a similar scale.
 It reduced the values to the range of [0,1]
  The new point is calculated as :
                                 X_new = (X - X_min)/(X_max - X_min)
 Geometrically speaking, transformation squishes the n-dimensional data into an n-dimensional unit hypercube.
 The Description of the features after applying MinMax scaling:
-[Figure ](images/Figure_minmax.png)
+
+[Figure 5.2.1](images/Figure_minmax.png)
 
 Figure shows the description of top 10 features after applying MinMax scaler.
 
-### 4.2.2: Z-Score Normalization:
+### 5.2.2: Z-Score Normalization
 
 
 Standardization or Z-Score Normalization is the transformation of features by subtracting from mean and dividing by standard deviation. This is often called as Z-score.
@@ -119,7 +121,7 @@ Geometrically speaking, it translates the data to the mean vector of original da
 
 Standardization does not get affected by outliers because there is no predefined range of transformed features.
 
-[Figure ](images/Figure_standard.png)
+[Figure 5.2.2](images/Figure_standard.png)
 
 
 Figure shows the description of top 10 features after applying standard scaler.
@@ -128,7 +130,7 @@ Figure shows the description of top 10 features after applying standard scaler.
 In UNSW-NB15 dataset, the outliers play an important role. The outliers are the datapoints, where the algorithm can predict anomaly. In later sections, we will compare the effects of both kinds of Normalization on the tree based algorithms, with respect to accuracy and F1 score.
 
 
-## 4.3 Dimension Reduction 
+## 5.3 Dimension Reduction 
 
 ### Data Modeling
 Machine models needs to be trained on the network packets from the dataset to allow them to detect network attacks. There are different machine learning models available, but for this project, the following four are considered:
@@ -138,8 +140,8 @@ Machine models needs to be trained on the network packets from the dataset to al
 4. Random Forest
 
 
-# 5. Data Analysis
-## 5.1 Correlation Analysis 
+# 6. Data Analysis
+## 6.1 Correlation Analysis 
 Correlation feature selection is used for eliminating or dropping columns which have high correlation variance.
 Figure 4 shows the complete visualization of correlation values.
 
@@ -148,14 +150,14 @@ dbytes dloss 0.99710885
 
 After analysing the correlation matrix, sbytes is correlated with sloss by 0.995 and dbytes is correlated with dloss by 0.9971. Since selecting correlation variance as 0.95 will result in loss of most of the data. So to optimize that 0.99 factor is considered. Therefore keeping only one the correlated columns, 'sloss' and 'dloss' columns are dropped.
 
-## 5.2 Principal Component Analysis 
+## 6.2 Principal Component Analysis 
 Principal Component Analysis, or PCA, is a dimensionality-reduction method that is often used to reduce the dimensionality of large data sets, by transforming a large set of variables into a smaller one that still contains most of the information in the large set. But this dimensionality reduction technique may reduce the accuracy of any model at quite a high rate. The principal component analysis algorithm was applied on the dataset considering the to capture the minimum variance of 99% else considering the less percent will lead to loss of most of the data. After applying PCA, the number of features that are responsible for the detection of 99% of variance has been reduced to 29 from 42 columns
 Figure shows the clustering of the PCA
 
-![Figure 5.2.1](https://user-images.githubusercontent.com/24936584/142955187-a689b66e-c679-428d-baf9-51226cf88a60.png)
+![Figure 6.2.1](https://user-images.githubusercontent.com/24936584/142955187-a689b66e-c679-428d-baf9-51226cf88a60.png)
 
 
-# 6. Data Modeling
+# 7. Data Modeling
 
 Machine models needs to be trained on the network packets from the dataset to allow them to detect network attacks. There are different machine learning models available, but for this project, the following four are considered:
 1. XGBoost
@@ -172,7 +174,7 @@ Datasets used for modelling:
 5. Dataset after applying MinMax scaler and correlation analysis(X_mm_corr)
 6. Dataset after applying Standard scaler and correaltion analysis(X_ss_corr)
 
-## 6.1 XGBoost
+## 7.1 XGBoost
 
 XGBoost, which stands for Extreme Gradient Boosting, is a scalable, distributed gradient-boosted decision tree (GBDT) machine learning library. It provides parallel tree boosting and is the leading machine learning library for regression, classification.
 Extreme Gradient Boosting (xgboost) is similar to the gradient boosting framework but more efficient. It has both linear model solver and tree learning algorithms. So, what makes it fast is its capacity to do parallel computation on a single machine.
@@ -180,100 +182,100 @@ When using boosting techniques all instances in the dataset are assigned a score
 The XGboost model was applied to the different preprocessed dataset. Figure shows that the test accuracy is above 90% for the cases.
 
 
-![Figure 6.1.1](images/Accuracy_plots/AccuracyXGBoost.png)
+![Figure 7.1.1](images/Accuracy_plots/AccuracyXGBoost.png)
 Figure 6.1.1 shows the accuracy plots for different preprocessed datasets.
 
-![Figure 6.1.2](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
+![Figure 7.1.2](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
 
 Figure shows the F1 scores of the models build from different dataset.
 
-## 6.2 Gradient Boost
+## 7.2 Gradient Boost
 Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function. All the trees are connected in series and each tree tries to minimise the error of the previous tree. Due to this sequential connection, the gradient boost algorithm is usually slow to learn, but also highly accurate.
 
-![Figure 6.2.1](https://user-images.githubusercontent.com/24936584/142963987-3707f5be-692e-4d15-a20d-9dd175ff7392.png)
+![Figure 7.2.1](https://user-images.githubusercontent.com/24936584/142963987-3707f5be-692e-4d15-a20d-9dd175ff7392.png)
 
-![Figure 6.2.2](https://user-images.githubusercontent.com/24936584/142963995-b758dcec-e66e-423c-bf1d-2646f2c1fa53.png)
-
-
-![image](images/Accuracy_plots/AccuracyGB_Gradient.png)
+![Figure 7.2.2](https://user-images.githubusercontent.com/24936584/142963995-b758dcec-e66e-423c-bf1d-2646f2c1fa53.png)
 
 
-![image](images/F1scores_plots_all_models/F1_scoresGB_Gradient.png)
+![Figure 7.2.3](images/Accuracy_plots/AccuracyGB_Gradient.png)
+
+
+![Figure 7.2.3](images/F1scores_plots_all_models/F1_scoresGB_Gradient.png)
 
 
 Figure shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
 
 
-## 6.3 Decision Tree
+## 7.3 Decision Tree
 
 A tree can be “learned” by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node all has the same value of the target variable, or when splitting no longer adds value to the predictions. The construction of decision tree classifier does not require any domain knowledge or parameter setting, and therefore is appropriate for exploratory knowledge discovery. 
 The Decsision model was applied to the different preprocessed dataset. The accuracy of the XGBoost is high when compared to other algorithms. Figure shows that the test accuracy is above 90% for the cases.
 
-![Figure 6.3.1](images/Accuracy_plots/AccuracyDecison_Tree.png)
-Figure 6.3.1 shows the accuracy of the decison trees on the differnt preprocessed dataset
+![Figure 7.3.1](images/Accuracy_plots/AccuracyDecison_Tree.png)
+Figure 7.3.1 shows the accuracy of the decison trees on the differnt preprocessed dataset
 It can be observed that with standard scaling preprocessing technique, accuracy of DT is maximum and with PCA, it is lowest.
 
-![Figure 6.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png)
-Figure 6.3.2 shows the F1-score of the decison trees on the different preprocessed dataset 
+![Figure 7.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png)
+Figure 7.3.2 shows the F1-score of the decison trees on the different preprocessed dataset 
 
-## 6.4 Random Forest
+## 7.4 Random Forest
 Random Forest is a classification algorithm is combination of many decision trees. It is a better classifier than decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of Random forest model include simplicity and good accuracy.
 
-One of the best ways to analysis the performance of a Machine Learning model is studying it accuracy and F1 score. The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 6.4.1) and F1 score (Figure 6.4-.) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
+One of the best ways to analysis the performance of a Machine Learning model is studying it accuracy and F1 score. The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 7.4.1) and F1 score (Figure 7.4.2) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
 
-![Figure 6.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png)
-Figure 6.4.1 It can be observed accuracy of RF is maximum for three preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling and Standard Scaling. It is lowest with PCA.
+![Figure 7.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png)
+Figure 7.4.1 It can be observed accuracy of RF is maximum for three preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling and Standard Scaling. It is lowest with PCA.
 
-![Figure 6.4.2](images/F1scores_plots_all_models/F1_scoresRandom_Forest.png)
-Figure 6.4.2 It can be observed that with MinMax preprocessing technique, F1 of RF is maximum and with PCA, it is lowest.
+![Figure 7.4.2](images/F1scores_plots_all_models/F1_scoresRandom_Forest.png)
+Figure 7.4.2 It can be observed that with MinMax preprocessing technique, F1 of RF is maximum and with PCA, it is lowest.
 
 
-# 7. Comparisons
-## Without Processing the dataset
-The data modeling was done for the data without any processing which gave the following results shown in Figure 7.1.
+# 8. Comparisons
+## 8.1 Without Processing the dataset
+The data modeling was done for the data without any processing which gave the following results shown in Figure 8.1.
  
- ![Figure 7.1](https://user-images.githubusercontent.com/24936584/142974327-42ed9f93-9835-4e99-b881-7ba6ba04dc85.png)
+ ![Figure 8.1](https://user-images.githubusercontent.com/24936584/142974327-42ed9f93-9835-4e99-b881-7ba6ba04dc85.png)
 
  
 For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.6% and lastly for Random forest the accuracy was 93.4%.
 
-## After applying Min-Max Scaler algorithm
-The data modeling was done for the dataset which gave the following results shown in Figure 7.2.
+## 8.2 After applying Min-Max Scaler algorithm
+The data modeling was done for the dataset which gave the following results shown in Figure 8.2.
  
- ![Figure 7.2](https://user-images.githubusercontent.com/24936584/142974343-136afe8f-06db-48c9-9dbf-46ef0eb12977.png)
+ ![Figure 8.2](https://user-images.githubusercontent.com/24936584/142974343-136afe8f-06db-48c9-9dbf-46ef0eb12977.png)
 
  
 For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.7% and lastly for Random forest the accuracy was 93.6%.
 
 
-## After applying Min-Max Scaler with Correlation
-The data modeling was done for the dataset which gave the following results shown in Figure 7.3.
+## 8.3 After applying Min-Max Scaler with Correlation
+The data modeling was done for the dataset which gave the following results shown in Figure 8.3.
  
- ![Figure 7.3](https://user-images.githubusercontent.com/24936584/142974362-e8fe529e-bb23-401f-b0b6-30c031df3acc.png)
+ ![Figure 8.3](https://user-images.githubusercontent.com/24936584/142974362-e8fe529e-bb23-401f-b0b6-30c031df3acc.png)
 
  
 For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.7% and lastly for Random forest the accuracy was 93.3%.
 
-## After applying Standard Scaler with PCA
-The data modeling was done for the dataset which gave the following results shown in Figure 7.4. The accuracy dropped for this processing.
+## 8.4 After applying Standard Scaler with PCA
+The data modeling was done for the dataset which gave the following results shown in Figure 8.4. The accuracy dropped for this processing.
 
-![Figure 7.4](https://user-images.githubusercontent.com/24936584/142974377-659bb010-a752-460a-aa7a-972bd87d79d9.png)
+![Figure 8.4](https://user-images.githubusercontent.com/24936584/142974377-659bb010-a752-460a-aa7a-972bd87d79d9.png)
 
 
 For XG Boost accuracy was 92.9%, for Gradient boost it dropped to 90.6% further for Decision tree it was around 91.3% and lastly for Random forest the accuracy was 90.4%.
 
-## After applying Standard Scaler
-The data modeling was done for the dataset which gave the following results shown in Figure 7.5.  
+## 8.5 After applying Standard Scaler
+The data modeling was done for the dataset which gave the following results shown in Figure 8.5.  
 
-![Figure 7.5](https://user-images.githubusercontent.com/24936584/142974398-d704f565-2cb6-47fa-a948-7993adf7ebfc.png)
+![Figure 8.5](https://user-images.githubusercontent.com/24936584/142974398-d704f565-2cb6-47fa-a948-7993adf7ebfc.png)
 
 
 For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.8% and lastly for Random forest the accuracy was 93.4%.
 
-## After applying Standard Scaler with Correlation
-The data modeling was done for the dataset which gave the following results shown in Figure 7.6. 
+## 8.6 After applying Standard Scaler with Correlation
+The data modeling was done for the dataset which gave the following results shown in Figure 8.6. 
  
- ![Figure 7.6](https://user-images.githubusercontent.com/24936584/142974439-3efb80ec-180e-47d9-8cc1-a1551d25b24f.png)
+ ![Figure 8.6](https://user-images.githubusercontent.com/24936584/142974439-3efb80ec-180e-47d9-8cc1-a1551d25b24f.png)
  
  
 For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.6% and lastly for Random forest the accuracy was 93.2%.  
