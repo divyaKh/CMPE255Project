@@ -126,17 +126,6 @@ Figure 5.2.2 shows the description of top 10 features after applying standard sc
 
 In UNSW-NB15 dataset, the outliers play an important role. The outliers are the datapoints, where the algorithm can predict anomaly. In later sections, we will compare the effects of both kinds of Normalization on the tree based algorithms, with respect to accuracy and F1 score.
 
-
-## 5.3 Dimension Reduction 
-
-### Data Modeling
-Machine models needs to be trained on the network packets from the dataset to allow them to detect network attacks. There are different machine learning models available, but for this project, the following four are considered:
-1. XGBoost
-2. GB Gradient
-3. Decision Tree
-4. Random Forest
-
-
 # 6. Data Analysis
 ## 6.1 Correlation Analysis 
 Correlation feature selection is used for eliminating or dropping columns which have high correlation variance.
