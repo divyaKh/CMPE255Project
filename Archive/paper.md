@@ -25,10 +25,10 @@ The occurrence of cyber security incidents have proliferated in recent years. Al
 # Literature Review:
 
 Many datasets have been used for Intrusion detection system like KDD’99. According to 
-A. Divekar et al, “As with KDD-99, certain parameters were found unnecessary. A reduced set of 20 features found by Mean Decrease Impurity was used in this paper.”[2]. Tavallaee et al. [3], while proposing an improved NSL-KDD, provided a comprehensive description of the KDD CUP 99's idiosyncrasies”.Tavallaee et al. [3] developed NSL-KDD to rectify KDD-99 and overcome its drawbacks. However, it had some drawbacks like non representation of low footprint attacks[1]. A. Divekar et al, have compared and the datasets by applying preprocessing and feature Selection and found that uNSW-NB15 was found to be a modern substitute to  NSL-KDD and KDD CUP 99 dataset.[2]
+A. Divekar et al, “As with KDD-99, certain parameters were found unnecessary. A reduced set of 20 features found by Mean Decrease Impurity was used in this paper.”[@Divekar2018BenchmarkingDF]. Tavallaee et al. [@Tavallaee2009ADA], while proposing an improved NSL-KDD, provided a comprehensive description of the KDD CUP 99's idiosyncrasies”.Tavallaee et al. [@Tavallaee2009ADA] developed NSL-KDD to rectify KDD-99 and overcome its drawbacks. However, it had some drawbacks like non representation of low footprint attacks[@7348942]. A. Divekar et al, have compared and the datasets by applying preprocessing and feature Selection and found that uNSW-NB15 was found to be a modern substitute to  NSL-KDD and KDD CUP 99 dataset.[@Divekar2018BenchmarkingDF]
 
-A svm based model was implemented by D. Jing and H. Chen.According to the authors”the performance of our method is evaluated through accuracy, detection rate and false positive rate. Compared with other methods, the superiority of the proposed SVM method is shown by the experimental results.”[5].
-A multi-layer perceptron feed-forward artificial neural network with a single hidden layer was proposed by M. Al-Zewairi et al[4]. According to the authors, “The evaluation results demonstrate that the proposed classifier outperforms other models in the literature with 98.99% accuracy and 0.56% false alarm rate on unseen data.”[4]The decision trees was one of the models that was compared with this Artificial neural network.
+A svm based model was implemented by D. Jing and H. Chen.According to the authors”the performance of our method is evaluated through accuracy, detection rate and false positive rate. Compared with other methods, the superiority of the proposed SVM method is shown by the experimental results.”[@Jing2019SVMBN].
+A multi-layer perceptron feed-forward artificial neural network with a single hidden layer was proposed by M. Al-Zewairi et al[@AlZewairi2017ExperimentalEO]. According to the authors, “The evaluation results demonstrate that the proposed classifier outperforms other models in the literature with 98.99% accuracy and 0.56% false alarm rate on unseen data.”[@AlZewairi2017ExperimentalEO]The decision trees was one of the models that was compared with this Artificial neural network.
 
 
 # Exploratory Data Analysis
@@ -161,10 +161,10 @@ When using boosting techniques all instances in the dataset are assigned a score
 The XGboost model was applied to the different preprocessed dataset. Figure shows that the test accuracy is above 90% for the cases.
 
 
-![Figure ](./images/Accuracy_plots/AccuracyXGBoost.png)
+![Figure ](/images/Accuracy_plots/AccuracyXGBoost.png)
 Figure 1 shows the accuracy plots for different preprocessed datasets.
 
-![Figure ](./images/F1scores_plots_all_models/F1_scoresXGBoost.png)
+![Figure ](/images/F1scores_plots_all_models/F1_scoresXGBoost.png)
 
 Figure shows the F1 scores of the models build from different dataset.
 
@@ -176,7 +176,7 @@ Figure:
 Area under the curve for ROC is high, if we consider the threshold as 50%. Figure indicates that the models is performing well fo both the classes ie, 0 and 1
 
 
-![Figure ](./images/)
+![Figure ](/images/)
 
 
 ## 6.2 Gradient Boost
@@ -209,11 +209,11 @@ A tree can be “learned” by splitting the source set into subsets based on an
 The Decsision model was applied to the different preprocessed dataset. The accuracy of the XGBoost is high when compared to other algorithms. Figure shows that the test accuracy is above 90% for the cases.
 
 
-![Figure ](./images/Accuracy_plots/AccuracyDecisionTrees.png)
+![Figure ](/images/Accuracy_plots/AccuracyDecisionTrees.png)
 
 Figure shows the accuracy of the decison trees on the differnt preprocessed dataset
 
-![Figure ](./images/F1scores_plots_all_models/F1_scores_DecisonTree.png)
+![Figure ](/images/F1scores_plots_all_models/F1_scores_DecisonTree.png)
 Figure shows the F1-score of the decison trees on the different preprocessed dataset 
 
 The ROC curve shows a high accuracy:
@@ -225,9 +225,9 @@ One of the best ways to analysis the performance of a Machine Learning model is 
 
 The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 1) and F1 score (Fig.2) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
 
-![Figure ](./images/Random_Forest_plots/AccuracyRandom_Forest.png)
+![Figure ](/images/Random_Forest_plots/AccuracyRandom_Forest.png)
 
-![Figure ](./images/Random_Forest_plots/F1_scoresRandom\Forest.png)
+![Figure ](/images/Random_Forest_plots/F1_scoresRandom\Forest.png)
 
 
 
