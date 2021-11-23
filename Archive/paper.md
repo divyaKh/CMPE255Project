@@ -93,36 +93,42 @@ Dataset generally contains columns that hold categorical values. This is because
 
 In this project, both type of encoders were tested for. It is then infered from the results, that one-hot encoding is leading to increase in the feature numbers from 45 to above 200. So, label encoder is the best choice. It is used on the categorical columns like "dtype","proto", "stype".
 
+
 ## 4.2 Data Normalization::
 
 Data normalization is done to make the data set cohesive and similar across all the fields and columns.In the UNSW-NB15 dataset, if the data normalization is not done it will lead to the suppression of  the effectiveness of an important equally important attribute(on a lower scale because of other attributes having values on a larger scale.
-4.2.1: MinMax normalization :
+#4.2.1: MinMax normalization :
 The min max normalization is used to transform features to be on a similar scale.
 It reduced the values to the range of [0,1]
  The new point is calculated as :
-X_new = (X - X_min)/(X_max - X_min)
+                                X_new = (X - X_min)/(X_max - X_min)
 Geometrically speaking, transformation squishes the n-dimensional data into an n-dimensional unit hypercube.
+The Description of the features after applying MinMax scaling:
+[Figure ](./images/Figure_minmax.png)
 
-The Feature set after Applying MinMax scaler.
+Figure shows the description of top 10 features after applying MinMax scaler.
 
-Figure : here
-4.2.2: Z-Score Normalization:
+#4.2.2: Z-Score Normalization:
 
 
 Standardization or Z-Score Normalization is the transformation of features by subtracting from mean and dividing by standard deviation. This is often called as Z-score.
 The new data points are added as :
-X_new = (X - mean)/Std
+                                 X_new = (X - mean)/Std
 
 Geometrically speaking, it translates the data to the mean vector of original data to the origin and squishes or expands the points if std is 1 respectively.
 
 Standardization does not get affected by outliers because there is no predefined range of transformed features.
-Figure here:
+
+[Figure ](./images/Figure_standard.png)
+
+
+Figure shows the description of top 10 features after applying standard scaler.
 
 
 In UNSW-NB15 dataset, the outliers play an important role. The outliers are the datapoints, where the algorithm can predict anomaly. In later sections, we will compare the effects of both kinds of Normalization on the tree based algorithms, with respect to accuracy and F1 score.
 
 
-## 4.3 Dimension Reduction 
+# 4.3 Dimension Reduction 
 
 # Data Modeling
 Machine models needs to be trained on the network packets from the dataset to allow them to detect network attacks. There are different machine learning models available, but for this project, the following four are considered:
@@ -148,10 +154,17 @@ Figure shows the clustering of the PCA
 
 ![Figure ](https://user-images.githubusercontent.com/24936584/142955187-a689b66e-c679-428d-baf9-51226cf88a60.png)
 
-
-
 =======
 # 6. Data Modeling:
+
+Datasets used for modelling:
+
+1)Dataset without any preprocessing(X)
+2)Dataset after applying Standard scaler and PCA(X_ss_pca)
+3)Dataset after applying MinMax scaler(X_mm)
+4)Dataset after applying Standard sclaer(X_ss)
+5)Dataset after applying MinMax scaler and correlation analysis(X_mm_corr)
+6)Dataset after applying Standard scaler and correaltion analysis(X_ss_corr)
 
 ## 6.1 XGBoost:
 
@@ -171,13 +184,28 @@ Figure shows the F1 scores of the models build from different dataset.
 
 Here are the different ROC scores on the different preprocessed data :
 
-Figure:
 
-Area under the curve for ROC is high, if we consider the threshold as 50%. Figure indicates that the models is performing well fo both the classes ie, 0 and 1
+![Figure ](./images/XGBoost_plots/XGBoostX_mm.png)
+ROC curve for XGBoost with Minmax scaling
 
+![Figure ](./images/XGBoost_plots/XGBoostX.png)
+ROC curve for XGBoost without any preprocessed data.
 
-![Figure ](./images/)
+![Figure ](./images/XGBoost_plots/XGBoostX_mm_corr.png)
+ROC curve for XGBoost with Minmax scaling and correlation analysis.
 
+![Figure ](./images/XGBoost_plots/XGBoostX_ss.png)
+ROC curve for XGBoost with standard scaling
+
+![Figure ](./images/XGBoost_plots/XGBoostX_ss_corr.png)
+
+ROC curve for XGBoost after applying standard scaling and correlation analysis
+
+![Figure ](./images/XGBoost_plots/XGBoostX_ss_pca.png)
+
+ROC curve for XGBoost after applying standard scaling and PCA.
+
+Area under the curve for ROC is high, if we consider the threshold as 50%. Figure indicates that the models is performing well for both the classes in the label that is 0 and 1
 
 ## 6.2 Gradient Boost
 Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function. All the trees are connected in series and each tree tries to minimise the error of the previous tree. Due to this sequential connection, the gradient boost algorithm is usually slow to learn, but also highly accurate.
@@ -216,7 +244,29 @@ Figure shows the accuracy of the decison trees on the differnt preprocessed data
 ![Figure ](./images/F1scores_plots_all_models/F1_scores_DecisonTree.png)
 Figure shows the F1-score of the decison trees on the different preprocessed dataset 
 
-The ROC curve shows a high accuracy:
+ROC curves on the different preprocessed datasets.
+
+![Figure ](./images/DecisionTree_plots/Decision_TreeX_mm.png)
+
+ROC curve for Decision Trees with any minmax scaling.
+
+![Figure ](./images/DecisionTree_plots/Decision_TreeX_mm.png)
+ROC curve for Decision trees without any preprocessed data.
+
+![Figure ](./images/DecisionTree_plots/Decision_TreeX_mm_corr.png)
+ROC curve for Decision trees with Minmax scaling and correlation analysis.
+
+![Figure ](./images/DecisionTree_plots/Decision_TreeX_ss.png)
+ROC curve for Decision trees with standard scaling
+
+![Figure ](./images/DecisionTree_plots/Decision_TreeX_ss_corr.png)
+
+ROC curve for Decision trees after applying standard scaling and correlation analysis
+
+![Figure ](./images/DecisionTree_plots/Decision_TreeX_ss_pca.png)
+
+ROC curve for Decision trees after applying standard scaling and PCA.
+
 
 ## 6.4 Random Forest
 Random Forest is a classification algorithm is combination of many decision trees. It is a better classifier than decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of Random forest model include simplicity and good accuracy.
