@@ -104,7 +104,7 @@ It reduced the values to the range of [0,1]
                                 X_new = (X - X_min)/(X_max - X_min)
 Geometrically speaking, transformation squishes the n-dimensional data into an n-dimensional unit hypercube.
 The Description of the features after applying MinMax scaling:
-[Figure ](./images/Figure_minmax.png)
+[Figure ](images/Figure_minmax.png)
 
 Figure shows the description of top 10 features after applying MinMax scaler.
 
@@ -119,7 +119,7 @@ Geometrically speaking, it translates the data to the mean vector of original da
 
 Standardization does not get affected by outliers because there is no predefined range of transformed features.
 
-[Figure ](./images/Figure_standard.png)
+[Figure ](images/Figure_standard.png)
 
 
 Figure shows the description of top 10 features after applying standard scaler.
@@ -182,32 +182,6 @@ Figure 6.1.1 shows the accuracy plots for different preprocessed datasets.
 Figure shows the F1 scores of the models build from different dataset.
 
 
-Here are the different ROC scores on the different preprocessed data :
-
-
-![Figure ](./images/XGBoost_plots/XGBoostX_mm.png)
-ROC curve for XGBoost with Minmax scaling
-
-![Figure ](./images/XGBoost_plots/XGBoostX.png)
-ROC curve for XGBoost without any preprocessed data.
-
-![Figure ](./images/XGBoost_plots/XGBoostX_mm_corr.png)
-ROC curve for XGBoost with Minmax scaling and correlation analysis.
-
-![Figure ](./images/XGBoost_plots/XGBoostX_ss.png)
-ROC curve for XGBoost with standard scaling
-
-![Figure ](./images/XGBoost_plots/XGBoostX_ss_corr.png)
-
-ROC curve for XGBoost after applying standard scaling and correlation analysis
-
-
-![Figure ](./images/XGBoost_plots/XGBoostX_ss_pca.png)
-
-ROC curve for XGBoost after applying standard scaling and PCA.
-
-Area under the curve for ROC is high, if we consider the threshold as 50%. Figure indicates that the models is performing well for both the classes in the label that is 0 and 1
-
 ## 6.2 Gradient Boost
 Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function. All the trees are connected in series and each tree tries to minimise the error of the previous tree. Due to this sequential connection, the gradient boost algorithm is usually slow to learn, but also highly accurate.
 
@@ -224,17 +198,6 @@ Gradient boosting is a machine learning technique used in regression and classif
 
 Figure shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
 
-![Figure 6.2.3](images/GB_Gradient_plots/GB_GradientX.png)
-
-![Figure 6.2.4](images/GB_Gradient_plots/GB_GradientX_mm.png)
-
-![Figure 6.2.5](images/GB_Gradient_plots/GB_GradientX_mm_corr.png)
-
-![Figure 6.2.6](images/GB_Gradient_plots/GB_GradientX_pca.png)
-
-![Figure 6.2.7](images/GB_Gradient_plots/GB_GradientX_ss.png)
-
-![Figure 6.2.8](images/GB_Gradient_plots/GB_GradientX_ss_corr.png)
 
 ## 6.3 Decision Tree
 
@@ -249,29 +212,6 @@ Figure shows the accuracy of the decison trees on the differnt preprocessed data
 ![Figure 6.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png)
 Figure shows the F1-score of the decison trees on the different preprocessed dataset 
 
-ROC curves on the different preprocessed datasets.
-
-![Figure ](./images/DecisionTree_plots/Decision_TreeX_mm.png)
-
-ROC curve for Decision Trees with any minmax scaling.
-
-![Figure ](./images/DecisionTree_plots/Decision_TreeX_mm.png)
-ROC curve for Decision trees without any preprocessed data.
-
-![Figure ](./images/DecisionTree_plots/Decision_TreeX_mm_corr.png)
-ROC curve for Decision trees with Minmax scaling and correlation analysis.
-
-![Figure ](./images/DecisionTree_plots/Decision_TreeX_ss.png)
-ROC curve for Decision trees with standard scaling
-
-![Figure ](./images/DecisionTree_plots/Decision_TreeX_ss_corr.png)
-
-ROC curve for Decision trees after applying standard scaling and correlation analysis
-
-![Figure ](./images/DecisionTree_plots/Decision_TreeX_ss_pca.png)
-
-ROC curve for Decision trees after applying standard scaling and PCA.
-
 
 ## 6.4 Random Forest
 Random Forest is a classification algorithm is combination of many decision trees. It is a better classifier than decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of Random forest model include simplicity and good accuracy.
@@ -281,7 +221,6 @@ One of the best ways to analysis the performance of a Machine Learning model is 
 ![Figure 6.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png)
 
 ![Figure 6.4.2](images/F1scores_plots_all_models/F1_scoresRandom_Forest.png)
-
 
 
 # Comparisons
