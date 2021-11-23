@@ -40,7 +40,7 @@ Source : https://www.researchgate.net/profile/Di-Wu-137/publication/330702257/fi
 
 ## Measuring success?
 
-The success will be measured from the 
+The success will be measured from the values of 
 1. accuracy score of the model. 
 2. confusion matrix which lets us know about the False Positives and False negatives.
 3. F1 score
