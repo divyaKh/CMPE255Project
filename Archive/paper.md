@@ -73,9 +73,9 @@ Large data that is to be studied and worked upon is often raw and needs cleaning
 
 2. Dealing with Missing Values: Generally, the dataset contains some missing values which need to be dealt with attentively. There are different ways to deal with a missing value:
 	
- 2.1 Drop the missing value record(row) or feature(column)
+ 	2.1 Drop the missing value record(row) or feature(column)
 
- 2.2 Replace missing value with appropriate mean/mode/median value of the feature(column)
+ 	2.2 Replace missing value with appropriate mean/mode/median value of the feature(column)
 
 In this project, since input dataset did not contain any missing values, this step is not performed. 
 
