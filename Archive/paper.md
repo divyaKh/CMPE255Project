@@ -150,7 +150,6 @@ Figure shows the clustering of the PCA
 
 
 
-=======
 # 6. Data Modeling:
 
 ## 6.1 XGBoost:
@@ -188,10 +187,7 @@ Gradient boosting is a machine learning technique used in regression and classif
 
 Figure shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
 
-Gradient Boost/
-
 ![Figure ](/images/GB_Gradient_plots/GB_GradientX.png)
-
 
 ![Figure ](/images/GB_Gradient_plots/GB_GradientX_mm.png)
 
