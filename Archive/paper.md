@@ -233,6 +233,58 @@ One of the best ways to analysis the performance of a Machine Learning model is 
 
 
 # Comparisons
+## Without Processing the dataset: 
+The data modeling was done for the data without any processing which gave the following results
+ 
+ ![image](https://user-images.githubusercontent.com/24936584/142974327-42ed9f93-9835-4e99-b881-7ba6ba04dc85.png)
+
+ 
+For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.6% and lastly for Random forest the accuracy was 93.4%.
+
+## After applying Min-Max Scaler algorithm:
+The data modeling was done for the dataset which gave the following results
+ 
+ ![image](https://user-images.githubusercontent.com/24936584/142974343-136afe8f-06db-48c9-9dbf-46ef0eb12977.png)
+
+ 
+For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.7% and lastly for Random forest the accuracy was 93.6%.
+
+
+## After applying Min-Max Scaler with Correlation:
+The data modeling was done for the dataset which gave the following results
+ 
+ ![image](https://user-images.githubusercontent.com/24936584/142974362-e8fe529e-bb23-401f-b0b6-30c031df3acc.png)
+
+ 
+For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.7% and lastly for Random forest the accuracy was 93.3%.
+
+## After applying Standard Scaler with PCA:
+The data modeling was done for the dataset which gave the following results. The accuracy dropped for this processing.
+
+![image](https://user-images.githubusercontent.com/24936584/142974377-659bb010-a752-460a-aa7a-972bd87d79d9.png)
+
+
+For XG Boost accuracy was 92.9%, for Gradient boost it dropped to 90.6% further for Decision tree it was around 91.3% and lastly for Random forest the accuracy was 90.4%.
+
+## After applying Standard Scaler:
+The data modeling was done for the dataset which gave the following results.  
+
+![image](https://user-images.githubusercontent.com/24936584/142974398-d704f565-2cb6-47fa-a948-7993adf7ebfc.png)
+
+
+For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.8% and lastly for Random forest the accuracy was 93.4%.
+
+## After applying Standard Scaler with Correlation:
+The data modeling was done for the dataset which gave the following results. 
+ 
+ ![image](https://user-images.githubusercontent.com/24936584/142974439-3efb80ec-180e-47d9-8cc1-a1551d25b24f.png)
+ 
+ 
+For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.6% and lastly for Random forest the accuracy was 93.2%.
+
+### The standard scaler processing proved to be the most accurate for all the models with accuracy of 95.1%, 93.3%, 93.8% and 93.4% for XG Boost, Gradient Boost, Decision tree and Random Forest respectively. The main reason is Standard Scaler removes the mean and scales the data to unit variance. It also shrinks the range of feature.
+
+
 
 # Example Analysis
 
