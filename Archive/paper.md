@@ -66,43 +66,34 @@ Even though these 2 columns are numerical but most of their values are only 0 an
 ![Figure 4](images/EDA/heatmap.png)
 
 
-# Data Pre-Processing
-Large data that is to be studied and worked upon is often raw and needs pre-processing. There are two steps in this:
-1. Data cleaning and preparation 
-2. Data pre-processing
+# Data Preparation
+Large data that is to be studied and worked upon is often raw and needs cleaning. Data is cleaned for errors like missing values, incorrect values, unnecessary and duplicate data etc. Therefore, data cleaning is the first step that is performed before working ahead with any dataset. In this project, following are the basic data preparation steps that have been performed:
 
-## Data Preparation
-Data needs to be cleaned for errors like missing values, incorrect values, unnecessary and duplicate data etc. Therefore, data cleaning is the first step that is performed before working ahead with any dataset. In this project, following are the basic data preparation steps that have been performed:
 1. Dropping unnecessary columns: The columns that add no information to the dataset are dropped so that number of features to work with are reduced.
 
 2. Dealing with Missing Values: Generally, the dataset contains some missing values which need to be dealt with attentively. There are different ways to deal with a missing value:
-	2.1 Drop the missing value record(row) or feature(column)
-	2.2 Replace missing value with appropriate mean/mode/median value of the feature(column)
+	
+ 2.1 Drop the missing value record(row) or feature(column)
+
+ 2.2 Replace missing value with appropriate mean/mode/median value of the feature(column)
+
 In this project, since input dataset did not contain any missing values, this step is not performed. 
 
 3. Incorrect values: There could some invalid entries into a feature that are not of the expected datatype of that feature. These values need to be corrected. In this project, few columns like "is_ftp_login" and "is_sm_ips_ports" that expected binary input contained non binary value. This is corrected to get non-erroneous results. 
 
-## Data Pre-Processing
-Data pre-preocessing is performaned in order to generate a dataset that aids Machine Learning to predict more accurate results. Following data preprocessing steps have been performed in this project:
+# 4. Data Pre-Processing
+Data pre-preocessing is performed in order to generate a dataset that aids Machine Learning to predict more accurate results. Following data preprocessing steps have been performed in this project:
 
-1. Encoding: 
+## 4.1 Encoding: 
 Dataset generally contains columns that hold categorical values. This is because categorical values are more decriptive that numerical values. But ML models cannot work with any non-numerical values. So, prior to feed data to Machine Learning model, encoding is performed. There are two types of encodings that are ususally performed:
-1. Label Encoding
-	Pros: 
-		- Simple technique
-		- Assigns numbers to different categorical values
-	Cons:
-		- Misinterpreted by algorithms as having some sort of hierarchy/order
-2. One-Hot Encoding
-	Pros:
-		- Eliminates the hierarchy/order issues 
-	Cons:
-		- Adds more columns(features) to the data set which may contribute to overfitting
+
+1. Label Encoding: It is a simple technique to assign numbers to different categorical values. But it is generally misinterpreted by algorithms as having some sort of hierarchy/order.
+
+2. One-Hot Encoding: It eliminates the hierarchy/order issues. But it adds more columns(features) to the data set which may contribute to overfitting.
 
 In this project, both type of encoders were tested for. It is then infered from the results, that one-hot encoding is leading to increase in the feature numbers from 45 to above 200. So, label encoder is the best choice. It is used on the categorical columns like "dtype","proto", "stype".
 
-2. Data Scaling:
-4.2 Data Normalization::
+## 4.2 Data Normalization::
 
 Data normalization is done to make the data set cohesive and similar across all the fields and columns.In the UNSW-NB15 dataset, if the data normalization is not done it will lead to the suppression of  the effectiveness of an important equally important attribute(on a lower scale because of other attributes having values on a larger scale.
 4.2.1: MinMax normalization :
@@ -131,7 +122,7 @@ Figure here:
 In UNSW-NB15 dataset, the outliers play an important role. The outliers are the datapoints, where the algorithm can predict anomaly. In later sections, we will compare the effects of both kinds of Normalization on the tree based algorithms, with respect to accuracy and F1 score.
 
 
-3. Dimension Reduction 
+## 4.3 Dimension Reduction 
 
 # Data Modeling
 Machine models needs to be trained on the network packets from the dataset to allow them to detect network attacks. There are different machine learning models available, but for this project, the following four are considered:
@@ -158,8 +149,9 @@ Figure shows the clustering of the PCA
 ![image](https://user-images.githubusercontent.com/24936584/142955187-a689b66e-c679-428d-baf9-51226cf88a60.png)
 
 
-## XGBoost
-6.1:XGBoost:
+# 6. Data Modeling:
+
+## 6.1 XGBoost:
 XGBoost, which stands for Extreme Gradient Boosting, is a scalable, distributed gradient-boosted decision tree (GBDT) machine learning library. It provides parallel tree boosting and is the leading machine learning library for regression, classification.
 Extreme Gradient Boosting (xgboost) is similar to the gradient boosting framework but more efficient. It has both linear model solver and tree learning algorithms. So, what makes it fast is its capacity to do parallel computation on a single machine.
 When using boosting techniques all instances in the dataset are assigned a score that tells how difficult to classify they are.
@@ -221,22 +213,17 @@ Figure :
 
 The ROC curve shows a high accuracy:
 
-## Random Forest
+## 6.4 Random Forest
 Random Forest is a classification algorithm is combination of many decision trees. It is a better classifier than decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of Random forest model include simplicity and good accuracy.
 
 One of the best ways to analysis the performance of a Machine Learning model is studying its ROC curve. In this project, ROC curves for Random Forest was studied with different preprocessing techniques and following were the observations:
 
-![Figure ](./images/RandomForest/ROC_RandomForest_NoPreprocessing.png)
+The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 1) and F1 score (Fig.2) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
 
-![Figure ](./images/RandomForest/ROC_RandomForest_PCA.png)
+![Figure ](./images/Random_Forest_plots/AccuracyRandom_Forest.png)
 
-![Figure ](./images/RandomForest/ROC_RandomForest_mm_corr.png)
+![Figure ](./images/Random_Forest_plots/F1_scoresRandom\Forest.png)
 
-![Figure ](./images/RandomForest/ROC_RandomForest_mm.png)
-
-![Figure ](./images/RandomForest/ROC_RandomForest_ss.png)
-
-![Figure ](./images/RandomForest/ROC_RandomForest_ss_corr.png)
 
 
 # Comparisons
