@@ -202,14 +202,19 @@ It can be observed that with standard scaling preprocessing technique, accuracy 
 Figure 7.3.2 shows the F1-score of the decison trees on the different preprocessed dataset 
 
 ## 7.4 Random Forest
-Random Forest is a classification algorithm is combination of many decision trees. It is a better classifier than decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of Random forest model include simplicity and good accuracy.  
-One of the best ways to analysis the performance of a Machine Learning model is studying it accuracy and F1 score. The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 7.4.1) and F1 score (Figure 7.4.2) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
+Random Forest is a classification algorithm is combination of many decision trees. It is a better classifier than decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of Random forest model include simplicity and good accuracy.
+
+One of the best ways to analysis the performance of a Machine Learning model is studying it accuracy and F1 score. The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 6.4.1) and F1 score (Figure 6.4-.) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
 
 ![Figure 7.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png)
-Figure 7.4.1 It can be observed accuracy of RF is maximum for three preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling and Standard Scaling. It is lowest with PCA.
+Figure 6.4.1 shows the F1-score of the decison trees on the different preprocessed dataset 
+
+It can be observed accuracy of RF is maximum for three preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling and Standard Scaling. It is lowest with PCA.
 
 ![Figure 7.4.2](images/F1scores_plots_all_models/F1_scoresRandom_Forest.png)
-Figure 7.4.2 It can be observed that with MinMax preprocessing technique, F1 of RF is maximum and with PCA, it is lowest.
+Figure 6.4.2 shows the F1-score of the decison trees on the different preprocessed dataset 
+
+It can be observed that with MinMax preprocessing technique, F1 of RF is maximum and with PCA, it is lowest.
 
 
 # 8. Comparisons
