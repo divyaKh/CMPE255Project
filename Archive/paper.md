@@ -169,11 +169,10 @@ The XGboost model was applied to the different preprocessed dataset. Figure show
 
 
 ![Figure 7.1.1](images/Accuracy_plots/AccuracyXGBoost.png)
-Figure 6.1.1 shows the accuracy plots for different preprocessed datasets.
+Figure 7.1.1 shows the accuracy plots for different preprocessed datasets.
 
 ![Figure 7.1.2](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
-
-Figure shows the F1 scores of the models build from different dataset.
+Figure 7.1.2 shows the F1 scores of the models build from different dataset.
 
 ## 7.2 Gradient Boost
 Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function. All the trees are connected in series and each tree tries to minimise the error of the previous tree. Due to this sequential connection, the gradient boost algorithm is usually slow to learn, but also highly accurate.
