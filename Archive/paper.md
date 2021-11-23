@@ -146,7 +146,7 @@ After analysing the correlation matrix, sbytes is correlated with sloss by 0.995
 Principal Component Analysis, or PCA, is a dimensionality-reduction method that is often used to reduce the dimensionality of large data sets, by transforming a large set of variables into a smaller one that still contains most of the information in the large set. But this dimensionality reduction technique may reduce the accuracy of any model at quite a high rate. The principal component analysis algorithm was applied on the dataset considering the to capture the minimum variance of 99% else considering the less percent will lead to loss of most of the data. After applying PCA, the number of features that are responsible for the detection of 99% of variance has been reduced to 29 from 42 columns
 Figure shows the clustering of the PCA
 
-![Figure ](https://user-images.githubusercontent.com/24936584/142955187-a689b66e-c679-428d-baf9-51226cf88a60.png)
+![Figure 5.2.1](https://user-images.githubusercontent.com/24936584/142955187-a689b66e-c679-428d-baf9-51226cf88a60.png)
 
 
 
@@ -160,10 +160,10 @@ When using boosting techniques all instances in the dataset are assigned a score
 The XGboost model was applied to the different preprocessed dataset. Figure shows that the test accuracy is above 90% for the cases.
 
 
-![Figure ](images/Accuracy_plots/AccuracyXGBoost.png)
-Figure 1 shows the accuracy plots for different preprocessed datasets.
+![Figure 6.1.1](images/Accuracy_plots/AccuracyXGBoost.png)
+Figure 6.1.1 shows the accuracy plots for different preprocessed datasets.
 
-![Figure ](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
+![Figure 6.1.2](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
 
 Figure shows the F1 scores of the models build from different dataset.
 
@@ -175,41 +175,41 @@ Figure:
 Area under the curve for ROC is high, if we consider the threshold as 50%. Figure indicates that the models is performing well fo both the classes ie, 0 and 1
 
 
-![Figure ](images/)
+![Figure 6.1.3](images/)
 
 
 ## 6.2 Gradient Boost
 Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function. All the trees are connected in series and each tree tries to minimise the error of the previous tree. Due to this sequential connection, the gradient boost algorithm is usually slow to learn, but also highly accurate.
 
-![image](https://user-images.githubusercontent.com/24936584/142963987-3707f5be-692e-4d15-a20d-9dd175ff7392.png)
+![Figure 6.2.1](https://user-images.githubusercontent.com/24936584/142963987-3707f5be-692e-4d15-a20d-9dd175ff7392.png)
 
-![image](https://user-images.githubusercontent.com/24936584/142963995-b758dcec-e66e-423c-bf1d-2646f2c1fa53.png)
+![Figure 6.2.2](https://user-images.githubusercontent.com/24936584/142963995-b758dcec-e66e-423c-bf1d-2646f2c1fa53.png)
 
 Figure shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
 
-![Figure ](images/GB_Gradient_plots/GB_GradientX.png)
+![Figure 6.2.3](images/GB_Gradient_plots/GB_GradientX.png)
 
-![Figure ](images/GB_Gradient_plots/GB_GradientX_mm.png)
+![Figure 6.2.4](images/GB_Gradient_plots/GB_GradientX_mm.png)
 
-![Figure ](images/GB_Gradient_plots/GB_GradientX_mm_corr.png)
+![Figure 6.2.5](images/GB_Gradient_plots/GB_GradientX_mm_corr.png)
 
-![Figure ](images/GB_Gradient_plots/GB_GradientX_pca.png)
+![Figure 6.2.6](images/GB_Gradient_plots/GB_GradientX_pca.png)
 
-![Figure ](images/GB_Gradient_plots/GB_GradientX_ss.png)
+![Figure 6.2.7](images/GB_Gradient_plots/GB_GradientX_ss.png)
 
-![Figure ](images/GB_Gradient_plots/GB_GradientX_ss_corr.png)
+![Figure 6.2.8](images/GB_Gradient_plots/GB_GradientX_ss_corr.png)
 
-## Decision Tree
+## 6.3 Decision Tree
 
 A tree can be “learned” by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node all has the same value of the target variable, or when splitting no longer adds value to the predictions. The construction of decision tree classifier does not require any domain knowledge or parameter setting, and therefore is appropriate for exploratory knowledge discovery. 
 The Decsision model was applied to the different preprocessed dataset. The accuracy of the XGBoost is high when compared to other algorithms. Figure shows that the test accuracy is above 90% for the cases.
 
 
-![Figure ](images/Accuracy_plots/AccuracyDecison_Tree.png)
+![Figure 6.3.1](images/Accuracy_plots/AccuracyDecison_Tree.png)
 
 Figure shows the accuracy of the decison trees on the differnt preprocessed dataset
 
-![Figure ](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png)
+![Figure 6.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png)
 Figure shows the F1-score of the decison trees on the different preprocessed dataset 
 
 The ROC curve shows a high accuracy:
