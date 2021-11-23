@@ -39,7 +39,7 @@ The attacks involved were *backdoor* (2,329 instances), *analysis* (2,677 instan
 *worms* (174 instances), and *generic* (58,871 instances). 
 The data distribution data of UNSW-NB15 as in Figure 1.  
 We perfomed 3 kinds of exploratory data analysis on the UNSW-NB15 dataset, 
-namely countplot or barplot for all categorial or columns with small number of unique values, plot PDF for numerical features, and Correlation of the features and its heatmap.  
+namely countplot or barplot for all categorial or columns with small number of unique values, plot PDF (probability density function) for numerical features, and Correlation of the features and its heatmap.  
 In this data set, there are total 9 attack categories of attack and normal is non-attack. The data is highly imbalanced and have lots of non-attack than attacks.
 The most occured attack data categories are "*Reconnaissance*", "*Backdoor*", "*DoS*", "*Exploits*" and "*Analysis*". 
 In the **protocol** category, most of the values are consists of udp and tcp. For attacks count of udp is lot higher. The bar plot is shown in Figure 3.1.
@@ -56,6 +56,7 @@ The spread of values is wider in attack compared to normal.
 ![Figure 3.2.1](images/EDA/dload1.png)
 
 ![Figure 3.2.2](images/EDA/dload2.png)
+Figure 3.2.2 shows dload in log scale.
 
 To get correlation values for all the features, we plot heatmap of correaltion shown in Figure 3.3 for better visualization. The most correlated features are: sbytes and sloss, sbytes and sloss, swin and dwin. 
 These features are having very high correlation between them more than 95%.
