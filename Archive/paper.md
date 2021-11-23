@@ -165,7 +165,6 @@ Extreme Gradient Boosting (xgboost) is similar to the gradient boosting framewor
 When using boosting techniques all instances in the dataset are assigned a score that tells how difficult to classify they are.
 The XGboost model was applied to the different preprocessed dataset. Figure shows that the test accuracy is above 90% for the cases.
 
-
 ![Figure 7.1.1](images/Accuracy_plots/AccuracyXGBoost.png)
 Figure 7.1.1 shows the accuracy plots for different preprocessed datasets.
 
@@ -175,38 +174,38 @@ Figure 7.1.2 shows the F1 scores of the models build from different dataset.
 ## 7.2 Gradient Boost
 Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function. All the trees are connected in series and each tree tries to minimise the error of the previous tree. Due to this sequential connection, the gradient boost algorithm is usually slow to learn, but also highly accurate.
 
-![Figure 7.2.3](images/Accuracy_plots/AccuracyGB_Gradient.png)
+![Figure 7.2.1](images/Accuracy_plots/AccuracyGB_Gradient.png)
 
-![Figure 7.2.4](images/F1scores_plots_all_models/F1_scoresGB_Gradient.png)
+![Figure 7.2.2](images/F1scores_plots_all_models/F1_scoresGB_Gradient.png)
 
-Figure shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
+Figure 7.2.2 shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
 
 ## 7.3 Decision Tree
 
 A tree can be “learned” by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node all has the same value of the target variable, or when splitting no longer adds value to the predictions. The construction of decision tree classifier does not require any domain knowledge or parameter setting, and therefore is appropriate for exploratory knowledge discovery. 
-The Decision Tree model was applied to the different preprocessed datasets and following results were observed.
+The Decision Tree model was applied to the different preprocessed datasets and the following results were observed.
 
 ![Figure 7.3.1](images/Accuracy_plots/AccuracyDecison_Tree.png). 
-Figure 7.3.1 shows the accuracy of the decison trees on the differnt preprocessed dataset
-It can be observed that with standard scaling preprocessing technique, accuracy of DT is maximum and with PCA, it is lowest.
+Figure 7.3.1 shows the accuracy of the decision trees on the different preprocessed dataset. 
+It can be observed that with Standard Scaling preprocessing technique, the accuracy of DT is maximum, and with PCA, it is lowest.
 
 ![Figure 7.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png). 
-Figure 7.3.2 shows the F1-score of the decison trees on the different preprocessed dataset 
+Figure 7.3.2 shows the F1-score of the decision trees on the different preprocessed dataset. 
+It can be observed that with Standard Scaling preprocessing technique, F1 of DT is maximum, and with PCA, it is lowest.
 
 ## 7.4 Random Forest
-Random Forest is a classification algorithm is combination of many decision trees. It is a better classifier than decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of Random forest model include simplicity and good accuracy.
-
-One of the best ways to analysis the performance of a Machine Learning model is studying it accuracy and F1 score. The accuracy and F1 score of Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 6.4.1) and F1 score (Figure 6.4-.) given by Random Forest is better that most of the other model that the testing is performed. This can be infered from this that Random Forest predicts more accurate results here. 
+Random Forest is a classification algorithm that is a combination of many decision trees. It is a better classifier than a decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of the Random forest model includes simplicity and good accuracy.
+One of the best ways to analyze the performance of a Machine Learning model is by studying its accuracy and F1 score. The accuracy and F1 score of the Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 6.4.1) and F1 score (Figure 6.4-.) given by Random Forest are better than most of the other models that the testing is performed. This can be inferred from this that Random Forest predicts more accurate results here. 
 
 ![Figure 7.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png). 
 Figure 7.4.1 shows the F1-score of the decison trees on the different preprocessed dataset 
 
-It can be observed accuracy of RF is maximum for three preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling and Standard Scaling. It is lowest with PCA.
+It can be observed accuracy of RF is maximum for three preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling, and Standard Scaling. It is the lowest with PCA. 
 
 ![Figure 7.4.2](images/F1scores_plots_all_models/F1_scoresRandom_Forest.png). 
-Figure 7.4.2 shows the F1-score of the decison trees on the different preprocessed dataset 
+Figure 7.4.2 shows the F1-score of the decision trees on the different preprocessed dataset 
 
-It can be observed that with MinMax preprocessing technique, F1 of RF is maximum and with PCA, it is lowest.
+It can be observed that with MinMax preprocessing technique, F1 of RF is maximum, and with PCA, it is lowest.
 
 
 # 8. Comparisons
