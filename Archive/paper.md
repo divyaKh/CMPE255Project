@@ -145,11 +145,11 @@ Figure shows the clustering of the PCA
 
 # 7. Data Modeling
 
-Machine models needs to be trained on the network packets from the dataset to allow them to detect network attacks. There are different machine learning models available, but for this project, the following four are considered:
-1. XGBoost
-2. GB Gradient
-3. Decision Tree
-4. Random Forest
+Machine models needs to be trained on the network packets from the dataset to allow them to detect network attacks. There are different machine learning models available, but for this project, the following four are considered:  
+1. XGBoost.  
+2. GB Gradient.  
+3. Decision Tree.  
+4. Random Forest.  
 
 Datasets used for modelling:
 
