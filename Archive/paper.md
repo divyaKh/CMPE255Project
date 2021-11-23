@@ -205,20 +205,13 @@ RandomForest/
 A tree can be “learned” by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node all has the same value of the target variable, or when splitting no longer adds value to the predictions. The construction of decision tree classifier does not require any domain knowledge or parameter setting, and therefore is appropriate for exploratory knowledge discovery. 
 The Decsision model was applied to the different preprocessed dataset. The accuracy of the XGBoost is high when compared to other algorithms. Figure shows that the test accuracy is above 90% for the cases.
 
+Figure :
+![Figure ](./images/Accuracy_plots/AccuracyDecisionTrees.png)
 
-DecisionTree_plots/
+![Figure ](./images/F1scores_plots_all_models/F1_scoresDecisonTree.png)
 
-![Figure ](./images/DecisionTree/ROC_DecisionTree_NoPreprocessing.png)
 
-![Figure ](./images/DecisionTree/ROC_DecisionTree_PCA.png)
-
-![Figure ](./images/DecisionTree/ROC_DecisionTree_mm_corr.png)
-
-![Figure ](./images/DecisionTree/ROC_DecisionTree_mm.png)
-
-![Figure ](./images/DecisionTree/ROC_DecisionTree_ss.png)
-
-![Figure ](./images/DecisionTree/ROC_DecisionTree_ss_corr.png)
+The ROC curve shows a high accuracy:
 
 ## Random Forest
 Random Forest is a classification algorithm is combination of many decision trees. It is a better classifier than decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of Random forest model include simplicity and good accuracy.
