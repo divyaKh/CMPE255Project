@@ -22,7 +22,7 @@ The occurrence of cyber security incidents have proliferated in recent years. Al
 
 ![Figure 1](images/EDA/distribution_pie_chart.png)
 
-#Literature Review:
+# Literature Review:
 
 Many datasets have been used for Intrusion detection system like KDD’99. According to 
 A. Divekar et al, “As with KDD-99, certain parameters were found unnecessary. A reduced set of 20 features found by Mean Decrease Impurity was used in this paper.”[2]. Tavallaee et al. [3], while proposing an improved NSL-KDD, provided a comprehensive description of the KDD CUP 99's idiosyncrasies”.Tavallaee et al. [3] developed NSL-KDD to rectify KDD-99 and overcome its drawbacks. However, it had some drawbacks like non representation of low footprint attacks[1]. A. Divekar et al, have compared and the datasets by applying preprocessing and feature Selection and found that uNSW-NB15 was found to be a modern substitute to  NSL-KDD and KDD CUP 99 dataset.[2]
@@ -177,6 +177,8 @@ Figure:
 
 Area under the curve for ROC is high, if we consider the threshold as 50%. Figure indicates that the models is performing well fo both the classes ie, 0 and 1
 
+XGBoost_plots/
+
 ![Figure ](./images/XGBoost/ROC_XGB_NoPreprocessing.png)
 
 ![Figure ](./images/XGBoost/ROC_XGB_PCA.png)
@@ -204,6 +206,12 @@ RandomForest/
 ![Figure ](./images/GBGradient/ROC_GB_ss_corr.png)
 
 ## Decision Tree
+
+A tree can be “learned” by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node all has the same value of the target variable, or when splitting no longer adds value to the predictions. The construction of decision tree classifier does not require any domain knowledge or parameter setting, and therefore is appropriate for exploratory knowledge discovery. 
+The Decsision model was applied to the different preprocessed dataset. The accuracy of the XGBoost is high when compared to other algorithms. Figure shows that the test accuracy is above 90% for the cases.
+
+
+DecisionTree_plots/
 
 ![Figure ](./images/DecisionTree/ROC_DecisionTree_NoPreprocessing.png)
 
