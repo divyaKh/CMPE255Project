@@ -190,18 +190,18 @@ Figure shows a good F1 score for the gradient descent algorithm. Also the model 
 
 Gradient Boost/
 
-![Figure ](./images/GB_Gradient_plots/GB GradientX.png)
+![Figure ](/images/GB_Gradient_plots/GB_GradientX.png)
 
 
-![Figure ](./images/GB_Gradient_plots/GB GradientX_mm.png)
+![Figure ](/images/GB_Gradient_plots/GB_GradientX_mm.png)
 
-![Figure ](./images/GB_Gradient_plots/GB GradientX_mm_corr.png)
+![Figure ](/images/GB_Gradient_plots/GB_GradientX_mm_corr.png)
 
-![Figure ](./images/GB_Gradient_plots/GB GradientX_pca.png)
+![Figure ](/images/GB_Gradient_plots/GB_GradientX_pca.png)
 
-![Figure ](./images/GB_Gradient_plots/GB GradientX_ss.png)
+![Figure ](/images/GB_Gradient_plots/GB_GradientX_ss.png)
 
-![Figure ](./images/GB_Gradient_plots/GB GradientX_ss_cor.png)
+![Figure ](/images/GB_Gradient_plots/GB_GradientX_ss_cor.png)
 
 ## Decision Tree
 
