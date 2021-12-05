@@ -1,9 +1,9 @@
 # Instructions to use
 
-1) Run "Dataset and its cleaning.ipynb"
+1) Run `Dataset and its cleaning.ipynb`
 2) It will generate 2 .csv files as output-
-    * cleaned_dataset_label_encoding.csv
-    * cleaned_dataset_oneHot_encoding.csv
+    * `cleaned_dataset_label_encoding.csv`
+    * `cleaned_dataset_oneHot_encoding.csv`
 
 
 # What does it cover?
