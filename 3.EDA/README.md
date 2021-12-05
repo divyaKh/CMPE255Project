@@ -1,7 +1,7 @@
 # Instructions to use
 1. Run "Exploratory_Data_Analysis.ipynb".
 2. It will plot graphs for better visualization of the UNSW-NB15 dataset.
-# Exploratory Data Analysis
+# EDA Findings
 For our work, the UNSW-NB15 dataset contains 257,673 data instances with 49 features. 
 The total classes of this dataset are 10 classes: one is for a *normal* network data (93 000 instances) and nine classes of anomalous network data (attacks classes). 
 The attacks involved were *backdoor* (2,329 instances), *analysis* (2,677 instances), *fuzzers* (24,246 instances), 
@@ -15,7 +15,7 @@ The most occured attack data categories are "*Reconnaissance*", "*Backdoor*", "*
 In the **protocol** category, most of the values are consists of udp and tcp. For attacks count of udp is lot higher. 
 In **attack** data "dns" is present higher than any other values. There are few no of others and http also. 
 In the **state** category we found the imbalce there are lots of int state for attacks.  
-For numerical features, we plot PDF. For better visualization, we also used log scale. 
+For numerical features, we plot PDF. For better visualization, we also used log scale. There are 44 features in this dataset. After dropping some highly correlated features to avoid redundancy, we have chosen and analysed 20 of them. 
 There are some results worth pointing out. **dload**: Destination bits per second, for attack data all the values are very close to 0. 
 For normal data they are distributed all over, has values close to 0 and also very large values. **sbytes**: Source to destination bytes, Most of normal category values are close to 0. Attack categories has most of its values around 5 in log1p graph. 
 The spread of values is wider in attack compared to normal.  
