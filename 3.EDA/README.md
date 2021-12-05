@@ -1,4 +1,7 @@
-# UNSW-NB15: Exploratory Data Analysis
+# Instructions to use
+1. Run "Exploratory_Data_Analysis.ipynb".
+2. It will plot graphs for better visualization of the UNSW-NB15 dataset.
+# Exploratory Data Analysis
 For our work, the UNSW-NB15 dataset contains 257,673 data instances with 49 features. 
 The total classes of this dataset are 10 classes: one is for a *normal* network data (93 000 instances) and nine classes of anomalous network data (attacks classes). 
 The attacks involved were *backdoor* (2,329 instances), *analysis* (2,677 instances), *fuzzers* (24,246 instances), 
