@@ -12,7 +12,7 @@ Open the file and run all cells, and get the files.
 3) PCA
 
 
-#Workflow
+# Workflow
 
 * `Input`: The script takes files that are output from Dataset/Dataset_and_its_Cleaning.ipynb.
 * `Output`: It outputs 6 files, 3 with one hot ecoding and 3 with label encoding.
@@ -23,4 +23,6 @@ Open the file and run all cells, and get the files.
     * `dataset_minmax_corr_onehot.csv`
     * `dataset_minmax_corr_onehot.csv`
 
-Note: The main function can be changed according to the functions that are needed for the preprocessing the file. 
+Note: 
+1) The main function can be changed according to the functions that are needed for the preprocessing the file. 
+2) Output csv files have not been uploaded because they exceeded the size limit of 100MB.
