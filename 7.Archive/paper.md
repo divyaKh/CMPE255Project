@@ -38,6 +38,7 @@ The attacks involved were *backdoor* (2,329 instances), *analysis* (2,677 instan
 *shellcode* (1 511), *reconnaissance* (13,987 instances), *exploits* (44,525 instances), *DoS* (16,353 instances), 
 *worms* (174 instances), and *generic* (58,871 instances). 
 The data distribution data of UNSW-NB15 as in Figure 1.  
+After dropping some highly correlated features to avoid redundancy, we have chosen and analysed 20 of them. 
 We perfomed 3 kinds of exploratory data analysis on the UNSW-NB15 dataset, 
 namely countplot or barplot for all categorial or columns with small number of unique values, plot PDF (probability density function) for numerical features, and Correlation of the features and its heatmap.  
 In this data set, there are total 9 attack categories of attack and normal is non-attack. The data is highly imbalanced and have lots of non-attack than attacks.
