@@ -19,8 +19,8 @@ Open the file and run all cells, and get the files.
 * `Input`: The script takes files that are output from Dataset/Dataset_and_its_Cleaning.ipynb.
 * `Output`: It outputs 6 files, 3 with one hot ecoding and 3 with label encoding.
     * `data_minmax_labelenc.csv`
-    * `dataset_minmax_corr_labelenc.csv`
-    * `dataset_minmax_pca_labelenc.csv`
+    * `dataset_minmax_corr.csv`
+    * `dataset_pca.csv`
 
 Note: 
 1) The main function can be changed according to the functions that are needed for the preprocessing the file. 
