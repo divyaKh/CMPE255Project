@@ -1,0 +1,32 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="sttl <= 0.239\ngini = 0.462\nsamples = 180371\nvalue = [65170, 115201]"] ;
+1 [label="ct_dst_sport_ltm <= 0.033\ngini = 0.012\nsamples = 42449\nvalue = [42194, 255]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="spkts <= 0.0\ngini = 0.006\nsamples = 42251\nvalue = [42120, 131]"] ;
+1 -> 2 ;
+3 [label="gini = 0.095\nsamples = 2612\nvalue = [2481, 131]"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 39639\nvalue = [39639, 0]"] ;
+2 -> 4 ;
+5 [label="sbytes <= 0.0\ngini = 0.468\nsamples = 198\nvalue = [74, 124]"] ;
+1 -> 5 ;
+6 [label="gini = 0.126\nsamples = 133\nvalue = [9, 124]"] ;
+5 -> 6 ;
+7 [label="gini = 0.0\nsamples = 65\nvalue = [65, 0]"] ;
+5 -> 7 ;
+8 [label="synack <= 0.012\ngini = 0.278\nsamples = 137922\nvalue = [22976, 114946]"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="smean <= 0.015\ngini = 0.14\nsamples = 93894\nvalue = [7130, 86764]"] ;
+8 -> 9 ;
+10 [label="gini = 0.384\nsamples = 3429\nvalue = [2539, 890]"] ;
+9 -> 10 ;
+11 [label="gini = 0.096\nsamples = 90465\nvalue = [4591, 85874]"] ;
+9 -> 11 ;
+12 [label="ct_srv_dst <= 0.008\ngini = 0.461\nsamples = 44028\nvalue = [15846, 28182]"] ;
+8 -> 12 ;
+13 [label="gini = 0.188\nsamples = 17940\nvalue = [1885, 16055]"] ;
+12 -> 13 ;
+14 [label="gini = 0.498\nsamples = 26088\nvalue = [13961, 12127]"] ;
+12 -> 14 ;
+}
