@@ -26,7 +26,7 @@ The dataset contains both categorical and numerical features with the count as g
 
 ## PROBLEM BEING INVESTIGATED
 
-A network attack attempts to gain unauthorized access to the network. Using above mentioned dataset, we will detect that if any network attack is happening over the network. This dataset has nine types of attacks:
+A network attack attempts to gain unauthorized access to the network. Using above mentioned dataset, we will detect that if any network attack is happening over the network. This dataset may have any of the following type of network attack:
 * Fuzzers
 * Analysis
 * Backdoors
