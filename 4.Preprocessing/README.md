@@ -7,9 +7,11 @@ Open the file and run all cells, and get the files.
 
 # PreProcessing Techniques used:
 
-1) MinMax Scaling
-2) Correlation Analysis
-3) PCA
+1) Feature Scaling
+   * Minmax Scaling
+   * Standard Scaling
+3) Correlation Analysis
+4) PCA
 
 
 # Workflow
@@ -19,10 +21,7 @@ Open the file and run all cells, and get the files.
     * `data_minmax_labelenc.csv`
     * `dataset_minmax_corr_labelenc.csv`
     * `dataset_minmax_pca_labelenc.csv`
-    * `data_minmax_onehot.csv`
-    * `dataset_minmax_corr_onehot.csv`
-    * `dataset_minmax_corr_onehot.csv`
 
 Note: 
 1) The main function can be changed according to the functions that are needed for the preprocessing the file. 
-2) Output csv files have not been uploaded because they exceeded the size limit of 100MB.
+2) Output csv files might not be uploaded because they exceeded the size limit of 100MB.
