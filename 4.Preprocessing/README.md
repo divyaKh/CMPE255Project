@@ -16,8 +16,8 @@ Open the file and run all cells, and get the files.
 
 # Workflow
 
-* `Input`: The script takes files that are output from Dataset/Dataset_and_its_Cleaning.ipynb.
-* `Output`: It outputs 3 files.
+* `Input`: The script takes files that are output from Dataset/Dataset_and_its_Cleaning.ipynb. Find the input csv in the `input` folder.
+* `Output`: It outputs 3 files. Find the output csv files in the `ouput` folder. (zipped due to size restrictions)
     * `dataset_minmax.csv`
     * `dataset_minmax_corr.csv`
     * `dataset_pca.csv`
