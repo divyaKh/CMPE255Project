@@ -1,9 +1,16 @@
-The final files contains all the preprocessing steps and modeling steps.
 
-Instructions to run:
+# Contents
 
-1)Open the notebook, upload the datasets UNSW-NB15 testing and training datasets csv.
-2)Run the notebook
+1) `Baseline` folder - It contains the notebooks for all the ML models (classifiers) implemented for the project:
+	* XGBoost : Owner [Nancy Saxena](https://github.com/NancyS1)
+	* Random Forest : Owner [Divya Khandelwal](https://github.com/divyaKh)
+	* Decision Tree : Owner [Wen-Hao Tseng](https://github.com/Wenhao-Tseng)
 
+2) The `final_notebook` contains all the important steps from the project lifecycle (data science lifecycle). It is an compilation of code that has been implemented in all other folders combined. Note: It might not cover everything, but it directs to parent notebook wherever required.
 
-#Note : all our paper analysis is based on the steps of the notebook.
+# Instruction to use
+
+1) Open the notebook.
+2) Make sure the .csv files that are loaded have correct path.
+3) Run the notebook
+
