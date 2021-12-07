@@ -3,7 +3,8 @@
 Open the file and run all cells, and get the files.
 1) The file contains some techniques to preprocess the files.
 2) The functions have been designed for each steps.
-3) Users can preprocess the file by calling the functions in the main function and get the preprocessed file by saving the data frame in "train_preprocessed.csv" and "test_preprocessed.csv"
+3) Users can preprocess the file by calling the functions in the main function and get the preprocessed file by saving the data frame in "cleaned_dataset_label_encoding.csv"
+From here : [https://github.com/divyaKh/CMPE255Project/blob/main/2.Data_Cleaning/cleaned_dataset_label_encoding.csv]
 
 # PreProcessing Techniques used:
 
