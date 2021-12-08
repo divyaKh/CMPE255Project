@@ -10,10 +10,12 @@ Cyber attacks are one of the biggest threads in this era of digital world. It is
 
 ## ABOUT DATASET
 
-The dataset used, is created by Cyber Range Lab of UNSW Canberra. It is widely used and is named as UNSW-NB15 dataset. The raw network packets of the `UNSW-NB 15` dataset were created by the IXIA PerfectStorm tool for generating a hybrid of real modern normal activities and synthetic contemporary attack behaviours.
+The dataset used, is created by Cyber Range Lab of UNSW Canberra. It is widely used and is named as UNSW-NB15 dataset. The raw network packets of the `UNSW-NB 15` dataset were created by the IXIA PerfectStorm tool. This data set has a hybrid of the real modern normal and the contemporary synthesized attack activities of the network traffic.
 
 The UNSW-NB15  dataset can be found [here](https://research.unsw.edu.au/projects/unsw-nb15-dataset). 
 We have used UNSW_NB15_training-set.csv and UNSW_NB15_testing-set.csv from the source and combined them to generate a single dataframe to work upon. For our work, the dataset contains `257,673 data records` with `49 features` as mentioned [here](https://cloudstor.aarnet.edu.au/plus/apps/onlyoffice/s/2DhnLGDdEECo4ys?fileId=206777051).
+
+To know more about the dataset, read this [research](https://ieeexplore.ieee.org/abstract/document/7348942/authors#authors).
 
 The dataset contains both categorical and numerical features with the count as given below-
 
