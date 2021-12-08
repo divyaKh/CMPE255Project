@@ -21,8 +21,8 @@ The dataset contains both categorical and numerical features with the count as g
 
 |     Type       | Feature Count     | 
 |----------------| ------------------|
-|  Categorical   |                   |
-|  Numerical     |                   |
+|  Categorical   |       4            |
+|  Numerical     |       45           |
 
 
 
