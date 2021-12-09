@@ -157,6 +157,7 @@ This dataset was prepared by applying standard scaler and PCA. No Min max scaler
 In GridSearchCV approach, machine learning model is evaluated for a range of hyperparameter values. This approach is called GridSearchCV, because it searches for best set of hyperparameters from a grid of hyperparameters values.
 For example, if we want to set one hyperparameter 'max_depth' of Decision trees classifer model, with different set of values. The gridsearch technique will construct many versions of the model with all possible combinations of hyerparameters, and will return the best one. This is done so that algorithm can learn or identify the pattern in data efficiently and provide a good performing model.
 The only drawback of this apporach is it becomes computationally expensive. In our method, we have taken common tree hyper parameters along with model specific parameter to train the model and get the best results. The cross fold count was taken as 3. 
+
 ## 8.1.2 Model comparison paramters
 A confusion matrix presents the ways in which a classification model becomes confused while making predictions.
 ![Figure 8.1.1](images/confusionMatrix.png)
@@ -193,6 +194,7 @@ Checking only the accuracy of the model on the test set is not enough, we would 
 
 ![Figure 8.2.1.1.2](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
 Figure 8.2.1.1.2 shows the F1 scores of the models build from different preprocessed datasets.
+
 From the table above we can see when the model was applied to without preprocessed dataset, it was overfitting. It is because the features are not at the same scale and hence one features might have dominating effect on the other important features in this tree based model. Hence the accuracy on train set is high and accuracy on the test set is low.
 The dataset with minmax scaler applied performs better than the dataset with no preprocessing. However, we can see the model is still slightly over fitting.
 The dataset with minmax scaler applied perform equailvalent to the dataset with minmax scaler and correaltion applied.
@@ -207,7 +209,6 @@ Gradient boosting is a machine learning technique used in regression and classif
 ![Figure 8.2.1](images/Accuracy_plots/AccuracyGB_Gradient.png)
 
 ![Figure 8.2.2](images/F1scores_plots_all_models/F1_score_GB_Gradient.png)
-
 Figure 8.2.2 shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
 
 ## 8.3 Decision Tree
@@ -223,11 +224,17 @@ It can be observed that with Standard Scaling preprocessing technique, the accur
 Figure 8.3.2 shows the F1-score of the decision trees on the different preprocessed dataset. 
 It can be observed that with Standard Scaling preprocessing technique, F1 of DT is maximum, and with PCA, it is lowest.
 
+![Figure 8.3.3](images/Accuracy_plots/AccuracyDecision_Tree.png). 
+Figure 8.3.3 shows the accuracy plots for different preprocessed datasets.
+
+![Figure 8.3.4](images/F1scores_plots_all_models/F1_scoresDecision_Tree.png). 
+Figure 8.3.4 shows the F1 scores of the models build from different preprocessed datasets.
+
 The accuracy and F1 scores are high for the dataset with standard scaler on the model. Model fitted with dataset with Minmax scaling has similar performance to the model fitted with dataset that has MinMax scaling applied and feature pruning on basis of correlation.
 
 ## 8.4 Random Forest
 Random Forest is a classification algorithm that is a combination of many decision trees. It is a better classifier than a decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of the Random forest model includes simplicity and good accuracy.
-One of the best ways to analyze the performance of a Machine Learning model is by studying its accuracy and F1 score. The accuracy and F1 score of the Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 7.4.1) and F1 score (Figure 7.4.2) given by Random Forest are better than most of the other models that the testing is performed. This can be inferred from this that Random Forest predicts more accurate results here. 
+One of the best ways to analyze the performance of a Machine Learning model is by studying its accuracy and F1 score. The accuracy and F1 score of the Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 8.4.1) and F1 score (Figure 8.4.2) given by Random Forest are better than most of the other models that the testing is performed. This can be inferred from this that Random Forest predicts more accurate results here. 
 
 ![Figure 8.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png). 
 Figure 8.4.1 shows the Accuracy plot of the Random Forest on the different preprocessed dataset when Cross Validation is not applied to the model. 
