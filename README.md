@@ -68,6 +68,7 @@ The dataset is chosen because its competitor KDD-99 dataset has only four attack
   * F1 score
   * Receiver Operating Characteristic (ROC) curve
   * Area under the curve (AUC)
+  * Confusion Matrix
 
 ## CONTRIBUTORS:
 
