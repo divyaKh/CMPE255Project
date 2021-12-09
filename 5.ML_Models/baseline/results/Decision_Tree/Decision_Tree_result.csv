@@ -1,2 +1,2 @@
-,Accuracy_without_pp,F1_score_without_pp,Accuracy_rf_mm,F1_score1_rf_mm,Accuracy2_rf_mm_corr,F1_score2_rf_mm_corr,Accuracy2_rf_pca,F1_score2_rf_pca
+,Accuracy_without_pp,F1_score_without_pp,Accuracy_dt_mm,F1_score1_dt_mm,Accuracy2_dt_mm_corr,F1_score2_dt_mm_corr,Accuracy2_dt_pca,F1_score2_dt_pca
 0,0.91974386339381,0.9381319930592951,0.91974386339381,0.9381319930592951,0.9068982245076161,0.9313335432349659,0.8954302900941108,0.9239775981491669
