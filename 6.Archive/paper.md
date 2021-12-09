@@ -187,12 +187,12 @@ When using boosting techniques all instances in the dataset are assigned a score
 The XGboost model was applied to the different preprocessed dataset. Figure shows that the test accuracy is above 90% for the cases.
 
 ![Figure 8.2.1.1.1](images/Accuracy_plots/AccuracyXGBoost.png)
-Figure 7.1.1 shows the accuracy plots for different preprocessed datasets.
+Figure 8.2.1.1.1 shows the accuracy plots for different preprocessed datasets.
 
 Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting.
 
 ![Figure 8.2.1.1.2](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
-Figure 7.1.2 shows the F1 scores of the models build from different preprocessed datasets.
+Figure 8.2.1.1.2 shows the F1 scores of the models build from different preprocessed datasets.
 From the table above we can see when the model was applied to without preprocessed dataset, it was overfitting. It is because the features are not at the same scale and hence one features might have dominating effect on the other important features in this tree based model. Hence the accuracy on train set is high and accuracy on the test set is low.
 The dataset with minmax scaler applied performs better than the dataset with no preprocessing. However, we can see the model is still slightly over fitting.
 The dataset with minmax scaler applied perform equailvalent to the dataset with minmax scaler and correaltion applied.
@@ -206,9 +206,9 @@ Gradient boosting is a machine learning technique used in regression and classif
 
 ![Figure 8.2.1](images/Accuracy_plots/AccuracyGB_Gradient.png)
 
-![Figure 8.2.2](images/F1scores_plots_all_models/F1_scoresGB_Gradient.png)
+![Figure 8.2.2](images/F1scores_plots_all_models/F1_score_GB_Gradient.png)
 
-Figure 7.2.2 shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
+Figure 8.2.2 shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
 
 ## 8.3 Decision Tree
 
@@ -216,11 +216,11 @@ A tree can be “learned” by splitting the source set into subsets based on an
 The Decision Tree model was applied to the different preprocessed datasets and the following results were observed.
 
 ![Figure 8.3.1](images/Accuracy_plots/AccuracyDecison_Tree.png). 
-Figure 7.3.1 shows the accuracy of the decision trees on the different preprocessed dataset. 
+Figure 8.3.1 shows the accuracy of the decision trees on the different preprocessed dataset. 
 It can be observed that with Standard Scaling preprocessing technique, the accuracy of DT is maximum, and with PCA, it is lowest.
 
 ![Figure 8.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png). 
-Figure 7.3.2 shows the F1-score of the decision trees on the different preprocessed dataset. 
+Figure 8.3.2 shows the F1-score of the decision trees on the different preprocessed dataset. 
 It can be observed that with Standard Scaling preprocessing technique, F1 of DT is maximum, and with PCA, it is lowest.
 
 The accuracy and F1 scores are high for the dataset with standard scaler on the model. Model fitted with dataset with Minmax scaling has similar performance to the model fitted with dataset that has MinMax scaling applied and feature pruning on basis of correlation.
@@ -230,18 +230,18 @@ Random Forest is a classification algorithm that is a combination of many decisi
 One of the best ways to analyze the performance of a Machine Learning model is by studying its accuracy and F1 score. The accuracy and F1 score of the Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 7.4.1) and F1 score (Figure 7.4.2) given by Random Forest are better than most of the other models that the testing is performed. This can be inferred from this that Random Forest predicts more accurate results here. 
 
 ![Figure 8.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png). 
-Figure 7.4.1 shows the Accuracy plot of the Random Forest on the different preprocessed dataset when Cross Validation is not applied to the model. 
+Figure 8.4.1 shows the Accuracy plot of the Random Forest on the different preprocessed dataset when Cross Validation is not applied to the model. 
 
 ![Figure 8.4.2](images/Accuracy_plots/Accuracy_RF_withCV.png). 
-Figure 7.4.2 shows the Accuracy plot of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model. 
+Figure 8.4.2 shows the Accuracy plot of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model. 
 
 It can be observed accuracy of RF is maximum for three preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling, and Standard Scaling. It is the lowest with PCA. 
 
 ![Figure 8.4.3](images/F1scores_plots_all_models/F1_scoresRandom_Forest.png). 
-Figure 7.4.3 shows the F1-score of the Random Forest on the different preprocessed dataset when Cross Validation is not applied to the model. 
+Figure 8.4.3 shows the F1-score of the Random Forest on the different preprocessed dataset when Cross Validation is not applied to the model. 
 
 ![Figure 8.4.4](images/F1scores_plots_all_models/F1_score_RF_withCV.png). 
-Figure 7.4.4 shows the F1-score of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model. 
+Figure 8.4.4 shows the F1-score of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model. 
 
 
 It can be observed that with MinMax preprocessing technique, F1 of RF is maximum, and with PCA, it is lowest.
