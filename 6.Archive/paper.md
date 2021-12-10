@@ -126,7 +126,9 @@ Correlation feature selection is used for eliminating or dropping columns which 
 The columns dropped were:
  <center>*'sbytes', 'dbytes', 'sloss', 'dloss', 'dwin', 'ct_src_dport_ltm', 'ct_dst_src_ltm', 'ct_ftp_cmd', 'ct_srv_dst'*</center>
 The features on the dataset reduced to 33.
-Figure 3.3 shows the complete visualization of correlation values.
+![Figure 6.1.1](images/CORR.png)
+
+Figure  shows the complete visualization of correlation values.
 
 
 ## 6.2 Principal Component Analysis 
@@ -196,12 +198,12 @@ Figure 8.2.1.1.1 shows the accuracy plots for different preprocessed datasets.
 
 Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting.
 
-![Figure 8.2.1.1.](images/F1scores_plots_all_models/Comparison_XGBoost.png)
+![Figure 8.2.1.1.2](images/F1scores_plots_all_models/Comparison_XGBoost.png)
 Here we can the best performing model is the models with the minmax scaler and the correlation analysis applied. The model is slightly overfitting but, it is better performing model than the other three.
 The F1-score is also high for this model. Below is the image for F1-scores of all the datasets and confusion matrix for the model trained using dataset preprocessed with Minmax scaler and correlation analysis.
 ![Figure 8.2.1.1.3](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
 
-![Figure 8.2.1.1.3](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
+![Figure 8.2.1.1.4](images/F1scores_plots_all_models/confusionMatrixXGBoost.png)
 Figure 8.2.1.1.2 shows the F1 scores of the models build from different preprocessed datasets.
 
 From the table above we can see when the model was applied to without preprocessed dataset, it was overfitting. It is because the features are not at the same scale and hence one features might have dominating effect on the other important features in this tree based model. Hence the accuracy on train set is high and accuracy on the test set is low.
