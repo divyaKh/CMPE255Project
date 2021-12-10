@@ -203,7 +203,7 @@ Here we can the best performing model is the models with the minmax scaler and d
 The F1-score is also high for this model. Below is the image for F1-scores of all the datasets and confusion matrix for the model trained using dataset preprocessed with Minmax scaler..
 ![Figure 8.2.1.1.3](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
 
-![Figure 8.2.1.1.4](images/F1scores_plots_all_models/confusionMatrixXGBoost.png)
+![Figure 8.2.1.1.4](images/F1scores_plots_all_models/confusionMatrixXGBoost.jpg)
 Figure 8.2.1.1.2 shows the F1 scores of the models build from different preprocessed datasets.
 
 From the table above we can see the dataset with minmax scaler applied perform equailvalent to the dataset with minmax scaler and correaltion applied. These two have a higher accuracies on the test set , and the model performs better.
