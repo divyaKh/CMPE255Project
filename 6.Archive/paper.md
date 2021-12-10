@@ -1,5 +1,5 @@
 ---
-title: Predicting Network Attack Using UNSW-NB15 Dataset
+title: Network Attack Detection Using UNSW-NB15 Dataset
 date: "November 2021"
 author: 
 - Divya Khandelwal
