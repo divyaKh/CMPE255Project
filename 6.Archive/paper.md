@@ -219,7 +219,7 @@ Gradient boosting is a machine learning technique used in regression and classif
 ![Figure 8.2.2](images/F1scores_plots_all_models/F1_score_GB_withCV.PNG)
 Figure 8.2.2 shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
 
-![Figure 8.2.3](images/F1scores_plots_all_models/GB_results.PNG)
+![Figure 8.2.3](images/GB_Gradient_plots/GB_results.PNG)
 Figure 8.4.1 shows the Accuracy comparison of train and test set
 
 ## 8.3 Decision Tree
