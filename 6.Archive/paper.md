@@ -283,6 +283,6 @@ For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further fo
 The standard scaler processing proved to be the most accurate for all the models with accuracy of 95.1%, 93.3%, 93.8% and 93.4% for XG Boost, Gradient Boost, Decision tree and Random Forest respectively. The main reason is Standard Scaler removes the mean and scales the data to unit variance. It also shrinks the range of feature.
 
 # Conclusions
-Get the best model and say ... SOME INFERNECES.
+After comparing accuracy of all the models, the XG boost comes out to be most accurate with the accuracy percentage of 95.2% after applying Min-Max scaling for the data set. This was followed by random forest with 95% accuracy. After, decision tree, gradient boost proved to be the more accurate with 94% before decision tree which has 92%.
 
 # References
