@@ -1,0 +1,2 @@
+,Accuracy_xgb_without_pp,F1_score_xgb_without_pp,Accuracy_xgb_mm,F1_score1_xgb_mm,Accuracy2_xgb_mm_corr,F1_score2_xgb_mm_corr,Accuracy2_xgb_pca,F1_score2_xgb_pca
+0,0.9522848549529446,0.9624482690163859,0.9522848549529446,0.9624482690163859,0.9441932667119434,0.9561959303033994,0.929484816144368,0.945176960444136
