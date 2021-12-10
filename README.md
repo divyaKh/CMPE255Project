@@ -77,7 +77,7 @@ The dataset is chosen because its competitor KDD-99 dataset has only four attack
 * [Wen-Hao Tseng](https://github.com/Wenhao-Tseng)
 * [Chintan Shah](https://github.com/chaks64)
 
-##Instruction to run the code 
+## Instruction to run the code 
 
 Stage 1: Go to the dataset run  https://github.com/divyaKh/CMPE255Project/blob/main/2.Data_Cleaning/Dataset_and_its_Cleaning.ipynb to get the https://github.com/divyaKh/CMPE255Project/blob/main/2.Data_Cleaning/cleaned_dataset_label_encoding.csv
 Stage 2: Go to https://github.com/divyaKh/CMPE255Project/blob/main/3.EDA/Exploratory_Data_Analysis.ipynb and run it for the EDA
