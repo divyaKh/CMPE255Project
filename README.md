@@ -93,7 +93,7 @@ Stage 4 : Go to https://github.com/divyaKh/CMPE255Project/tree/main/5.ML_Models/
 FOR Milestone 2 implementation -- > run https://github.com/divyaKh/CMPE255Project/blob/main/5.ML_Models/Final_notebook.ipynb. It has links to MILESTONE 3 implementations 
 
 
-The final report is Paper.pdf --> https://github.com/divyaKh/CMPE255Project/blob/main/6.Archive/paper.pdf
+The final report is Paper.pdf --> https://github.com/divyaKh/CMPE255Project/blob/main/6.Archive/final.pdf
 Milestone 2 paper-->https://github.com/divyaKh/CMPE255Project/blob/eba8664e878d3b7bc7a81d5a40151cc2e437b33c/Archive/paper.pdf
 
 
