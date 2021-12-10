@@ -174,9 +174,13 @@ The higher the F1-score, the better the model.
 ## 8.2.1 Models
 
 Machine models needs to be trained on the network packets from the dataset to allow them to detect network attacks.There are different machine learning models available, but for this project, Only tree based models were chosen. The following four are considered:
+
 1. XGBoost
+
 2. GB Gradient
+
 3. Decision Tree
+
 4. Random Forest
 
 ## 8.2.1.1 XGBoost
@@ -191,15 +195,18 @@ Figure 8.2.1.1.1 shows the accuracy plots for different preprocessed datasets.
 
 Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting.
 
-![Figure 8.2.1.1.2](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
+![Figure 8.2.1.1.](images/F1scores_plots_all_models/Comparison_XGBoost.png)
+Here we can the best performing model is the models with the minmax scaler and the correlation analysis applied. The model is slightly overfitting but, it is better performing model than the other three.
+The F1-score is also high for this model. Below is the image for F1-scores of all the datasets and confusion matrix for the model trained using dataset preprocessed with Minmax scaler and correlation analysis.
+![Figure 8.2.1.1.3](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
+
+![Figure 8.2.1.1.3](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
 Figure 8.2.1.1.2 shows the F1 scores of the models build from different preprocessed datasets.
 From the table above we can see when the model was applied to without preprocessed dataset, it was overfitting. It is because the features are not at the same scale and hence one features might have dominating effect on the other important features in this tree based model. Hence the accuracy on train set is high and accuracy on the test set is low.
 The dataset with minmax scaler applied performs better than the dataset with no preprocessing. However, we can see the model is still slightly over fitting.
 The dataset with minmax scaler applied perform equailvalent to the dataset with minmax scaler and correaltion applied.
-The datset where pca was applied performs best among the other datasets. The train accuracy and test accuracy are similar and the F1-score is also high in this case.
-Below is the image for confusion marix for dataset with PCA applied.
+The datset where pca is worse, the model is overfitting the dataset on train, hence the accuracy at the test data is low. 
 
-![Figure 8.2.1.1.3](images/F1scores_plots_all_models/confusionMatrixXGBoost.png)
 
 ## 8.2.1.2 Gradient Boost
 Gradient boosting is a machine learning technique used in regression and classification tasks, among others. It gives a prediction model in the form of an ensemble of weak prediction models, which are typically decision trees. When a decision tree is the weak learner, the resulting algorithm is called gradient-boosted trees. A gradient-boosted trees model is built in a stage-wise fashion as in other boosting methods, but it generalizes the other methods by allowing optimization of an arbitrary differentiable loss function. All the trees are connected in series and each tree tries to minimise the error of the previous tree. Due to this sequential connection, the gradient boost algorithm is usually slow to learn, but also highly accurate.
