@@ -199,17 +199,16 @@ Figure 8.2.1.1.1 shows the accuracy plots for different preprocessed datasets.
 Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting.
 
 ![Figure 8.2.1.1.2](images/F1scores_plots_all_models/Comparison_XGBoost.png)
-Here we can the best performing model is the models with the minmax scaler and the correlation analysis applied. The model is slightly overfitting but, it is better performing model than the other three.
-The F1-score is also high for this model. Below is the image for F1-scores of all the datasets and confusion matrix for the model trained using dataset preprocessed with Minmax scaler and correlation analysis.
+Here we can the best performing model is the models with the minmax scaler and dataset that has no scaling. The model is slightly overfitting but, it is better performing model than the other two.
+The F1-score is also high for this model. Below is the image for F1-scores of all the datasets and confusion matrix for the model trained using dataset preprocessed with Minmax scaler..
 ![Figure 8.2.1.1.3](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
 
 ![Figure 8.2.1.1.4](images/F1scores_plots_all_models/confusionMatrixXGBoost.png)
 Figure 8.2.1.1.2 shows the F1 scores of the models build from different preprocessed datasets.
 
-From the table above we can see when the model was applied to without preprocessed dataset, it was overfitting. It is because the features are not at the same scale and hence one features might have dominating effect on the other important features in this tree based model. Hence the accuracy on train set is high and accuracy on the test set is low.
-The dataset with minmax scaler applied performs better than the dataset with no preprocessing. However, we can see the model is still slightly over fitting.
-The dataset with minmax scaler applied perform equailvalent to the dataset with minmax scaler and correaltion applied.
-The datset where pca is worse, the model is overfitting the dataset on train, hence the accuracy at the test data is low. 
+From the table above we can see the dataset with minmax scaler applied perform equailvalent to the dataset with minmax scaler and correaltion applied. These two have a higher accuracies on the test set , and the model performs better.
+The dataset with the Minmax scaler and correlation analysis applied has a slight overfitting and is somewhat equivalent to the dataset without preprocessing and minxmax scaler applied.
+The datset where pca was applied performs worse, the model is overfitting the dataset on train, hence the accuracy at the test data is low. 
 
 
 ## 8.2.1.2 Gradient Boost
