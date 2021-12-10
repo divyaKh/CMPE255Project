@@ -219,6 +219,9 @@ Gradient boosting is a machine learning technique used in regression and classif
 ![Figure 8.2.2](images/F1scores_plots_all_models/F1_score_GB_withCV.PNG)
 Figure 8.2.2 shows a good F1 score for the gradient descent algorithm. Also the model classifies in the test data above 90%. Although it takes time for the fitting due to its sequential connection.
 
+![Figure 8.2.3](images/F1scores_plots_all_models/GB_results.PNG)
+Figure 8.4.1 shows the Accuracy comparison of train and test set
+
 ## 8.3 Decision Tree
 
 A tree can be “learned” by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node all has the same value of the target variable, or when splitting no longer adds value to the predictions. The construction of decision tree classifier does not require any domain knowledge or parameter setting, and therefore is appropriate for exploratory knowledge discovery. 
