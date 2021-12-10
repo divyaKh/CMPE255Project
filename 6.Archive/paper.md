@@ -225,20 +225,15 @@ Figure 8.2.2 shows a good F1 score for the gradient descent algorithm. Also the 
 A tree can be “learned” by splitting the source set into subsets based on an attribute value test. This process is repeated on each derived subset in a recursive manner called recursive partitioning. The recursion is completed when the subset at a node all has the same value of the target variable, or when splitting no longer adds value to the predictions. The construction of decision tree classifier does not require any domain knowledge or parameter setting, and therefore is appropriate for exploratory knowledge discovery. 
 The Decision Tree model was applied to the different preprocessed datasets and the following results were observed.
 
-![Figure 8.3.1](images/Accuracy_plots/AccuracyDecison_Tree.png). 
-Figure 8.3.1 shows the accuracy of the decision trees on the different preprocessed dataset. 
-It can be observed that with Standard Scaling preprocessing technique, the accuracy of DT is maximum, and with PCA, it is lowest.
+![Figure 8.3.1](images/Accuracy_plots/AccuracyDecision_Tree.png). 
+Figure 8.3.1 shows the accuracy plots for different preprocessed datasets with Cross Validation.
 
-![Figure 8.3.2](images/F1scores_plots_all_models/F1_scoresDecison_Tree.png). 
-Figure 8.3.2 shows the F1-score of the decision trees on the different preprocessed dataset. 
-It can be observed that with Standard Scaling preprocessing technique, F1 of DT is maximum, and with PCA, it is lowest.
+![Figure 8.3.2](images/F1scores_plots_all_models/F1_scoresDecision_Tree.png). 
+Figure 8.3.2 shows the F1 scores of the models build from different preprocessed datasets with Cross Validation.
 
-![Figure 8.3.3](images/Accuracy_plots/AccuracyDecision_Tree.png). 
-Figure 8.3.3 shows the accuracy plots for different preprocessed datasets.
+![Figure 8.3.3](../5.ML_Models/baseline/results/Decision_Tree/trainVerusTestAccuracy.png). 
 
-![Figure 8.3.4](images/F1scores_plots_all_models/F1_scoresDecision_Tree.png). 
-Figure 8.3.4 shows the F1 scores of the models build from different preprocessed datasets.
-
+Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting. The result is shown in Figure 8.3.3. 
 The accuracy and F1 scores are high for the dataset with standard scaler on the model. Model fitted with dataset with Minmax scaling has similar performance to the model fitted with dataset that has MinMax scaling applied and feature pruning on basis of correlation.
 
 ## 8.4 Random Forest
