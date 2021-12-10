@@ -257,32 +257,7 @@ Figure 8.4.3 shows the F1-score of the Random Forest on the different preprocess
 
 The F1 scores are comparable for the unprocessed dataset and dataset with MinMax scaling applied. Taking into account the accuracy and F1 score both, we can infer that Random Forest perform best for unprocessed data.
 
-
-# 9. Comparisons:
-
-## 9.1 Without Processing the dataset
-The data modeling was done for the data without any processing which gave the following results shown in Figure 8.1.
- 
-For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.6% and lastly for Random forest the accuracy was 93.4%.
-
-## 9.2 After applying Min-Max Scaler algorithm
-The data modeling was done for the dataset which gave the following results shown in Figure 8.2.
- 
-For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.7% and lastly for Random forest the accuracy was 93.6%.
-
-## 9.3 After applying Min-Max Scaler with Correlation
-The data modeling was done for the dataset which gave the following results shown in Figure 8.3.
- 
- ![Figure 9.3](https://user-images.githubusercontent.com/24936584/142974362-e8fe529e-bb23-401f-b0b6-30c031df3acc.png)
-
-For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.7% and lastly for Random forest the accuracy was 93.3%.
-
-## 9.4 After applying Standard Scaler with PCA
-
-For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.6% and lastly for Random forest the accuracy was 93.2%.  
-The standard scaler processing proved to be the most accurate for all the models with accuracy of 95.1%, 93.3%, 93.8% and 93.4% for XG Boost, Gradient Boost, Decision tree and Random Forest respectively. The main reason is Standard Scaler removes the mean and scales the data to unit variance. It also shrinks the range of feature.
-
-# Conclusions
-After comparing accuracy of all the models, the XG boost comes out to be most accurate with the accuracy percentage of 95.2% after applying Min-Max scaling for the data set. This was followed by random forest with 95% accuracy. After, decision tree, gradient boost proved to be the more accurate with 94% before decision tree which has 92%. Also, min-max scalar has no effect on the dataset. PCA worsens the accuracy of dataset and also its very time consuming.
+# 9 Conclusions
+After comparing accuracy of all the models, the XG boost comes out to be most accurate with the accuracy percentage of 95.2% after applying Min-Max scaling for the data set. This was followed by random forest with 95% accuracy on pre-processed dataset. After, decision tree, gradient boost proved to be the more accurate with 94% before decision tree which has 92%. Also, min-max scalar has no effect on the accuracy of model. PCA worsens the accuracy of dataset and also its very time consuming.
 
 # References
