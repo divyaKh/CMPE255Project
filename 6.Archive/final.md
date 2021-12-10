@@ -176,7 +176,7 @@ The higher the accuracy, the better is the model. However, we should consider th
 
 The higher the F1-score, the better the model.
 
-## 8.2.1 Models
+## 8.2.1 Models Comparisons
 
 Machine models needs to be trained on the network packets from the dataset to allow them to detect network attacks.There are different machine learning models available, but for this project, Only tree based models were chosen. The following four are considered:
 
