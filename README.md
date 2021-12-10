@@ -94,6 +94,7 @@ FOR Milestone 2 implementation -- > run https://github.com/divyaKh/CMPE255Projec
 
 
 The final report is Paper.pdf --> https://github.com/divyaKh/CMPE255Project/blob/main/6.Archive/paper.pdf
+Milestone 2 paper-->https://github.com/divyaKh/CMPE255Project/blob/eba8664e878d3b7bc7a81d5a40151cc2e437b33c/Archive/paper.pdf
 
 
 
