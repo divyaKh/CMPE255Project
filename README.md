@@ -93,6 +93,8 @@ Each stage above will generate the csv, and fed to the next stage.
 FOR Milestone 2 implementation -- > run https://github.com/divyaKh/CMPE255Project/blob/main/5.ML_Models/Final_notebook.ipynb. It has links to MILESTONE 3 implementations 
 
 
+The final report is Paper.pdf --> https://github.com/divyaKh/CMPE255Project/blob/main/6.Archive/paper.pdf
+
 
 
 
