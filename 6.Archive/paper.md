@@ -250,7 +250,7 @@ Figure 8.4.1 shows the Accuracy plot of the Random Forest on the different prepr
 
 Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting.
 
-![Figure 8.4.2](https://raw.githubusercontent.com/divyaKh/CMPE255Project/5.ML_Models/baseline/results/Random_Forest/trainVerusTestAccuracy.png).
+![Figure 8.4.2](../5.ML_Models/baseline/results/Random_Forest/trainVerusTestAccuracy.png).
 
 It can be observed accuracy of RF is comparable and good for preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling. It is the lowest with PCA. 
 
