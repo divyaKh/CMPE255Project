@@ -250,7 +250,7 @@ Figure 8.4.1 shows the Accuracy plot of the Random Forest on the different prepr
 
 Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting.
 
-![Figure 8.4.2](https://raw.githubusercontent.com/divyaKh/CMPE255Project/5.ML_Models/baseline/results/Random_Forest/trainVerusTestAccuracy.png).
+![Figure 8.4.2](images/Random_Forest_plots/trainVerusTestAccuracy.png).
 
 It can be observed accuracy of RF is comparable and good for preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling. It is the lowest with PCA. 
 
@@ -258,21 +258,17 @@ It can be observed accuracy of RF is comparable and good for preprocessing techn
 Figure 8.4.3 shows the F1-score of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model. 
 
 
-# 9. Comparisons : leaving this part now
+# 9. Comparisons:
 
 ## 9.1 Without Processing the dataset
 The data modeling was done for the data without any processing which gave the following results shown in Figure 8.1.
  
-
-
 For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.6% and lastly for Random forest the accuracy was 93.4%.
 
 ## 9.2 After applying Min-Max Scaler algorithm
 The data modeling was done for the dataset which gave the following results shown in Figure 8.2.
  
-
 For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.7% and lastly for Random forest the accuracy was 93.6%.
-
 
 ## 9.3 After applying Min-Max Scaler with Correlation
 The data modeling was done for the dataset which gave the following results shown in Figure 8.3.
@@ -283,7 +279,6 @@ For XG Boost accuracy was 95.1%, for Gradient boost it dropped to 93.3% further 
 
 ## 9.4 After applying Standard Scaler with PCA
 
- 
 For XG Boost accuracy was 95%, for Gradient boost it dropped to 93.3% further for Decision tree it was around 93.6% and lastly for Random forest the accuracy was 93.2%.  
 The standard scaler processing proved to be the most accurate for all the models with accuracy of 95.1%, 93.3%, 93.8% and 93.4% for XG Boost, Gradient Boost, Decision tree and Random Forest respectively. The main reason is Standard Scaler removes the mean and scales the data to unit variance. It also shrinks the range of feature.
 
