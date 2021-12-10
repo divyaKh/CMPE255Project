@@ -199,14 +199,14 @@ Figure 8.2.1.1.1 shows the accuracy plots for different preprocessed datasets.
 Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting.
 
 ![Figure 8.2.1.1.2](images/F1scores_plots_all_models/Comparison_XGBoost.png)
-Here we can the best performing model is the models with the minmax scaler and dataset that has no scaling. The model is slightly overfitting but, it is better performing model than the other two.
-The F1-score is also high for this model. Below is the image for F1-scores of all the datasets and confusion matrix for the model trained using dataset preprocessed with Minmax scaler..
+Here we can see that the best performing models are the models with the minmax scaler and unprocessed data. The models are slightly overfitting but, they are  performing better than the other two.
+The F1-score is also high for these models. Below is the image for F1-scores of all the datasets and confusion matrix for the model trained using dataset preprocessed with Minmax scaler.
 ![Figure 8.2.1.1.3](images/F1scores_plots_all_models/F1_scoresXGBoost.png)
 
 ![Figure 8.2.1.1.4](images/F1scores_plots_all_models/confusionMatrixXGBoost.jpg)
 Figure 8.2.1.1.2 shows the F1 scores of the models build from different preprocessed datasets.
 
-From the table above we can see the dataset with minmax scaler applied perform equailvalent to the dataset with minmax scaler and correaltion applied. These two have a higher accuracies on the test set , and the model performs better.
+From the table above we can see the dataset with minmax scaler applied, performs equilvalent to the dataset with minmax scaler and correlation applied. These two have a higher accuracies on the test set. 
 The dataset with the Minmax scaler and correlation analysis applied has a slight overfitting and is somewhat equivalent to the dataset without preprocessing and minxmax scaler applied.
 The dataset where pca was applied performs worse, the model is overfitting the dataset on train, hence the accuracy at the test data is low. 
 
@@ -248,7 +248,7 @@ Figure 8.4.1 shows the Accuracy plot of the Random Forest on the different prepr
 Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting.
 
 ![Figure 8.4.2](images/Random_Forest_plots/trainVerusTestAccuracy.png)
-Figure 8.4.1 shows the Accuracy comparison of train and test set
+Figure 8.4.2 shows the Accuracy comparison of train and test set
 
 Here we can see that the model is best performing best with no preprocessing done. Though in all the analysis, the model is overfitting as train accuracy > test accuracy. But if we check that difference between the train and test accuracies, it is least for unprocessed dataset. Therefore we can say that if data is left unprocessed then Random Forest is performing is the best.
 
@@ -258,6 +258,6 @@ Figure 8.4.3 shows the F1-score of the Random Forest on the different preprocess
 The F1 scores are comparable for the unprocessed dataset and dataset with MinMax scaling applied. Taking into account the accuracy and F1 score both, we can infer that Random Forest perform best for unprocessed data.
 
 # 9 Conclusions
-After comparing accuracy of all the models, the XG boost comes out to be most accurate with the accuracy percentage of 95.2% after applying Min-Max scaling for the data set. This was followed by random forest with 95% accuracy on pre-processed dataset. After, decision tree, gradient boost proved to be the more accurate with 94% before decision tree which has 92%. Also, min-max scalar has no effect on the accuracy of model. PCA worsens the accuracy of dataset and also its very time consuming.
+After comparing accuracy of all the models, the XG boost comes out to be most accurate with the accuracy percentage of 95.2% after applying Min-Max scaling for the data set. This was followed by random forest with 95% accuracy on unprocessed dataset. After, decision tree, gradient boost proved to be the more accurate with 94% before decision tree which has 92%. Also, min-max scalar has not much effect on the accuracy of models. PCA worsens the accuracy of models and its processing takes a lot of time.
 
 # References
