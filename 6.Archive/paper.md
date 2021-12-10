@@ -240,16 +240,19 @@ Random Forest is a classification algorithm that is a combination of many decisi
 One of the best ways to analyze the performance of a Machine Learning model is by studying its accuracy and F1 score. The accuracy and F1 score of the Random Model as a classifier is computed and plotted for different preprocessing techniques. 
 
 ![Figure 8.4.1](images/Accuracy_plots/Accuracy_RF_withCV.png)
-Figure 8.4.1 shows the Accuracy plot of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model.
+Figure 8.4.1 shows the Accuracy plot of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model
 
 Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting.
 
 ![Figure 8.4.2](images/Random_Forest_plots/trainVerusTestAccuracy.png)
+Figure 8.4.1 shows the Accuracy comparison of train and test set
 
-It can be observed accuracy of RF is comparable and good for preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling. It is the lowest with PCA. 
+Here we can see that the model is best performing best with no preprocessing done. Though in all the analysis, the model is overfitting as train accuracy > test accuracy. But if we check that difference between the train and test accuracies, it is least for unprocessed dataset. Therefore we can say that if data is left unprocessed then Random Forest is performing is the best.
 
 ![Figure 8.4.3](images/F1scores_plots_all_models/F1_score_RF_withCV.png)
-Figure 8.4.3 shows the F1-score of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model. 
+Figure 8.4.3 shows the F1-score of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model 
+
+The F1 scores are comparable for the unprocessed dataset and dataset with MinMax scaling applied. Taking into account the accuracy and F1 score both, we can infer that Random Forest perform best for unprocessed data.
 
 
 # 9. Comparisons:
