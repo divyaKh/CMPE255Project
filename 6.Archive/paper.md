@@ -243,24 +243,20 @@ The accuracy and F1 scores are high for the dataset with standard scaler on the 
 
 ## 8.4 Random Forest
 Random Forest is a classification algorithm that is a combination of many decision trees. It is a better classifier than a decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of the Random forest model includes simplicity and good accuracy.
-One of the best ways to analyze the performance of a Machine Learning model is by studying its accuracy and F1 score. The accuracy and F1 score of the Random Model as a classifier is computed and plotted for different preprocessing techniques. It is observed that both accuracy (Figure 8.4.1) and F1 score (Figure 8.4.2) given by Random Forest are better than most of the other models that the testing is performed. This can be inferred from this that Random Forest predicts more accurate results here. 
+One of the best ways to analyze the performance of a Machine Learning model is by studying its accuracy and F1 score. The accuracy and F1 score of the Random Model as a classifier is computed and plotted for different preprocessing techniques. 
 
-![Figure 8.4.1](images/Accuracy_plots/AccuracyRandom_Forest.png). 
-Figure 8.4.1 shows the Accuracy plot of the Random Forest on the different preprocessed dataset when Cross Validation is not applied to the model. 
+![Figure 8.4.1](images/Accuracy_plots/Accuracy_RF_withCV.png).  
+Figure 8.4.1 shows the Accuracy plot of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model.
 
-![Figure 8.4.2](images/Accuracy_plots/Accuracy_RF_withCV.png). 
-Figure 8.4.2 shows the Accuracy plot of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model. 
+Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting.
 
-It can be observed accuracy of RF is maximum for three preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling, and Standard Scaling. It is the lowest with PCA. 
+![Figure 8.4.2](https://raw.githubusercontent.com/divyaKh/CMPE255Project/5.ML_Models/baseline/results/Random_Forest/trainVerusTestAccuracy.png).
 
-![Figure 8.4.3](images/F1scores_plots_all_models/F1_scoresRandom_Forest.png). 
-Figure 8.4.3 shows the F1-score of the Random Forest on the different preprocessed dataset when Cross Validation is not applied to the model. 
+It can be observed accuracy of RF is comparable and good for preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling. It is the lowest with PCA. 
 
-![Figure 8.4.4](images/F1scores_plots_all_models/F1_score_RF_withCV.png). 
-Figure 8.4.4 shows the F1-score of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model. 
+![Figure 8.4.3](images/F1scores_plots_all_models/F1_score_RF_withCV.png).  
+Figure 8.4.3 shows the F1-score of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model. 
 
-
-It can be observed that with MinMax preprocessing technique, F1 of RF is maximum, and with PCA, it is lowest.
 
 # 9. Comparisons : leaving this part now
 
