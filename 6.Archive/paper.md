@@ -37,7 +37,7 @@ For our work, the UNSW-NB15 dataset contains 257,673 data instances with 49 feat
 The data distribution data of UNSW-NB15 is shown in Figure 1.1.  
 After dropping some highly correlated features to avoid redundancy, we have chosen and analysed 20 of them. We perfomed 3 kinds of exploratory data analysis on the UNSW-NB15 dataset, namely countplot or barplot for all categorial or columns with small number of unique values, plot PDF (probability density function) for numerical features, and Correlation of the features and its heatmap.  
 In this data set, there are total 9 attack categories of attack and normal is non-attack. The data is highly imbalanced and have lots of non-attack than attacks.
-The most occured attack data categories are "*Reconnaissance*", "*Backdoor*", "*DoS*", "*Exploits*" and "*Analysis*". 
+The most occurred attack data categories are "*Reconnaissance*", "*Backdoor*", "*DoS*", "*Exploits*" and "*Analysis*". 
 In the **protocol** category, most of the values are consists of udp and tcp. For attacks count of udp is lot higher. The bar plot is shown in Figure 3.1.
 
 ![Figure 3.1](images/EDA/protocol.png)
