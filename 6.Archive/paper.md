@@ -126,7 +126,7 @@ Correlation feature selection is used for eliminating or dropping columns which 
 The columns dropped were:
  <center>*'sbytes', 'dbytes', 'sloss', 'dloss', 'dwin', 'ct_src_dport_ltm', 'ct_dst_src_ltm', 'ct_ftp_cmd', 'ct_srv_dst'*</center>
 The features on the dataset reduced to 33.
-![Figure 6.1.1](images/CORR.png)
+![Figure 6.1.1](images/CORR.JPG)
 
 Figure  shows the complete visualization of correlation values.
 
