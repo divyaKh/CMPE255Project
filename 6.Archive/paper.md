@@ -234,7 +234,7 @@ Figure 8.3.2 shows the F1 scores of the models build from different preprocessed
 ![Figure 8.3.3](../5.ML_Models/baseline/results/Decision_Tree/trainVerusTestAccuracy.png)
 
 Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting. The result is shown in Figure 8.3.3.  
-The accuracy and F1 scores are high for the dataset with standard scaler on the model. Model fitted with dataset with Minmax scaling has similar performance to the model fitted with dataset that has MinMax scaling applied and feature pruning on basis of correlation.
+Model fitted with dataset with Minmax scaling has similar performance to the model fitted with dataset that has MinMax scaling applied. It is the lowest with PCA. 
 
 ## 8.4 Random Forest
 Random Forest is a classification algorithm that is a combination of many decision trees. It is a better classifier than a decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of the Random forest model includes simplicity and good accuracy.
