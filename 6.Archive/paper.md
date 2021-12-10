@@ -231,25 +231,25 @@ Figure 8.3.1 shows the accuracy plots for different preprocessed datasets with C
 ![Figure 8.3.2](images/F1scores_plots_all_models/F1_scoresDecision_Tree.png). 
 Figure 8.3.2 shows the F1 scores of the models build from different preprocessed datasets with Cross Validation.
 
-![Figure 8.3.3](../5.ML_Models/baseline/results/Decision_Tree/trainVerusTestAccuracy.png). 
+![Figure 8.3.3](../5.ML_Models/baseline/results/Decision_Tree/trainVerusTestAccuracy.png)
 
-Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting. The result is shown in Figure 8.3.3. 
+Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting. The result is shown in Figure 8.3.3.  
 The accuracy and F1 scores are high for the dataset with standard scaler on the model. Model fitted with dataset with Minmax scaling has similar performance to the model fitted with dataset that has MinMax scaling applied and feature pruning on basis of correlation.
 
 ## 8.4 Random Forest
 Random Forest is a classification algorithm that is a combination of many decision trees. It is a better classifier than a decision tree since it leverages the advantages of DT and overcomes its shortcomings. Therefore, the feature of the Random forest model includes simplicity and good accuracy.
 One of the best ways to analyze the performance of a Machine Learning model is by studying its accuracy and F1 score. The accuracy and F1 score of the Random Model as a classifier is computed and plotted for different preprocessing techniques. 
 
-![Figure 8.4.1](images/Accuracy_plots/Accuracy_RF_withCV.png).  
+![Figure 8.4.1](images/Accuracy_plots/Accuracy_RF_withCV.png)
 Figure 8.4.1 shows the Accuracy plot of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model.
 
 Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting.
 
-![Figure 8.4.2](images/Random_Forest_plots/trainVerusTestAccuracy.png).
+![Figure 8.4.2](images/Random_Forest_plots/trainVerusTestAccuracy.png)
 
 It can be observed accuracy of RF is comparable and good for preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling. It is the lowest with PCA. 
 
-![Figure 8.4.3](images/F1scores_plots_all_models/F1_score_RF_withCV.png).  
+![Figure 8.4.3](images/F1scores_plots_all_models/F1_score_RF_withCV.png)
 Figure 8.4.3 shows the F1-score of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model. 
 
 
