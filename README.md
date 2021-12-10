@@ -88,7 +88,7 @@ We have changed a preprocessing a bit. We have taken on MINMAX scaler into consi
 
 Stage 4 : Go to https://github.com/divyaKh/CMPE255Project/tree/main/5.ML_Models/baseline run each notebook for each type of the models.This stage requires cleaned_dataset_label_encoding.csv,dataset_minmax.csv,dataset_minmax_corr.csv,dataset_pca.csv. These csv will be genrated at stage 1 and stage3. This is MILESTONE 3 implementation.
 
-Each stage above will generate the csv, and fed to the next stage.
+
 
 FOR Milestone 2 implementation -- > run https://github.com/divyaKh/CMPE255Project/blob/main/5.ML_Models/Final_notebook.ipynb. It has links to MILESTONE 3 implementations 
 
