@@ -15,7 +15,7 @@ header-includes: |
 
 # Abstract
 
-Cyber attacks are one of the biggest threads in this era of digital world. It is very important to combat the network attacks to establish a secure environment for all the users of a network. This project focuses on creating and testing Machine Learning Models over a large dataset of raw network packets to detect network attacks. The dataset used, is created by Cyber Range Lab of UNSW Canberra. The project analyses the performance of different ML models like XGBoost, Random Forest, Decision Tree and Gradient Boost over the dataset. The dataset has been preprocessed using techniques like Dimension Reduction, Feature Scaling. The performance, in terms of Acuracy and F1 score, is studied for each model and the inferences like best working model are derived.
+Cyber attacks are one of the biggest threats in this era of digital world. It is very important to combat the network attacks to establish a secure environment for all the users of a network. This project focuses on creating and testing Machine Learning Models over a large dataset of raw network packets to detect network attacks. The dataset used, is created by Cyber Range Lab of UNSW Canberra. The project analyses the performance of different ML models like XGBoost, Random Forest, Decision Tree and Gradient Boost over the dataset. The dataset has been preprocessed using techniques like Dimension Reduction, Feature Scaling. The performance, in terms of Acuracy and F1 score, is studied for each model and the inferences like best working model are derived.
 
 # 1. Introduction
 The occurrence of cyber security incidents have proliferated in recent years. Almost every year, one or two major information security incidents attract the attention of the world. Numerous studies have already been conducted in the field of cyber security utilizing data mining technologies. Using the UNSW-NB15 Dataset [@7348942], we will detect that if the network is under attack. This dataset is created by Cyber Range Lab of UNSW Canberra. It is widely used and is named as UNSW-NB15 dataset. The raw network packets of the UNSW-NB 15 dataset were created by the IXIA PerfectStorm tool. This dataset has a hybrid of the real modern normal and the contemporary synthesized attack activities of the network traffic.
@@ -166,11 +166,11 @@ A confusion matrix presents the ways in which a classification model becomes con
 We have compared on the basis of accuracy and F1-score. We have considered F1-score, because there is a slight imbalance in the classes of the target features.
 
 1. Accuracy :
-<center>*Accuracy =  TP+TN/(TP+TN+FP+FN)*</center>
+<center>**Accuracy =  TP+TN/(TP+TN+FP+FN)**</center>
 The higher the accuracy, the better is the model. However, we should consider the accuracy of the train and test set both to check if the model is overfitting.
 
 2. F1-Score:
-<center> *F1-score = 2 X (TP)/(2TP+FN+FP)* </center>
+<center> **F1-score = 2 * (TP)/(2TP+FN+FP)** </center>
 
 The higher the F1-score, the better the model.
 
@@ -208,7 +208,7 @@ Figure 8.2.1.1.2 shows the F1 scores of the models build from different preproce
 
 From the table above we can see the dataset with minmax scaler applied perform equailvalent to the dataset with minmax scaler and correaltion applied. These two have a higher accuracies on the test set , and the model performs better.
 The dataset with the Minmax scaler and correlation analysis applied has a slight overfitting and is somewhat equivalent to the dataset without preprocessing and minxmax scaler applied.
-The datset where pca was applied performs worse, the model is overfitting the dataset on train, hence the accuracy at the test data is low. 
+The dataset where pca was applied performs worse, the model is overfitting the dataset on train, hence the accuracy at the test data is low. 
 
 
 ## 8.2.1.2 Gradient Boost
@@ -240,16 +240,19 @@ Random Forest is a classification algorithm that is a combination of many decisi
 One of the best ways to analyze the performance of a Machine Learning model is by studying its accuracy and F1 score. The accuracy and F1 score of the Random Model as a classifier is computed and plotted for different preprocessing techniques. 
 
 ![Figure 8.4.1](images/Accuracy_plots/Accuracy_RF_withCV.png)
-Figure 8.4.1 shows the Accuracy plot of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model.
+Figure 8.4.1 shows the Accuracy plot of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model
 
 Checking only the accuracy of the model on the test set is not enough, we would need to check the model accuracy on both test and train set to check if out model was overfitting.
 
 ![Figure 8.4.2](images/Random_Forest_plots/trainVerusTestAccuracy.png)
+Figure 8.4.1 shows the Accuracy comparison of train and test set
 
-It can be observed accuracy of RF is comparable and good for preprocessing techniques i.e MinMax scaling with correlation, MinMax Scaling. It is the lowest with PCA. 
+Here we can see that the model is best performing best with no preprocessing done. Though in all the analysis, the model is overfitting as train accuracy > test accuracy. But if we check that difference between the train and test accuracies, it is least for unprocessed dataset. Therefore we can say that if data is left unprocessed then Random Forest is performing is the best.
 
 ![Figure 8.4.3](images/F1scores_plots_all_models/F1_score_RF_withCV.png)
-Figure 8.4.3 shows the F1-score of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model. 
+Figure 8.4.3 shows the F1-score of the Random Forest on the different preprocessed dataset when Cross Validation is applied to the model 
+
+The F1 scores are comparable for the unprocessed dataset and dataset with MinMax scaling applied. Taking into account the accuracy and F1 score both, we can infer that Random Forest perform best for unprocessed data.
 
 
 # 9. Comparisons:
